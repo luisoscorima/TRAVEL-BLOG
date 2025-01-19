@@ -13,11 +13,26 @@
             background-color: #f9f9f9;
             color: #333;
         }
+        button {
+            background-color: #3ba1c8;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2e8abf;
+        }
         header {
-            background: #4CAF50;
-            color: white;
+            background: #e6e9ee;
+            color: #3ba1c8;
             padding: 1rem 0;
             text-align: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         }
         nav ul {
             list-style: none;
@@ -47,8 +62,11 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+        h1 {
+            text-align: center;
+        }
         h2 {
-            color: #4CAF50;
+            color: #3ba1c8;
         }
         footer {
             text-align: center;
@@ -63,11 +81,12 @@
             display: block;
             margin: 10px 0;
         }
+
     </style>
 </head>
 <body>
     <header>
-        <h1>Pisaq</h1>
+        <h1>Blog Viajero</h1>
         <nav>
             <ul>
                 <li><a href="ollantaytambo.html">Ollantaytambo</a></li>
@@ -79,26 +98,36 @@
         </nav>
     </header>
     <main>
+        <h1>PISAQ</h1>
         <section id="historia">
             <h2>Historia</h2>
-            <img src="../images/pisaq_historia.jpg" alt="Vista histórica de Pisaq">
             <p>Pisaq es conocido por sus impresionantes terrazas agrícolas y su mercado tradicional. Este lugar fue una importante ciudad inca y centro ceremonial.</p>
+            <img src="../images/pisaq_historia.jpg" alt="Vista histórica de Pisaq">
+            <a href="pisaq_historia.html">
+                <button>Ver más</button>
+            </a>
         </section>
 
         <section id="tour-actividades">
             <h2>Tour y Actividades</h2>
-            <img src="../images/pisaq_tour.webp" alt="Actividades en Pisaq">
             <ul>
                 <li>Explorar el complejo arqueológico de Pisaq.</li>
                 <li>Visitar el mercado artesanal.</li>
                 <li>Caminar por sus senderos y disfrutar de las vistas panorámicas.</li>
             </ul>
+            <img src="../images/pisaq_tour.jpg" alt="Actividades en Pisaq">
+            <a href="pisaq_historia.html">
+                <button>Ver más</button>
+            </a>
         </section>
 
         <section id="comida">
             <h2>Comida</h2>
-            <img src="images/pisaq_comida.jpg" alt="Gastronomía típica de Pisaq">
             <p>Prueba los platos típicos de la región como el choclo con queso, la trucha frita y la chicha morada en los mercados locales.</p>
+            <img src="../images/pisaq_comida.jpg" alt="Gastronomía típica de Pisaq">
+            <a href="pisaq_historia.html">
+                <button>Ver más</button>
+            </a>
         </section>
 
         <section id="consejos-practicos">
@@ -108,15 +137,14 @@
                 <li>Visita temprano en la mañana para evitar multitudes.</li>
                 <li>No olvides tu cámara para capturar las vistas impresionantes.</li>
             </ul>
-        </section>
-
-        <section id="experiencias">
-            <h2>Cuéntanos tu experiencia</h2>
-            <p>¿Has visitado Pisaq? Comparte con nosotros lo que más te gustó de este maravilloso lugar.</p>
+            <a href="pisaq_historia.html">
+                <button>Ver más</button>
+            </a>
         </section>
 
         <section id="comentarios">
-            <h2>Sección de Comentarios</h2>
+            <h2>Cuéntanos tu experiencia</h2>
+            <p>¿Has visitado Pisaq? Comparte con nosotros lo que más te gustó de este maravilloso lugar.</p>
             <form action="#" method="post">
                 <table>
                     <tr>
@@ -157,6 +185,36 @@
         </section>
     </main>
     <footer>
+        <h2>Cuéntanos tu experiencia</h2>
+            <p>¿Has visitado Pisaq? Comparte con nosotros lo que más te gustó de este maravilloso lugar.</p>
+            <form action="#" method="post">
+                <table>
+                    <tr>
+                        <td>Nombre:</td>
+                        <td><input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre"></td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de visita:</td>
+                        <td><input type="date" id="fecha" name="fecha" required></td>
+                    </tr>
+                    <tr>
+                        <td>Lugares visitados:</td>
+                        <td><textarea id="lugares" name="lugares" rows="3" required placeholder="Describa los lugares visitados"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Recomendaciones:</td>
+                        <td><textarea id="recomendaciones" name="recomendaciones" rows="3" required placeholder="Ingrese sus recomendaciones"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Puntuación (1-5):</td>
+                        <td><input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required></td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit">Enviar</button></td>
+                        <td><button type="reset">Limpiar</button></td>
+                    </tr>
+                </table>
+            </form>
         <p>&copy; 2025 Blog Viajero. Todos los derechos reservados.</p>
     </footer>
 </body>
