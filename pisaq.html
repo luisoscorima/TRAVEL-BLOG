@@ -3,8 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pisaq - Blog Viajero</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Pisaq - Blog Viajero UTP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            background: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            background: #555;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,11 +81,13 @@
     <main>
         <section id="historia">
             <h2>Historia</h2>
+            <img src="images/pisaq_historia.webp" alt="Vista histórica de Pisaq">
             <p>Pisaq es conocido por sus impresionantes terrazas agrícolas y su mercado tradicional. Este lugar fue una importante ciudad inca y centro ceremonial.</p>
         </section>
 
         <section id="tour-actividades">
             <h2>Tour y Actividades</h2>
+            <img src="images/pisaq_tour.jpg" alt="Actividades en Pisaq">
             <ul>
                 <li>Explorar el complejo arqueológico de Pisaq.</li>
                 <li>Visitar el mercado artesanal.</li>
@@ -36,6 +97,7 @@
 
         <section id="comida">
             <h2>Comida</h2>
+            <img src="images/pisaq_comida.jpg" alt="Gastronomía típica de Pisaq">
             <p>Prueba los platos típicos de la región como el choclo con queso, la trucha frita y la chicha morada en los mercados locales.</p>
         </section>
 
@@ -86,6 +148,7 @@
     </main>
     <footer>
         <p>&copy; 2025 Blog Viajero UTP. Todos los derechos reservados.</p>
+        <p>Síguenos en nuestras redes:</p>
     </footer>
 </body>
 </html>
