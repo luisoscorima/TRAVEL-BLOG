@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #faf5ef;
+            color: #595552;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            color: #3ba1c8;
+            text-align: center;
+            padding: 15px;
+            margin: 0;
+        }
+        .banner {
+            width: 100%;
+            height: 50vh;
+            background-image: url('banner-image.jpg'); /* Reemplaza con la URL de tu imagen */
+            background-size: cover;
+            background-position: center;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #3ba1c8;
+            border-bottom: 2px solid #ffc226;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #0f2719;
+        }
+        .divider {
+            border-bottom: 2px solid #ffc226;
+            margin: 20px 0;
+        }
+        .info-box {
+            background-color: #ffffff;
+            border: 1px solid #3ba1c8;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .info-box h4 {
+            background-color: #ffc226;
+            padding: 10px;
+            border-radius: 5px;
+            margin: -15px -15px 15px -15px;
+            color: #0f2719;
+        }
+        .legend {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ffc226;
+            border-radius: 8px;
+            background-color: #fdfaf4;
+        }
+        button {
+            background-color: #3ba1c8;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2e8abf;
+        }
+        footer {
+            background-color: #3ba1c8;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4b41a;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .imagen-placeholder {
+            background: #ddd;
+            width: 100px;
+            height: 60px;
+            display: block;
+            text-align: center;
+            line-height: 60px;
+            color: #333;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog de Viaje a Cusco</h1>
+    </header>
+    <div class="banner"></div>
+
+    <!-- Sección de Historia -->
+    <section>
+        <h2>Historia de Montaña de colores</h2>
+        <p>La montaña de los 7 Colores (también llamado Vinicunca o simplemente ‘montaña arcoíris’) es una de las nuevas y mejores atracciones del Perú. Ubicada a más de 100 kilómetros de la ciudad del Cusco, en una cumbre altitudinal situada a 5,200 metros sobre el nivel del mar (m.s.n.m.). Se trata de una formación montañosa teñida de varias tonalidades producto de la compleja combinación de minerales. Las laderas y la cumbre están teñidas de diversas tonos que incluyen el rojo, morado, verde, amarillo, rosado y otras variaciones. Este atractivo turístico estuvo rodeado de hielo hace no muchos años. Desde el 2016, este lugar recibe a cientos de visitantes al día convirtiéndose, junto con Machu Picchu, en uno de los lugares más visitados en Cusco-Perú. A continuación toda la información sobre la Montaña de 7 Colores..</p>
+            <p><img src="imagenes/Concesioario-1800x728.jpg"> </p>
+            <div class="info-box">
+            <h4>Festividades</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Tipo</th>
+                        <th>Lugar</th>
+                        <th>Festividad</th>
+                        <th>Descripción</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>24-Jun</td>
+                        <td>Religiosa y Cultural</td>
+                        <td>La Plaza Mayor y en los sitios arqueológicos de Sacsayhuamán</td>
+                        <td>Inti Raymi </td>
+                        <td>
+                            El Inti Raymi es una celebración que rinde homenaje al sol, 
+                            la deidad más importante para los antiguos incas. Esta festividad tiene un profundo significado espiritual y cultural
+                            , ya que recrea la ceremonia ancestral incaica en la que se celebraba el solsticio de invierno del hemisferio sur.
+
+                        </td>
+                        <td><span class="imagen-placeholder">Imagen</span></td>
+                    </tr>
+                    <tr>
+                        <td>15-May</td>
+                        <td>Religiosa</td>
+                        <td>Distritos Ollantaytambo</td>
+                        <td>SAN ISIDRO LABRADOR</td>
+                        <td>
+                            Denominado patrón de los agricultores. En Ollantaytambo se celebra con procesiones de San Isidro Labrador, 
+                            acompañado de danzas y recorrido de bueyes adornados para la ocasión, que son sacados a la plaza del 
+                            distrito. También hay danzas en la comunidad de primavera.
+                        </td>
+                        <td><span class="imagen-placeholder">Imagen</span></td>
+                    </tr>
+                    <tr>
+                        <td>31-May</td>
+                        <td>Religiosa</td>
+                        <td>Distrito de Ollantaytambo</td>
+                        <td>FESTIVIDAD DEL SEÑOR DE CHOQUEKILLKA</td>
+                        <td>
+                            Patrón del distrito, por lo que se celebra con procesiones, comparsas, danzas. Es reconocido como 
+                            “Patrimonio Cultural de la Nación” por el INC las celebraciones empiezan en la víspera (30 de mayo), 
+                            siendo el día central el 31 de mayo, donde participan cientos de pobladores y comparsas en la plaza 
+                            principal, lugar donde el pueblo acompaña. Esta fiesta se prolonga por cuatro días más.
+                        </td>
+                        <td><span class="imagen-placeholder">Imagen</span></td>
+                    </tr>
+                    <tr>
+                        <td>29-Jun</td>
+                        <td>Evento</td>
+                        <td>Ollantaytambo</td>
+                        <td>OLLANTAYRAYMI</td>
+                        <td>
+                            Se escenifica el drama incaico Ollantay que narra la historia del amor prohibido del general Ollanta y 
+                            Cusi Coyllor, hija del inca Pachacutec. Participan instituciones educativas tanto en la escenificación 
+                            del drama como en la presentación de danzas y música típica de la Región.
+                        </td>
+                        <td><span class="imagen-placeholder">Imagen</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="info-box">
+            <h4>Leyendas Locales</h4>
+            <div class="legend">
+                <p><strong>La leyenda de Ollantay:</strong> Cuenta la historia de un guerrero que luchó por el amor de una princesa inca. <button onclick="alert('Redirigiendo a la historia completa...')">Ver más</button></p>
+            </div>
+            <div class="legend">
+                <p><strong>El puente inca:</strong> Una leyenda sobre la construcción de un puente milagroso. <button onclick="alert('Redirigiendo a la historia completa...')">Ver más</button></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de comentarios -->
+    <footer>
+        <h2>Cuéntanos tu experiencia</h2>
+        <form>
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="place">Lugar visitado:</label><br>
+            <select id="place" name="place">
+                <option value="ollantaytambo">Ollantaytambo</option>
+                <option value="pisaq">Pisaq</option>
+                <option value="machupichu">Machupichu</option>
+                <option value="laguna-huamantay">Laguna Huamantay</option>
+                <option value="montana-colores">Montaña de Colores</option>
+            </select><br><br>
+
+            <label for="date">Fecha de visita:</label><br>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="comments">Comentarios:</label><br>
+            <textarea id="comments" name="comments" rows="4" required></textarea><br><br>
+
+            <label for="rating">Puntuación:</label><br>
+            <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </footer>
+</body>
+</html>
