@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consejos Practicos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #faf5ef;
+            color: #595552;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            color: #3ba1c8;
+            text-align: center;
+            padding: 15px;
+            margin: 0;
+        }
+        .banner {
+            width: 100%;
+            height: 50vh;
+            background-image: url('banner-image.jpg'); /* Reemplaza con la URL de tu imagen */
+            background-size: cover;
+            background-position: center;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #3ba1c8;
+            border-bottom: 2px solid #ffc226;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #0f2719;
+        }
+        .divider {
+            border-bottom: 2px solid #ffc226;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #3ba1c8;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2e8abf;
+        }
+        footer {
+            background-color: #3ba1c8;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Consejos Parcticos</h1>
+    </header>
+    <div class="banner"></div>
+
+    <!-- Sección de Ollantaytambo -->
+    <section>
+        <h2>Verano</h2>
+        <h3>Clima esperado</h3>
+        <p>Las temperaturas son de </p>
+        <button onclick="alert('Redirigiendo a más detalles...')">Ver más</button>
+        <div class="divider"></div>
+        <h3>Que se recomienda llevar</h3>
+        <p>Llevar ropa que abrigue poco y accesorios para subrirse del sol</p>
+        <button onclick="alert('Redirigiendo a más detalles...')">Ver más</button>
+        <div class="divider"></div>
+        <h3>Advertencias</h3>
+        <p>Ten cuidado con tus objetos personales, no lleves alimentos en tus paseos</p>
+        <button onclick="alert('Redirigiendo a más detalles...')">Ver más</button>
+    </section>
+
+    <!-- Repite para otros lugares -->
+    <section>
+        <h2>Invierno</h2>
+        <h3>Clima esperado</h3>
+        <p>Las temperaturas son de </p>
+        <button onclick="alert('Redirigiendo a más detalles...')">Ver más</button>
+        <div class="divider"></div>
+        <h3>Que se recomienda llevar</h3>
+        <p>Llevar ropa que abrigue poco y accesorios para subrirse del sol</p>
+        <button onclick="alert('Redirigiendo a más detalles...')">Ver más</button>
+        <div class="divider"></div>
+        <h3>Advertencias</h3>
+        <p>Ten cuidado con tus objetos personales, no lleves alimentos en tus paseos</p>
+        <button onclick="alert('Redirigiendo a más detalles...')">Ver más</button>
+    </section>
+
+    <section>
+        <h2>Otoño</h2>
+        <h3>Clima esperado</h3>
+        <p>Las temperaturas son de </p>
+        <button onclick="alert('Redirigiendo a más detalles...')">Ver más</button>
+        <div class="divider"></div>
+        <h3>Que se recomienda llevar</h3>
+        <p>Llevar ropa que abrigue poco y accesorios para subrirse del sol</p>
+        <button onclick="alert('Redirigiendo a más detalles...')">Ver más</button>
+        <div class="divider"></div>
+        <h3>Advertencias</h3>
+        <p>Ten cuidado con tus objetos personales, no lleves alimentos en tus paseos</p>
+        <button onclick="alert('Redirigiendo a más detalles...')">Ver más</button>
+    </section>
+    <section>
+        <h2>Primavera</h2>
+        <h3>Clima esperado</h3>
+        <p>Las temperaturas son de </p>
+        <button onclick="alert('Redirigiendo a más detalles...')">Ver más</button>
+        <div class="divider"></div>
+        <h3>Que se recomienda llevar</h3>
+        <p>Llevar ropa que abrigue poco y accesorios para subrirse del sol</p>
+        <button onclick="alert('Redirigiendo a más detalles...')">Ver más</button>
+        <div class="divider"></div>
+        <h3>Advertencias</h3>
+        <p>Ten cuidado con tus objetos personales, no lleves alimentos en tus paseos</p>
+        <button onclick="alert('Redirigiendo a más detalles...')">Ver más</button>
+    </section>
+
+    <!-- Formulario de comentarios -->
+    <footer>
+        <h2>Cuéntanos tu experiencia</h2>
+        <form>
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="place">Lugar visitado:</label><br>
+            <select id="place" name="place">
+                <option value="ollantaytambo">Ollantaytambo</option>
+                <option value="pisaq">Pisaq</option>
+                <option value="machupichu">Machupichu</option>
+                <option value="laguna-huamantay">Laguna Huamantay</option>
+                <option value="montana-colores">Montaña de Colores</option>
+            </select><br><br>
+
+            <label for="date">Fecha de visita:</label><br>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="comments">Comentarios:</label><br>
+            <textarea id="comments" name="comments" rows="4" required></textarea><br><br>
+
+            <label for="rating">Puntuación:</label><br>
+            <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <form>
+            <table>
+            <tr>
+                <td>Apellidos </td>
+                <td><input type="text" name="Apellidos" value="" placeholder="Ingrese Apellidos"></td>
+            </tr>
+            <tr>
+                <td>Nombres</td>
+                <td><input type="text" name="Nombres" value="" placeholder="Ingrese Nombres"></td>
+            </tr>
+            <tr>
+                <td>Lugar Visitado</td>
+                <td><select name="Donde estuve">
+                    <option>Ollantaytambo</option>
+                    <option>Machupichu</option>
+                    <option>Pisac</option>
+                    <option>Montaña 7 colores</option>
+                    <option>laguna-huamantay</option>
+                </td>
+            </tr>
+            <tr>
+                <td>Fecha de Visita</td>
+                <td><input type="date" name="fecnac"></td>
+                </tr>
+                <tr>
+                    <td>Comentarios</td>
+                    <td>
+                        <textarea name="comentarios" value="" cols="50" rows="5">
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Enviar"></td>
+                    <td><input type="reset" value="Limpiar"></td>
+                </tr>
+            </table>
+        </form>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parada - Pisac</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #faf5ef;
+            color: #595552;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            color: #3ba1c8;
+            text-align: center;
+            padding: 15px;
+            margin: 0;
+        }
+        .banner {
+            width: 100%;
+            height: 50vh;
+            background-image: url('ruta-pisac.jpg'); /* Reemplaza con la URL de tu imagen */
+            background-size: cover;
+            background-position: center;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #3ba1c8;
+            border-bottom: 2px solid #ffc226;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #0f2719;
+        }
+        .divider {
+            border-bottom: 2px solid #ffc226;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #3ba1c8;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2e8abf;
+        }
+        footer {
+            background-color: #3ba1c8;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Parada - Pisac</h1>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner"></div>
+
+    <!-- Actividades -->
+    <section>
+        <h2>Actividades Recomendadas</h2>
+        <div>
+            <h3>Explorar el Mercado Artesanal</h3>
+            <p>Horario recomendado: 9:00 AM - 11:00 AM</p>
+            <p>Descripción: Disfruta de una experiencia cultural comprando artesanías locales y textiles tradicionales.</p>
+        </div>
+        <div class="divider"></div>
+        <div>
+            <h3>Visitar las Ruinas de Pisac</h3>
+            <p>Horario recomendado: 11:30 AM - 1:30 PM</p>
+            <p>Descripción: Explora la historia incaica mientras disfrutas de vistas impresionantes al Valle Sagrado.</p>
+        </div>
+    </section>
+
+    <!-- Restaurantes -->
+    <section>
+        <h2>Restaurantes Cercanos</h2>
+        <div>
+            <h3>Restaurante Pisac Gourmet</h3>
+            <p>Especialidades: Quinua orgánica, cuy al horno, y sopa de choclo.</p>
+            <p>Horario: 8:00 AM - 8:00 PM</p>
+            <button>Ver más</button>
+        </div>
+        <div class="divider"></div>
+        <div>
+            <h3>La Trucha Dorada</h3>
+            <p>Especialidades: Trucha a la parrilla, causa rellena, y ají de gallina.</p>
+            <p>Horario: 10:00 AM - 6:00 PM</p>
+            <button>Ver más</button>
+        </div>
+    </section>
+
+    <!-- Hoteles -->
+    <section>
+        <h2>Hoteles Cercanos</h2>
+        <div>
+            <h3>Hotel Andean Lodge</h3>
+            <p>Calificación: ⭐⭐⭐⭐</p>
+            <p>Descripción: Un hotel acogedor con vistas espectaculares al Valle Sagrado.</p>
+            <button>Ver más</button>
+        </div>
+        <div class="divider"></div>
+        <div>
+            <h3>Hostal Inti Wasi</h3>
+            <p>Calificación: ⭐⭐⭐</p>
+            <p>Descripción: Perfecto para viajeros que buscan comodidad y accesibilidad económica.</p>
+            <button>Ver más</button>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <h2>Cuéntanos tu experiencia</h2>
+        <form>
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="place">Lugar visitado:</label><br>
+            <select id="place" name="place">
+                <option value="ollantaytambo">Ollantaytambo</option>
+                <option value="pisaq">Pisaq</option>
+                <option value="machupichu">Machupichu</option>
+                <option value="laguna-huamantay">Laguna Huamantay</option>
+                <option value="montana-colores">Montaña de Colores</option>
+            </select><br><br>
+
+            <label for="date">Fecha de visita:</label><br>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="comments">Comentarios:</label><br>
+            <textarea id="comments" name="comments" rows="4" required></textarea><br><br>
+
+            <label for="rating">Puntuación:</label><br>
+            <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </footer>
+</body>
+</html>
