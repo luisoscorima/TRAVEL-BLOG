@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zona Turística - Valle Sagrado</title>
+    <title>Zona Turística </title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,6 +18,8 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 1rem 0;
         }
         header h1 {
             color: #3ba1c8;
@@ -28,7 +30,7 @@
         .banner {
             width: 100%;
             height: 50vh;
-            background-image: url('ruta-banner.jpg'); /* Reemplaza con la URL de tu imagen */
+            background-image: url(https://thumbs.dreamstime.com/b/salinas-de-maras-peru-salt-natural-mine-inca-salt-pans-maras-sacred-valley-peru-near-cuzco-84748169.jpg); 
             background-size: cover;
             background-position: center;
         }
@@ -70,6 +72,24 @@
             padding: 15px;
             margin-top: 30px;
         }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            background: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            background: #555;
+        }
     </style>
 </head>
 <body>
@@ -87,9 +107,8 @@
     </header>
     <div class="banner"></div>
 
-    <!-- Sección de Paradas -->
     <section>
-        <h2>Paradas del Tour</h2>
+        <h2>Itinerario</h2>
         <div>
             <h3>1. Pisac</h3>
             <p>Descubre el mercado artesanal y las impresionantes ruinas de Pisac.</p>
