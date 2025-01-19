@@ -18,6 +18,8 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 1rem 0;
         }
         header h1 {
             color: #3ba1c8;
@@ -118,125 +120,214 @@
             color: #333;
             font-size: 12px;
         }
+        td{
+            vertical-align: top;
+            text-align: left;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            background: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            background: #555;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Blog de Viaje a Cusco</h1>
+        <nav>
+            <ul>
+                <li><a href="ollantaytambo.html">Ollantaytambo</a></li>
+                <li><a href="montana_colores.html">Montaña de Colores</a></li>
+                <li><a href="laguna_huamantay.html">Laguna Humantay</a></li>
+                <li><a href="pisaq.html">Pisaq</a></li>
+                <li><a href="machu_picchu.html">Machu Picchu</a></li>
+            </ul>
+        </nav>
     </header>
+    <div class="banner"> </div>
     <div class="banner"></div>
 
     <!-- Sección de Historia -->
-    <section>
-        <h2>Historia de Ollantaytambo</h2>
-        <p>Según Pedro Sarmiento de Gamboa, un cronista español del siglo XVI, el emperador inca Pachacútec conquistó y destruyó Ollantaytambo para luego incorporarlo en su imperio.2​ Bajo el gobierno de los incas, el pueblo fue reconstruido con espléndidos edificios y el valle del río Urubamba fue irrigado y provisto de andenes; el pueblo sirvió de albergue para la nobleza inca mientras que los andenes eran trabajados por yanaconas, sirvientes del emperador. Después de la muerte de Pachacútec la región pasó a la custodia de su panaqa, su grupo familiar.3​
-            Durante la conquista, Ollantaytambo funcionó como capital temporal para Manco Inca Yupanqui, líder de la resistencia inca contra los conquistadores españoles. Bajo su mandato, el pueblo y sus alrededores fueron severamente fortificados en dirección a la antigua capital inca de Cuzco, la cual había caído bajo dominio español.4​ En el llano de Mascabamba, cerca de Ollantaytambo, Manco Inca derrotó una expedición española bloqueando su avance desde un conjunto de andenes e inundando el llano. Sin embargo, a pesar de su victoria, Manco Inca no consideró viable el permanecer en Ollantaytambo así que se retiró al espeso bosque de la zona de Vilcabamba. En 1540, la población nativa de Ollantaytambo fue asignada en encomienda a Hernando Pizarro.</p>
-            <p><img src="imagenes/Concesioario-1800x728.jpg"> </p>
-            <div class="info-box">
-            <h4>Festividades</h4>
+     <section>
+        <center><h2>Historia de Ollantaytambo</h2></center>
+        <table>
+            <tr>
+                <td>
+                    <p>
+                        Según Pedro Sarmiento de Gamboa, un cronista español del siglo XVI, el emperador inca Pachacútec conquistó y destruyó Ollantaytambo para luego incorporarlo en su imperio.2​ Bajo el gobierno de los incas, el pueblo fue reconstruido con espléndidos edificios y el valle del río Urubamba fue irrigado y provisto de andenes; el pueblo sirvió de albergue para la nobleza inca mientras que los andenes eran trabajados por yanaconas, sirvientes del emperador. Después de la muerte de Pachacútec la región pasó a la custodia de su panaqa, su grupo familiar.3​ Durante la conquista, Ollantaytambo funcionó como capital temporal para Manco Inca Yupanqui, líder de la resistencia inca contra los conquistadores españoles. Bajo su mandato, el pueblo y sus alrededores fueron severamente fortificados en dirección a la antigua capital inca de Cuzco, la cual había caído bajo dominio español.4​ En el llano de Mascabamba, cerca de Ollantaytambo, Manco Inca derrotó una expedición española bloqueando su avance desde un conjunto de andenes e inundando el llano. Sin embargo, a pesar de su victoria, Manco Inca no consideró viable el permanecer en Ollantaytambo así que se retiró al espeso bosque de la zona de Vilcabamba. En 1540, la población nativa de Ollantaytambo fue asignada en encomienda a Hernando Pizarro.
+                    </p>
+                </td>
+                <td>
+                    <img src="../images/pisaq_historia.jpg" alt="Historia de Pisaq" style="max-width: 100%; height: auto;">
+                </td>
+            </tr>
+        </table>
+     </section>
+     <section>
+        <center><h2>Festividades</h2></center>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Tipo</th>
+                    <th>Lugar</th>
+                    <th>Festividad</th>
+                    <th>Descripción</th>
+                    <th>Imagen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1-Ene</td>
+                    <td>Costumbrista</td>
+                    <td>Plaza de Armas de Ollantaytambo</td>
+                    <td>SINKUY o WATAQALLARI</td>
+                    <td>
+                        Es un juego de bolos que se celebra en la tarde del 01 de enero, organizado por los “varayoc” y regidores 
+                        de las comunidades de Huilloc, Patacancha, Kellkanka y Yanamayo, que toman posición de sus nuevos cargos, 
+                        en medio de sonidos de pututos, donde los jóvenes ataviados con sus vestidos de fiesta y con sombreros 
+                        adornados de cintas y flores, arrojan las bolas de madera por parejas mixtas, iniciando el alcalde de 
+                        Ollantaytambo y su esposa.
+                    </td>
+                    <td><span class="imagen-placeholder">Imagen</span></td>
+                </tr>
+                <tr>
+                    <td>15-May</td>
+                    <td>Religiosa</td>
+                    <td>Distritos Ollantaytambo</td>
+                    <td>SAN ISIDRO LABRADOR</td>
+                    <td>
+                        Denominado patrón de los agricultores. En Ollantaytambo se celebra con procesiones de San Isidro Labrador, 
+                        acompañado de danzas y recorrido de bueyes adornados para la ocasión, que son sacados a la plaza del 
+                        distrito. También hay danzas en la comunidad de primavera.
+                    </td>
+                    <td><span class="imagen-placeholder">Imagen</span></td>
+                </tr>
+                <tr>
+                    <td>31-May</td>
+                    <td>Religiosa</td>
+                    <td>Distrito de Ollantaytambo</td>
+                    <td>FESTIVIDAD DEL SEÑOR DE CHOQUEKILLKA</td>
+                    <td>
+                        Patrón del distrito, por lo que se celebra con procesiones, comparsas, danzas. Es reconocido como 
+                        “Patrimonio Cultural de la Nación” por el INC las celebraciones empiezan en la víspera (30 de mayo), 
+                        siendo el día central el 31 de mayo, donde participan cientos de pobladores y comparsas en la plaza 
+                        principal, lugar donde el pueblo acompaña. Esta fiesta se prolonga por cuatro días más.
+                    </td>
+                    <td><span class="imagen-placeholder">Imagen</span></td>
+                </tr>
+                <tr>
+                    <td>29-Jun</td>
+                    <td>Evento</td>
+                    <td>Ollantaytambo</td>
+                    <td>OLLANTAYRAYMI</td>
+                    <td>
+                        Se escenifica el drama incaico Ollantay que narra la historia del amor prohibido del general Ollanta y 
+                        Cusi Coyllor, hija del inca Pachacutec. Participan instituciones educativas tanto en la escenificación 
+                        del drama como en la presentación de danzas y música típica de la Región.
+                    </td>
+                    <td><span class="imagen-placeholder">Imagen</span></td>
+                </tr>
+            </tbody>
+        </table>
+     </section>
+
+     <section>
+        <h2><center>Leyendas Locales</center></h2>
+        <div class="info-box">
+            <h4><center>La leyenda de Ollantay</h4></center>
             <table>
-                <thead>
-                    <tr>
-                        <th>Fecha</th>
-                        <th>Tipo</th>
-                        <th>Lugar</th>
-                        <th>Festividad</th>
-                        <th>Descripción</th>
-                        <th>Imagen</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1-Ene</td>
-                        <td>Costumbrista</td>
-                        <td>Plaza de Armas de Ollantaytambo</td>
-                        <td>SINKUY o WATAQALLARI</td>
-                        <td>
-                            Es un juego de bolos que se celebra en la tarde del 01 de enero, organizado por los “varayoc” y regidores 
-                            de las comunidades de Huilloc, Patacancha, Kellkanka y Yanamayo, que toman posición de sus nuevos cargos, 
-                            en medio de sonidos de pututos, donde los jóvenes ataviados con sus vestidos de fiesta y con sombreros 
-                            adornados de cintas y flores, arrojan las bolas de madera por parejas mixtas, iniciando el alcalde de 
-                            Ollantaytambo y su esposa.
-                        </td>
-                        <td><span class="imagen-placeholder">Imagen</span></td>
-                    </tr>
-                    <tr>
-                        <td>15-May</td>
-                        <td>Religiosa</td>
-                        <td>Distritos Ollantaytambo</td>
-                        <td>SAN ISIDRO LABRADOR</td>
-                        <td>
-                            Denominado patrón de los agricultores. En Ollantaytambo se celebra con procesiones de San Isidro Labrador, 
-                            acompañado de danzas y recorrido de bueyes adornados para la ocasión, que son sacados a la plaza del 
-                            distrito. También hay danzas en la comunidad de primavera.
-                        </td>
-                        <td><span class="imagen-placeholder">Imagen</span></td>
-                    </tr>
-                    <tr>
-                        <td>31-May</td>
-                        <td>Religiosa</td>
-                        <td>Distrito de Ollantaytambo</td>
-                        <td>FESTIVIDAD DEL SEÑOR DE CHOQUEKILLKA</td>
-                        <td>
-                            Patrón del distrito, por lo que se celebra con procesiones, comparsas, danzas. Es reconocido como 
-                            “Patrimonio Cultural de la Nación” por el INC las celebraciones empiezan en la víspera (30 de mayo), 
-                            siendo el día central el 31 de mayo, donde participan cientos de pobladores y comparsas en la plaza 
-                            principal, lugar donde el pueblo acompaña. Esta fiesta se prolonga por cuatro días más.
-                        </td>
-                        <td><span class="imagen-placeholder">Imagen</span></td>
-                    </tr>
-                    <tr>
-                        <td>29-Jun</td>
-                        <td>Evento</td>
-                        <td>Ollantaytambo</td>
-                        <td>OLLANTAYRAYMI</td>
-                        <td>
-                            Se escenifica el drama incaico Ollantay que narra la historia del amor prohibido del general Ollanta y 
-                            Cusi Coyllor, hija del inca Pachacutec. Participan instituciones educativas tanto en la escenificación 
-                            del drama como en la presentación de danzas y música típica de la Región.
-                        </td>
-                        <td><span class="imagen-placeholder">Imagen</span></td>
-                    </tr>
-                </tbody>
+                <tr>
+                    <td>
+                        <img src="../images/pisaq_historia.jpg" alt="Historia de Pisaq" style="max-width: 100%; height: auto;">
+                    </td>
+                    <td>
+                        <p>
+                            Ollantay, un hombre de origen humilde, se enamora perdidamente de Cusi Coyllur, la hija del poderoso emperador inca. Sin embargo, su amor es imposible debido a las estrictas reglas de la sociedad inca, que prohíben los matrimonios entre personas de diferentes estatus sociales.<br>
+
+                           Desafiando todas las adversidades, Ollantay decide secuestrar a Cusi Coyllur y llevarla a un lugar remoto en las montañas, lejos del alcance del imperio. Juntos, viven su amor en secreto mientras Ollantay lucha por mantener su amada a salvo de los intentos de rescate del emperador.<br>
+
+                           La historia se desarrolla con batallas emocionantes, engaños y traiciones, pero también con momentos de pasión y lealtad inquebrantable. Ollantay se convierte en un símbolo de rebelión y valentía, mientras que Cusi Coyllur representa el amor verdadero y la fuerza de espíritu.<br>
+
+                            Finalmente, el emperador Pachacútec, padre de Cusi Coyllur, se entera del paradero de su hija y ordena su regreso al imperio. Ollantay, derrotado pero respetado por su valentía, es perdonado por el emperador y se le permite casarse con Cusi Coyllur, quien finalmente puede vivir su amor abiertamente.
+                        </p>
+                    </td>
+                </tr>  
             </table>
+            <center>
+                <a href="historiaOllan.html"><button>Ver más</button></a>
+            </center>
         </div>
         <div class="info-box">
-            <h4>Leyendas Locales</h4>
-            <div class="legend">
-                <p><strong>La leyenda de Ollantay:</strong> Cuenta la historia de un guerrero que luchó por el amor de una princesa inca. <button onclick="alert('Redirigiendo a la historia completa...')">Ver más</button></p>
-            </div>
-            <div class="legend">
-                <p><strong>El puente inca:</strong> Una leyenda sobre la construcción de un puente milagroso. <button onclick="alert('Redirigiendo a la historia completa...')">Ver más</button></p>
-            </div>
+            <h4><center>El puente Inca</h4></center>
+            <table>
+                <tr>
+                    <td>
+                        <img src="../images/pisaq_historia.jpg" alt="Historia de Pisaq" style="max-width: 100%; height: auto;">
+                    </td>
+                    <td>
+                        <p>
+                            Estaba ya próximo el fin del Inca del Imperio, y su sucesor, su único hijo, se encontraba gravemente enfermo. El pueblo, que sentía adoración por el futuro monarca, elevaba sus ruegos al dios Inti (Sol), a Mama-Quilla (la Luna) y a todos los dioses, haciendo sacrificios en su honor por la salud del enfermo. Pero ni los médicos del imperio ni las súplicas del pueblo devolvían la salud al inteligente y bondadoso príncipe. Si éste llegaba a morir, desaparecía con él uno de los más poderosos Incas del Imperio, que habría de gobernarlos con verdadera sabiduría y justicia. El temor de su muerte llenó de tristeza al pueblo, que no cesaba de interrogar a los dioses cuál era el remedio eficaz para salvar la vida al futuro monarca. Al fin consultaron a los Amautas (filósofos), y ellos dijeron que el príncipe recuperaría la salud, si se bañaba en unas aguas de maravilloso poder que existían en regiones del continente muy apartados. En efecto: sabían que en unos lugares lejanos, en dirección al sur, entre las rocas de los cerros de la cordillera, brotaba el agua buena que curaba a los enfermos de todos sus males. También aseguraron que para llegar a esas fuentes, había que recorrer largas distancias, atravesar desiertos y escalar montañas. Los sacerdotes, los sabios y los médicos decidieron el viaje del príncipe a tan lejanas regiones, y sin pérdida de tiempo comenzaron los preparativos para realizarlo. 
+                        </p>
+                    </td>
+                </tr>  
+            </table>
+            <p>
+                En una mañana de sol, luminosa y clara, partió del Cuzco, en dirección al sur, la larga caravana de viajeros que había de conducirlo hasta las fuentes de las que brotaba el agua salvadora. Acompañaban al príncipe, los nobles, sabios, sacerdotes y médicos. Los seguía una recua de llamas cargadas con víveres todo lo necesario para tan largo viaje. Muchas lunas duró la travesía. Montañas abruptas, valles tranquilos, campos desiertos, verdes praderas, ríos, arroyos pasaron ante los ojos de la larga caravana que, llena de asombro, admiraba cuadros maravillosos en los que la Naturaleza parecía haber reunido toda su grandeza y esplendor. Durante la noche veían las montañas como si fueran espectros gigantescos, y oían salir de las montañas como si fueran espectros gigantescos, y oían salir de las entrañas de la tierra y de los precipicios, roncos acentos que el eco repetía como voces misteriosas en la inmensidad del espacio. Llegados a cierto lugar, se quedaron los indios maravillados ante la imponente majestad de uno de los colosos de la cordillera y exclamaron asombrados: ¡ Acon-Cahua! Esto, traducido de su idioma, el quichua, significa: "vigía o centinela de piedra". Se encontraron ante nuestro grandioso Aconcagua, el pico más alto de nuestra cordillera y uno de los más elevados del globo. A poco andar, llegaron al fin, en los últimas horas de la tarde, a una quebrada en cuyo fondo corría encajonado un río torrentoso que bramaba entre las piedras de su profundo lecho. Se detuvieron; y el sonido estridente de la quepa (clarín) anunció que allí se encontraban las fuentes del agua salvadora. Pero esas fuentes estaban en el lado opuesto de la quebrada; la distancia que los separaba de ellas era demasiado grande y el camino inaccesible.<br>
+
+                 ¡Creyeron desfallecer ante el obstáculo insalvable que se les presentaba!    Pasaron allí la noche cavilando en el modo de llegar a las fuentes, mas al amanecer del día siguiente, les fue dado presenciar el hecho más maravilloso que imaginar podían. Cuando las primeras claridades de la aurora comenzaron a colorear la nieve de los montes vecinos, hubo un momento indescriptible en que, ante el asombro de los aborígenes, los picos helados parecieron inclinarse hacia la quebrada. Inmensos peñascos caían desde colosales alturas, al mismo tiempo que grandes trozos de hielo se desprendían de las cimas. Unidos unos y otros formaron un puente magnífico por el que podía llegarse sin dificultad a las fuentes del agua maravillosa. De este modo, el poder sobrenatural de los dioses acercó al príncipe de los Incas a las fuentes de las aguas buenas, las que le dieron la salud y la vida; y a su pueblo, la alegría y la calma. Así fue como la larga caravana que viajó desde el Cuzco regresó jubilosa, llevando en sus ojos la visión encantada de la grandeza sublime de nuestras montañas y el poder sobrehumano de sus dioses buenos. Los indios llamaron al puente maravilloso, el Puente del Inca. Cuentan que al acercarse la noche, cuando los cerros que la rodean se esfuman como envueltos en velos de suaves colores, una larga caravana de figuras extrañas parece cruzar de unos montes a otros, mientras que el cantar del agua de las cascadas rompe gozoso el misterioso silencio de las montañas inmensas. <br>
+            </p>
+            <center>
+                <a href="historiaOllan.html"><button>Ver más</button></a>
+            </center>
         </div>
-    </section>
+     </section>
+     
+     
 
     <!-- Formulario de comentarios -->
     <footer>
         <h2>Cuéntanos tu experiencia</h2>
-        <form>
-            <label for="name">Nombre:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="place">Lugar visitado:</label><br>
-            <select id="place" name="place">
-                <option value="ollantaytambo">Ollantaytambo</option>
-                <option value="pisaq">Pisaq</option>
-                <option value="machupichu">Machupichu</option>
-                <option value="laguna-huamantay">Laguna Huamantay</option>
-                <option value="montana-colores">Montaña de Colores</option>
-            </select><br><br>
-
-            <label for="date">Fecha de visita:</label><br>
-            <input type="date" id="date" name="date" required><br><br>
-
-            <label for="comments">Comentarios:</label><br>
-            <textarea id="comments" name="comments" rows="4" required></textarea><br><br>
-
-            <label for="rating">Puntuación:</label><br>
-            <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
-
-            <button type="submit">Enviar</button>
+        <form action="#" method="post">
+            <table>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre"></td>
+                </tr>
+                <tr>
+                    <td>Fecha de visita:</td>
+                    <td><input type="date" id="fecha" name="fecha" required></td>
+                </tr>
+                <tr>
+                    <td>Lugares visitados:</td>
+                    <td><textarea id="lugares" name="lugares" rows="3" required placeholder="Describa los lugares visitados"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Recomendaciones:</td>
+                    <td><textarea id="recomendaciones" name="recomendaciones" rows="3" required placeholder="Ingrese sus recomendaciones"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Puntuación (1-5):</td>
+                    <td><input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required></td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Enviar</button></td>
+                    <td><button type="reset">Limpiar</button></td>
+                </tr>
+            </table>
         </form>
     </footer>
 </body>
