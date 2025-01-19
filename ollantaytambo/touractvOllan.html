@@ -19,6 +19,8 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 1rem 0;
         }
         header h1 {
             color: #3ba1c8;
@@ -29,7 +31,7 @@
         .banner {
             width: 100%;
             height: 50vh;
-            background-image: url('banner-image.jpg'); /* Reemplaza con la URL de tu imagen */
+            background-image: url(https://media.tacdn.com/media/attractions-splice-spp-674x446/06/d6/49/cf.jpg); /* Reemplaza con la URL de tu imagen */
             background-size: cover;
             background-position: center;
         }
@@ -134,45 +136,109 @@
             color: #333;
             font-size: 12px;
         }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            background: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            background: #555;
+        }
     </style>
 </head>
 <body>
-    <!-- Encabezado -->
     <header>
         <h1>Blog de Viaje a Cusco</h1>
+        <nav>
+            <ul>
+                <li><a href="ollantaytambo.html">Ollantaytambo</a></li>
+                <li><a href="montana_colores.html">Montaña de Colores</a></li>
+                <li><a href="laguna_huamantay.html">Laguna Humantay</a></li>
+                <li><a href="pisaq.html">Pisaq</a></li>
+                <li><a href="machu_picchu.html">Machu Picchu</a></li>
+            </ul>
+        </nav>
     </header>
     <div class="banner"></div>
-    
-    <!-- Imagen principal -->
-    <div class="hero-image"></div>
     <section>
-    <!-- Contenedor principal -->
-    <div class="container">
-        <h2>Tour y Actividades</h2>
-        <p>Descubre las mejores zonas turísticas y todo lo que tienen para ofrecer.</p>
-
-        <!-- Tour por Zona Turística -->
-        <div class="tour-section">
-            <h3>Zona Turística: Valle Sagrado</h3>
-            <img src="ruta-imagen-valle.jpg" alt="Valle Sagrado">
-            <p>
-                Explora el increíble Valle Sagrado con actividades como senderismo, visitas arqueológicas y más.
-            </p>
-            <a href="#" class="button">Ver más</a>
+        <center><h2>Tour y Actividades</h2></center>
+        <div class="info-box">
+            <h4><center>Desde Cusco: Valle Sagrado y Minas de Sal de Maras con Almuerzo</h4></center>
+            <table>
+                <tr>
+                    <td>
+                        <img src="../images/ollantaytambo_his_historia_ollantay.jpg" width="300" height="200">
+                    </td>
+                    <td>
+                        <p>
+                            Cancelación gratuita <br>
+                            Cancela con hasta 24 horas de antelación y recibe un reembolso completo<br>
+                            Reservar ahora y pagar después<br>
+                            Planes flexibles: reserva tu plaza de inmediato, sin que se te haga el cargo hoy.<br>
+                            Duración 1 día
+                            Comprueba la disponibilidad para ver los horarios de inicio.<br>
+                            Guía<br>
+                            Inglés, Español<br>
+                            Servicio de recogida incluido<br>
+                            Si te alojas en un alojamiento privado, se te facilitará un punto de encuentro cercano. Espera hasta 10 minutos para que tu conductor llegue.<br>
+                            Grupo privado disponible<br>
+                            <Strong><center>PRECIO: 500 USD</center></Strong>
+                        </p>
+                    </td>
+                    <td>
+                        <img src="../images/ollantaytambo_his_historia_ollantay.jpg" width="300" height="200">
+                    </td>
+                </tr>  
+            </table>
+            <center>
+                <a href="zonturisOllan.html"><button>Ver actividades y paradas</button></a>
+            </center>
         </div>
-
-        <div class="divider"></div>
-
-        <div class="tour-section">
-            <h3>Zona Turística: Machu Picchu</h3>
-            <img src="ruta-imagen-machu.jpg" alt="Machu Picchu">
-            <p>
-                Una maravilla del mundo, Machu Picchu es un lugar imperdible lleno de historia y actividades únicas.
-            </p>
-            <a href="#" class="button">Ver más</a>
+        <div class="info-box">
+            <h4><center>Desde Cusco: Valle Sagrado y Minas de Sal de Maras con Almuerzo</h4></center>
+            <table>
+                <tr>
+                    <td>
+                        <img src="../images/ollantaytambo_his_historia_ollantay.jpg" width="300" height="200">
+                    </td>
+                    <td>
+                        <p>
+                            Cancelación gratuita <br>
+                            Cancela con hasta 24 horas de antelación y recibe un reembolso completo<br>
+                            Reservar ahora y pagar después<br>
+                            Planes flexibles: reserva tu plaza de inmediato, sin que se te haga el cargo hoy.<br>
+                            Duración 1 día
+                            Comprueba la disponibilidad para ver los horarios de inicio.<br>
+                            Guía<br>
+                            Inglés, Español<br>
+                            Servicio de recogida incluido<br>
+                            Si te alojas en un alojamiento privado, se te facilitará un punto de encuentro cercano. Espera hasta 10 minutos para que tu conductor llegue.<br>
+                            Grupo privado disponible<br>
+                            <Strong><center>PRECIO: 500 USD</center></Strong>
+                        </p>
+                    </td>
+                    <td>
+                        <img src="../images/ollantaytambo_his_historia_ollantay.jpg" width="300" height="200">
+                    </td>
+                </tr>  
+            </table>
+            <center>
+                <a href="zonturisOllan.html"><button>Ver actividades y paradas</button></a>
+            </center>
         </div>
-    </div>
     </section>
+    
+    <div class="hero-image"></div>
     <!-- Pie de página -->
     <footer>
         <h2>Cuéntanos tu experiencia</h2>
