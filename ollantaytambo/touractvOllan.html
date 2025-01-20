@@ -243,30 +243,34 @@
     <div class="hero-image"></div>
     <!-- Pie de página -->
     <footer>
-        <h2>Cuéntanos tu experiencia</h2>
-        <form>
-            <label for="name">Nombre:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="place">Lugar visitado:</label><br>
-            <select id="place" name="place">
-                <option value="ollantaytambo">Ollantaytambo</option>
-                <option value="pisaq">Pisaq</option>
-                <option value="machupichu">Machupichu</option>
-                <option value="laguna-huamantay">Laguna Huamantay</option>
-                <option value="montana-colores">Montaña de Colores</option>
-            </select><br><br>
-
-            <label for="date">Fecha de visita:</label><br>
-            <input type="date" id="date" name="date" required><br><br>
-
-            <label for="comments">Comentarios:</label><br>
-            <textarea id="comments" name="comments" rows="4" required></textarea><br><br>
-
-            <label for="rating">Puntuación:</label><br>
-            <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
-
-            <button type="submit">Enviar</button>
+        <h3>Cuéntanos tu experiencia</h3>
+        <form action="#" method="post">
+            <table>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre"></td>
+                </tr>
+                <tr>
+                    <td>Fecha de visita:</td>
+                    <td><input type="date" id="fecha" name="fecha" required></td>
+                </tr>
+                <tr>
+                    <td>Lugares visitados:</td>
+                    <td><textarea id="lugares" name="lugares" rows="3" required placeholder="Describa los lugares visitados"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Recomendaciones:</td>
+                    <td><textarea id="recomendaciones" name="recomendaciones" rows="3" required placeholder="Ingrese sus recomendaciones"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Puntuación (1-5):</td>
+                    <td><input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required></td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Enviar</button></td>
+                    <td><button type="reset">Limpiar</button></td>
+                </tr>
+            </table>
         </form>
     </footer>
 </body>
