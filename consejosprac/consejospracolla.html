@@ -18,6 +18,8 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 1rem 0;
         }
         header h1 {
             color: #3ba1c8;
@@ -27,10 +29,12 @@
         }
         .banner {
             width: 100%;
-            height: 50vh;
-            background-image: url('banner-image.jpg'); /* Reemplaza con la URL de tu imagen */
+            height: 100vh;
+            background-image: url(https://radioondaazul.com/wp-content/uploads/2021/06/Inti-Raymi.jpg);
             background-size: cover;
             background-position: center;
+            object-fit: cover;
+            background-repeat: no-repeat;
         }
         section {
             margin: 20px;
@@ -51,6 +55,27 @@
             border-bottom: 2px solid #ffc226;
             margin: 20px 0;
         }
+        .info-box {
+            background-color: #ffffff;
+            border: 1px solid #3ba1c8;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .info-box h4 {
+            background-color: #ffc226;
+            padding: 10px;
+            border-radius: 5px;
+            margin: -15px -15px 15px -15px;
+            color: #0f2719;
+        }
+        .legend {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ffc226;
+            border-radius: 8px;
+            background-color: #fdfaf4;
+        }
         button {
             background-color: #3ba1c8;
             color: #ffffff;
@@ -70,47 +95,11 @@
             padding: 15px;
             margin-top: 30px;
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            background: #333;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        nav ul li a:hover {
-            background: #555;
-        }
-        header {
-            background-color: #ffffff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 1rem 0;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Blog Viajero UTP: Descubre Cusco</a></h1>
-        <nav>
-            <ul>
-                <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
-                <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
-                <li><a href="../lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
-                <li><a href="../pisac/pisac.html">Pisac</a></li>
-                <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
-            </ul>
-        </nav>
+        <h1>Consejos Prácticos</h1>
     </header>
     <div class="banner"></div>
 
