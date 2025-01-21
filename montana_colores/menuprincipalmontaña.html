@@ -29,10 +29,19 @@
         }
         .banner {
             width: 100%;
-            height: 50vh;
-            background-image: url('banner-image.jpg'); /* Reemplaza con la URL de tu imagen */
+            height: 600px;
+            background-image: url('../images/montaña_tour.jpg'); /* Reemplaza con la URL de tu imagen */
             background-size: cover;
             background-position: center;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
         }
         section {
             margin: 20px;
@@ -66,11 +75,24 @@
             background-color: #2e8abf;
         }
         footer {
-            background-color: #223d4870;
-            color: #ffffff;
             text-align: center;
-            padding: 15px;
-            margin-top: 30px;
+            padding: 1rem 0;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        footer h2 {
+            color: #ffffff;
+            border-bottom: 2px solid #ffc226;
+            padding-bottom: 7px;
+        }
+        table {
+            width: 100%;
+            border-spacing: 20px;
+        }
+        th {
+            vertical-align: top;
+            text-align: left;
         }
         nav ul {
             list-style: none;
@@ -99,13 +121,13 @@
             <ul>
                 <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
                 <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
-                <li><a href="../lagunahuamantay/lagunapagina.html">Laguna Humantay</a></li>
+                <li><a href="../lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
                 <li><a href="../pisac/pisac.html">Pisac</a></li>
                 <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
             </ul>
         </nav>
     </header>
-    <div class="banner"> </div>
+    <div class="banner"><span>Montaña de Colores</span></div>
 
 <section>
     <h2><center>Montaña de Colores </center></h2>
@@ -132,47 +154,42 @@
     <!-- Formulario de comentarios -->
     <footer>
         <h2>Cuéntanos tu experiencia</h2>
-        <form>
-            <table>
-            <tr>
-                <td>Apellidos </td>
-                <td><input type="text" name="Apellidos" value="" placeholder="Ingrese Apellidos"></td>
-            </tr>
-            <tr>
-                <td>Nombres</td>
-                <td><input type="text" name="Nombres" value="" placeholder="Ingrese Nombres"></td>
-            </tr>
-            <tr>
-                <td>Lugar Visitado</td>
-                <td><select name="Donde estuve">
-                    <option>Ollantaytambo</option>
-                    <option>Machupichu</option>
-                    <option>Pisac</option>
-                    <option>Montaña 7 colores</option>
-                    <option>laguna-huamantay</option>
-                </td>
-            </tr>
-            <tr>
-                <td>Fecha de Visita</td>
-                <td><input type="date" name="fecnac"></td>
-                </tr>
-                <tr>
-                    <td>Puntuación (1-5):</td>
-                    <td><input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required></td>
-                </tr>
-                <tr>
-                    <td>Comentarios</td>
-                    <td>
-                        <textarea name="comentarios" value="" cols="50" rows="5">
-                        </textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="submit" value="Enviar"></td>
-                    <td><input type="reset" value="Limpiar"></td>
-                </tr>
-            </table>
-        </form>
+            <p>¿Has visitado pisac? Comparte con nosotros lo que más te gustó de este maravilloso lugar.</p>
+            <form action="#" method="post">
+                <table>
+                    <tr>
+                        <td>Nombre:</td>
+                        <td><input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre"></td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de visita:</td>
+                        <td><input type="date" id="fecha" name="fecha" required></td>
+                    </tr>
+                    <tr>
+                        <td>Lugar Visitado</td>
+                        <td><select name="Donde estuve">
+                            <option>Ollantaytambo</option>
+                            <option>Machupichu</option>
+                            <option>Pisac</option>
+                            <option>Montaña 7 colores</option>
+                            <option>Laguna Huamantay</option>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Recomendaciones:</td>
+                        <td><textarea id="recomendaciones" name="recomendaciones" rows="3" required placeholder="Ingrese sus recomendaciones"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Puntuación (1-5):</td>
+                        <td><input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required></td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit">Enviar</button></td>
+                        <td><button type="reset">Limpiar</button></td>
+                    </tr>
+                </table>
+            </form>
+        <p>&copy; 2025 Blog Viajero UTP. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

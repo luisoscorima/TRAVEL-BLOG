@@ -31,6 +31,13 @@
             background-image: url(https://www.caminosalkantay.com/blog/wp-content/uploads/2023/08/Llama-en-Machu-Picchu-1024x666.jpg); /* Reemplaza con la URL de tu imagen */
             background-size: cover;
             background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
         }
         section {
             margin: 20px;
@@ -85,28 +92,24 @@
             background-color: #2e8abf;
         }
         footer {
-            background-color: #3ba1c8;
-            color: #ffffff;
             text-align: center;
-            padding: 15px;
-            margin-top: 30px;
+            padding: 1rem 0;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        footer h2 {
+            color: #ffffff;
+            border-bottom: 2px solid #ffc226;
+            padding-bottom: 7px;
         }
         table {
             width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
+            border-spacing: 20px;
         }
         th {
-            background-color: #f4b41a;
-            color: #fff;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
+            vertical-align: top;
+            text-align: left;
         }
         .imagen-placeholder {
             background: #ddd;
@@ -160,13 +163,13 @@
             <ul>
                 <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
                 <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
-                <li><a href="../lagunahuamantay/lagunapagina.html">Laguna Humantay</a></li>
+                <li><a href="../lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
                 <li><a href="../pisac/pisac.html">Pisac</a></li>
                 <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
             </ul>
         </nav>
     </header>
-    <div class="banner"> 
+    <div class="banner"><span>Machu Picchu</span></div>
       
     </div >
 
@@ -175,8 +178,7 @@
         <h2>Historia de Machupichu</h2>
         <p>Según Pedro Sarmiento de Gamboa, un cronista español del siglo XVI, el emperador inca Pachacútec conquistó y destruyó Ollantaytambo para luego incorporarlo en su imperio.2​ Bajo el gobierno de los incas, el pueblo fue reconstruido con espléndidos edificios y el valle del río Urubamba fue irrigado y provisto de andenes; el pueblo sirvió de albergue para la nobleza inca mientras que los andenes eran trabajados por yanaconas, sirvientes del emperador. Después de la muerte de Pachacútec la región pasó a la custodia de su panaqa, su grupo familiar.3​
             Durante la conquista, Ollantaytambo funcionó como capital temporal para Manco Inca Yupanqui, líder de la resistencia inca contra los conquistadores españoles. Bajo su mandato, el pueblo y sus alrededores fueron severamente fortificados en dirección a la antigua capital inca de Cuzco, la cual había caído bajo dominio español.4​ En el llano de Mascabamba, cerca de Ollantaytambo, Manco Inca derrotó una expedición española bloqueando su avance desde un conjunto de andenes e inundando el llano. Sin embargo, a pesar de su victoria, Manco Inca no consideró viable el permanecer en Ollantaytambo así que se retiró al espeso bosque de la zona de Vilcabamba. En 1540, la población nativa de Ollantaytambo fue asignada en encomienda a Hernando Pizarro.</p>
-            <p><img src="hiustoria.jpg"> </p>
-            <div class="info-box">
+            <p><img src="../images/hiustoria.jpg"> </p>
             <h4>Festividades</h4>
             <table>
                 <thead>
@@ -243,30 +245,42 @@
     <!-- Formulario de comentarios -->
     <footer>
         <h2>Cuéntanos tu experiencia</h2>
-        <form>
-            <label for="name">Nombre:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="place">Lugar visitado:</label><br>
-            <select id="place" name="place">
-                <option value="ollantaytambo">Ollantaytambo</option>
-                <option value="pisaq">Pisaq</option>
-                <option value="machupichu">Machupichu</option>
-                <option value="laguna-huamantay">Laguna Huamantay</option>
-                <option value="montana-colores">Montaña de Colores</option>
-            </select><br><br>
-
-            <label for="date">Fecha de visita:</label><br>
-            <input type="date" id="date" name="date" required><br><br>
-
-            <label for="comments">Comentarios:</label><br>
-            <textarea id="comments" name="comments" rows="4" required></textarea><br><br>
-
-            <label for="rating">Puntuación:</label><br>
-            <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
-
-            <button type="submit">Enviar</button>
-        </form>
+            <p>¿Has visitado pisac? Comparte con nosotros lo que más te gustó de este maravilloso lugar.</p>
+            <form action="#" method="post">
+                <table>
+                    <tr>
+                        <td>Nombre:</td>
+                        <td><input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre"></td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de visita:</td>
+                        <td><input type="date" id="fecha" name="fecha" required></td>
+                    </tr>
+                    <tr>
+                        <td>Lugar Visitado</td>
+                        <td><select name="Donde estuve">
+                            <option>Ollantaytambo</option>
+                            <option>Machupichu</option>
+                            <option>Pisac</option>
+                            <option>Montaña 7 colores</option>
+                            <option>Laguna Huamantay</option>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Recomendaciones:</td>
+                        <td><textarea id="recomendaciones" name="recomendaciones" rows="3" required placeholder="Ingrese sus recomendaciones"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Puntuación (1-5):</td>
+                        <td><input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required></td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit">Enviar</button></td>
+                        <td><button type="reset">Limpiar</button></td>
+                    </tr>
+                </table>
+            </form>
+        <p>&copy; 2025 Blog Viajero UTP. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
