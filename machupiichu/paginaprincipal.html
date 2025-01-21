@@ -85,28 +85,24 @@
             background-color: #2e8abf;
         }
         footer {
-            background-color: #3ba1c8;
-            color: #ffffff;
             text-align: center;
-            padding: 15px;
-            margin-top: 30px;
+            padding: 1rem 0;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        footer h2 {
+            color: #ffffff;
+            border-bottom: 2px solid #ffc226;
+            padding-bottom: 7px;
         }
         table {
             width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
+            border-spacing: 20px;
         }
         th {
-            background-color: #f4b41a;
-            color: #fff;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
+            vertical-align: top;
+            text-align: left;
         }
         .imagen-placeholder {
             background: #ddd;
@@ -160,7 +156,7 @@
             <ul>
                 <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
                 <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
-                <li><a href="../lagunahuamantay/lagunapagina.html">Laguna Humantay</a></li>
+                <li><a href="../lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
                 <li><a href="../pisac/pisac.html">Pisac</a></li>
                 <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
             </ul>
@@ -243,30 +239,42 @@
     <!-- Formulario de comentarios -->
     <footer>
         <h2>Cuéntanos tu experiencia</h2>
-        <form>
-            <label for="name">Nombre:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="place">Lugar visitado:</label><br>
-            <select id="place" name="place">
-                <option value="ollantaytambo">Ollantaytambo</option>
-                <option value="pisaq">Pisaq</option>
-                <option value="machupichu">Machupichu</option>
-                <option value="laguna-huamantay">Laguna Huamantay</option>
-                <option value="montana-colores">Montaña de Colores</option>
-            </select><br><br>
-
-            <label for="date">Fecha de visita:</label><br>
-            <input type="date" id="date" name="date" required><br><br>
-
-            <label for="comments">Comentarios:</label><br>
-            <textarea id="comments" name="comments" rows="4" required></textarea><br><br>
-
-            <label for="rating">Puntuación:</label><br>
-            <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
-
-            <button type="submit">Enviar</button>
-        </form>
+            <p>¿Has visitado pisac? Comparte con nosotros lo que más te gustó de este maravilloso lugar.</p>
+            <form action="#" method="post">
+                <table>
+                    <tr>
+                        <td>Nombre:</td>
+                        <td><input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre"></td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de visita:</td>
+                        <td><input type="date" id="fecha" name="fecha" required></td>
+                    </tr>
+                    <tr>
+                        <td>Lugar Visitado</td>
+                        <td><select name="Donde estuve">
+                            <option>Ollantaytambo</option>
+                            <option>Machupichu</option>
+                            <option>Pisac</option>
+                            <option>Montaña 7 colores</option>
+                            <option>Laguna Huamantay</option>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Recomendaciones:</td>
+                        <td><textarea id="recomendaciones" name="recomendaciones" rows="3" required placeholder="Ingrese sus recomendaciones"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Puntuación (1-5):</td>
+                        <td><input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required></td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit">Enviar</button></td>
+                        <td><button type="reset">Limpiar</button></td>
+                    </tr>
+                </table>
+            </form>
+        <p>&copy; 2025 Blog Viajero UTP. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

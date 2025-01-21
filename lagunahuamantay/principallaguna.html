@@ -68,11 +68,24 @@
             background-color: #2e8abf;
         }
         footer {
-            background-color: #223d4870;
-            color: #ffffff;
             text-align: center;
-            padding: 15px;
-            margin-top: 30px;
+            padding: 1rem 0;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        footer h2 {
+            color: #ffffff;
+            border-bottom: 2px solid #ffc226;
+            padding-bottom: 7px;
+        }
+        table {
+            width: 100%;
+            border-spacing: 20px;
+        }
+        th {
+            vertical-align: top;
+            text-align: left;
         }
         nav ul {
             list-style: none;
@@ -121,14 +134,14 @@
 </head>
 <body>
     <header>
-        <h1>Blog de Viaje a Cusco</h1>
+        <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Blog Viajero UTP: Descubre Cusco</a></h1>
         <nav>
             <ul>
-                <li><a href="ollantaytambo.html">Ollantaytambo</a></li>
-                <li><a href="montana_colores.html">Montaña de Colores</a></li>
-                <li><a href="laguna_huamantay.html">Laguna Humantay</a></li>
-                <li><a href="pisaq.html">Pisaq</a></li>
-                <li><a href="machu_picchu.html">Machu Picchu</a></li>
+                <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
+                <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
+                <li><a href="../lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
+                <li><a href="../pisac/pisac.html">Pisac</a></li>
+                <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
             </ul>
         </nav>
     </header>
@@ -223,35 +236,43 @@
 
     <!-- Formulario de comentarios -->
     <footer>
-        <h3>Cuéntanos tu experiencia</h3>
-        <form action="#" method="post">
-            <table>
-                <tr>
-                    <td>Nombre:</td>
-                    <td><input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre"></td>
-                </tr>
-                <tr>
-                    <td>Fecha de visita:</td>
-                    <td><input type="date" id="fecha" name="fecha" required></td>
-                </tr>
-                <tr>
-                    <td>Lugares visitados:</td>
-                    <td><textarea id="lugares" name="lugares" rows="3" required placeholder="Describa los lugares visitados"></textarea></td>
-                </tr>
-                <tr>
-                    <td>Recomendaciones:</td>
-                    <td><textarea id="recomendaciones" name="recomendaciones" rows="3" required placeholder="Ingrese sus recomendaciones"></textarea></td>
-                </tr>
-                <tr>
-                    <td>Puntuación (1-5):</td>
-                    <td><input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required></td>
-                </tr>
-                <tr>
-                    <td><button type="submit">Enviar</button></td>
-                    <td><button type="reset">Limpiar</button></td>
-                </tr>
-            </table>
-        </form>
+        <h2>Cuéntanos tu experiencia</h2>
+            <p>¿Has visitado pisac? Comparte con nosotros lo que más te gustó de este maravilloso lugar.</p>
+            <form action="#" method="post">
+                <table>
+                    <tr>
+                        <td>Nombre:</td>
+                        <td><input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre"></td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de visita:</td>
+                        <td><input type="date" id="fecha" name="fecha" required></td>
+                    </tr>
+                    <tr>
+                        <td>Lugar Visitado</td>
+                        <td><select name="Donde estuve">
+                            <option>Ollantaytambo</option>
+                            <option>Machupichu</option>
+                            <option>Pisac</option>
+                            <option>Montaña 7 colores</option>
+                            <option>Laguna Huamantay</option>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Recomendaciones:</td>
+                        <td><textarea id="recomendaciones" name="recomendaciones" rows="3" required placeholder="Ingrese sus recomendaciones"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Puntuación (1-5):</td>
+                        <td><input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required></td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit">Enviar</button></td>
+                        <td><button type="reset">Limpiar</button></td>
+                    </tr>
+                </table>
+            </form>
+        <p>&copy; 2025 Blog Viajero UTP. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
