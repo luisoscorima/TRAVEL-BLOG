@@ -3,21 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Viajero UTP: Cusco</title>
+    <title>Blog Viajero UTP :: Cusco</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
+            background-color: #faf5ef;
+            color: #595552;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
         }
         header {
-            background: #4CAF50;
-            color: white;
-            padding: 1rem 0;
+            background-color: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
+            padding: 1rem 0;
+        }
+        header h1 {
+            color: #3ba1c8;
+            text-align: center;
+            padding: 15px;
+            margin: 0;
+        }
+        .banner {
+            width: 100%;
+            height: 600px;
+            background-image: url('../images/pisac_portada.jpg'); /* Reemplaza con la URL de tu imagen */
+            background-size: cover;
+            background-position: center;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #0e2d3a;
+            border-bottom: 2px solid #ffc226;
+            padding-bottom: 7px;
+        }
+        h3 {
+            color: #0f2719;
+        }
+        .divider {
+            border-bottom: 2px solid #ffc226;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #3ba1c8;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2e8abf;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        footer h2 {
+            color: #ffffff;
+            border-bottom: 2px solid #ffc226;
+            padding-bottom: 7px;
         }
         nav ul {
             list-style: none;
@@ -37,44 +104,55 @@
         nav ul li a:hover {
             background: #555;
         }
-        main {
-            padding: 20px;
+        strong {
+            color: #3ba1c8;
         }
-        section {
-            margin-bottom: 20px;
-            padding: 20px;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        i {
+            font-style: italic;
         }
-        h2 {
-            color: #4CAF50;
+        table {
+            width: 100%;
+            border-spacing: 20px;
         }
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background: #333;
-            color: white;
-            margin-top: 20px;
+        th {
+            vertical-align: top;
+            text-align: left;
         }
         img {
-            max-width: 50%;
+            border-radius: 8px;
+            max-width: 100%;
             height: auto;
-            display: block;
-            margin: 10px 0;
         }
+        p {
+            line-height: 1.2;
+            text-align: justify;
+            margin: 10px 0;
+            font-weight: normal;
+        }
+        footer p{
+            text-align: center;
+        }
+        ul {
+            list-style-position: inside;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
     </style>
 </head>
 <body>
     <header>
-        <h1>Blog Viajero UTP: Descubre Cusco</h1>
+        <h1><a href="./index.html" style="text-decoration: none; color: inherit;">Blog Viajero UTP: Descubre Cusco</a></h1>
         <nav>
             <ul>
-                <li><a href="ollantaytambo.html">Ollantaytambo</a></li>
-                <li><a href="montana_colores.html">Montaña de Colores</a></li>
-                <li><a href="laguna_huamantay.html">Laguna Humantay</a></li>
-                <li><a href="pisaq.html">Pisaq</a></li>
-                <li><a href="machu_picchu.html">Machu Picchu</a></li>
+                <li><a href="./ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
+                <li><a href="./montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
+                <li><a href="./lagunahuamantay/lagunapagina.html">Laguna Humantay</a></li>
+                <li><a href="./pisac/pisac.html">Pisac</a></li>
+                <li><a href="./machupiichu/paginaprincipal.html">Machu Picchu</a></li>
             </ul>
         </nav>
     </header>
@@ -82,6 +160,56 @@
         <section>
             <h2>Bienvenidos a Cusco</h2>
             <p>Explora los lugares más impresionantes de Cusco, cada uno con su propia historia, actividades únicas, gastronomía típica y consejos prácticos para aprovechar al máximo tu visita.</p>
+        </section>
+        <section id="Ollantaytambo">
+            <center>
+                <h2>Ollantaytambo</h2>
+                <img src="./images/ollantaytambo_principal.jpg" alt="Vista histórica de Pisac" style="width: 800px; height: auto; align-content: center ;">
+                <p>Descubre Ollantaytambo aquí.</p>
+                <a href="./ollantaytambo/paginaprincipal.html">
+                    <button>Ver más</button>
+                </a>
+            </center>
+        </section>
+        <section id="montana_colores">
+            <center>
+                <h2>Montaña de Colores</h2>
+                <img src="./images/montaña_tour.jpg" alt="Vista histórica de Pisac" style="width: 800px; height: auto; align-content: center ;">
+                <p>Descubre Montaña de Colores aquí.</p>
+                <a href="./montana_colores/menuprincipalmontaña.html">
+                    <button>Ver más</button>
+                </a>
+            </center>
+        </section>
+        <section id="laguna_huamantay">
+            <center>
+                <h2>Laguna Humantay</h2>
+                <img src="./images/vista grande.jpeg" alt="Vista histórica de Pisac" style="width: 800px; height: auto; align-content: center ;">
+                <p>Descubre Laguna Humantay aquí.</p>
+                <a href="./lagunahuamantay/principallaguna.html">
+                    <button>Ver más</button>
+                </a>
+            </center>
+        </section>
+        <section id="pisac">
+            <center>
+                <h2>Pisac</h2>
+                <img src="./images/pisac_portada.jpg" alt="Vista histórica de Pisac" style="width: 800px; height: auto; align-content: center ;">
+                <p>Descubre Pisac aquí.</p>
+                <a href="./pisac/pisac.html">
+                    <button>Ver más</button>
+                </a>
+            </center>
+        </section>
+        <section id="machu_picchu">
+            <center>
+                <h2>Machu Picchu</h2>
+                <img src="./images/machuu.jpg" alt="Vista histórica de Pisac" style="width: 800px; height: auto; align-content: center ;">
+                <p>Descubre Machu Picchu aquí.</p>
+                <a href="./machupiichu/paginaprincipal.html">
+                    <button>Ver más</button>
+                </a>
+            </center>
         </section>
     </main>
     <footer>

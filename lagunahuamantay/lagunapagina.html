@@ -3,33 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laguna Huamantay - Información y Experiencias</title>
+    <title>iniciolaguna</title>
     <style>
-        h2{
-                font-size: 20px;
-            }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #faf5ef;
+            color: #595552;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 1rem 0;
+        }
+        header h1 {
+            color: #3ba1c8;
+            text-align: center;
+            padding: 15px;
+            margin: 0;
+        }
+        .banner {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://laguna1.jpg);
+            background-size: cover;
+            background-position: center;
+            object-fit: cover;
+            background-repeat: no-repeat;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #3ba1c8;
+            border-bottom: 2px solid #ffc226;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #0f2719;
+        }
+        .divider {
+            border-bottom: 2px solid #ffc226;
+            margin: 20px 0;
+        }
+        .info-box {
+            background-color: #ffffff;
+            border: 1px solid #3ba1c8;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .info-box h4 {
+            background-color: #ffc226;
+            padding: 10px;
+            border-radius: 5px;
+            margin: -15px -15px 15px -15px;
+            color: #0f2719;
+        }
+        .legend {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ffc226;
+            border-radius: 8px;
+            background-color: #fdfaf4;
+        }
+        button {
+            background-color: #3ba1c8;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2e8abf;
+        }
+        footer {
+            background-color: #3ba1c8;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4b41a;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .imagen-placeholder {
+            background: #ddd;
+            width: 100px;
+            height: 60px;
+            display: block;
+            text-align: center;
+            line-height: 60px;
+            color: #333;
+            font-size: 12px;
+        }
+        td{
+            vertical-align: top;
+            text-align: left;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            background: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            background: #555;
+        }
     </style>
 </head>
 <body>
-    <h1><center>Laguna Huamantay</center></h1>
-    <hr>
-        <p>La <i>Laguna Humantay</i> es una joya natural ubicada en la región de Cusco, Perú, específicamente en la provincia de Anta, dentro de la cordillera de Vilcabamba.
-            Famosa por sus impresionantes aguas turquesas, que contrastan maravillosamente con el paisaje montañoso que la rodea, esta laguna se encuentra a unos 4,200 metros sobre el nivel del mar
-            y es alimentada por el deshielo del imponente nevado Humantay.
+    <header>
+        <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Blog Viajero UTP: Descubre Cusco</a></h1>
+        <nav>
+            <ul>
+                <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
+                <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
+                <li><a href="../lagunahuamantay/lagunapagina.html">Laguna Humantay</a></li>
+                <li><a href="../pisac/pisac.html">Pisac</a></li>
+                <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="banner"></div>
 
-            Además de ser un espectáculo visual único, la Laguna Humantay tiene un profundo significado espiritual para las comunidades andinas, ya que es considerada una ofrenda sagrada del Apu Salkantay, 
-            una de las montañas más veneradas en la cosmovisión andina. Su historia y conexión con las tradiciones locales la convierten en un lugar de reflexión, ceremonias y agradecimiento a la Pachamama, la madre tierra.
-            
-            Este destino es ideal para quienes buscan conectar con la naturaleza y descubrir la riqueza cultural de los Andes peruanos. En esta página encontrarás todo lo necesario para planificar tu visita: desde su historia y tradiciones, 
-            hasta guías para el trekking, actividades recomendadas, festividades locales y consejos prácticos para disfrutar al máximo de esta experiencia. 
-            La Laguna Humantay no es solo un atractivo turístico, sino un viaje hacia el corazón de los Andes, donde la naturaleza y la espiritualidad se encuentran en perfecta armonía. ¡Atrévete a descubrirla!</p>
-            <center><img src="imagenes/laguna1.jpeg" width="500" height="700" ></center>
-    <br>
-    <hr>
-    <center>Historia</center> 
-    <hr>
-    <p>
-    Durante la época de los Incas, esta laguna era considerada sagrada. Según la mitología inca, el nevado Humantay era un dios poderoso, y la laguna era vista como su esposa. 
+    <!-- Sección de Historia -->
+     <section>
+        <center><h2>Historia de la Laguna Huamantay</h2></center>
+        <table>
+            <tr>
+                <td>
+                    <p>
+                        Durante la época de los Incas, esta laguna era considerada sagrada. Según la mitología inca, el nevado Humantay era un dios poderoso, y la laguna era vista como su esposa. 
     Los Incas creían que la laguna tenía propiedades curativas y purificadoras, y la utilizaban para ceremonias religiosas y rituales sagrados.
     Al mismo tiempo, habia una cercana relacion con los <strong>apus</strong> . El nevado Salkantay, que alimenta la laguna, es considerado uno de los Apus más poderosos y venerados.
     Se cree que la laguna Huamantay es una ofrenda natural del Apu Salkantay, y su existencia representa la conexión entre el cielo, la tierra y el agua.
@@ -39,12 +178,19 @@
     La laguna Huamantay, situada en la región de Cusco, es un lugar de gran valor espiritual y cultural para las comunidades andinas. Aunque la laguna no es directamente 
         el centro de grandes festividades masivas como ocurre en otros puntos turísticos, sí está vinculada a tradiciones y ceremonias relacionadas con la espiritualidad andina, 
         muchas de las cuales coinciden con eventos festivos de la región de Cusco.
-        A continuación, te proporciono una tabla con fechas relevantes para eventos culturales, ceremoniales o festivos que se relacionan con la laguna o sus alrededores:<br>
-        <center><img src="imagenes/vista grande.jpeg" width="800" height="500" ></center>
+                    </p>
+                </td>
+                <td>
+                    <img src="../images/lagunalaguna.jpg" width="200" height="200">
+                </td>
+            </tr>
+        </table>
+     </section>
+     <section>
         <center>
             <table border = "1">
             <thead>
-                <tr bgcolor="pink">
+                <tr bgcolor="blue">
                     <th>Fechas</th>
                     <th>Evento/Festividad</th>
                     <th>Descripcion</th>
@@ -80,127 +226,42 @@
             </table>
             <center><img src="imagenes/piedras1.png" width="600" height="600" ></center>
         </center>
-    
-    
-    </p>
+     </section>
 
-    
-    <hr>
-    <center>Tour y actividades</center>
-    <hr>
-    La laguna se encuentra a unos 4,200 metros sobre el nivel del mar y es alimentada por el deshielo del glaciar Humantay. Para llegar a ella,
-    los visitantes suelen viajar en transporte terrestre hasta Soraypampa, el punto de partida esta situado a 3,900 metros de altitud y desde alli se preparan para
-    realizar una caminata de aproximadamente 1.5 a 2 horas.
-    Aunque el trayecto puede ser desafiante debido a la altitud y la inclinación del terreno, la vista al llegar a la laguna compensa con creces el esfuerzo.
-    Es un lugar ideal para los amantes de la naturaleza, el senderismo y la fotografía, y es cada vez más popular entre los turistas que visitan Perú. 
-    <ul type="disc">
-        <center><img src="imagenes/Camino.jpeg" width="800" height="500" ></center>
-        <br>
-        <li><u>Trekking a la Laguna Huamantay:</u></li>
-        <p>La caminata desde Soraypampa es la actividad principal. Durante el trayecto, se pueden disfrutar paisajes espectaculares, con vistas a los nevados Salkantay y Humantay.
-            La ruta es exigente, pero factible para personas con condición física moderada. Hay pendientes pronunciadas y tramos de terreno irregular.
-            Para quienes prefieren evitar la caminata completa, en Soraypampa se pueden alquilar caballos para subir parte del trayecto.</p>
-        <li><u>Paisaje de la laguna:</u></li>
-        <p>Una vez en la laguna, los visitantes quedan maravillados con el intenso color turquesa de sus aguas, alimentadas por el deshielo del nevado Salkantay.
-            Es un lugar ideal para descansar, tomar fotografías y apreciar la tranquilidad del entorno.</p>
-        <li><u>Conexion con la cultura antigua:</u></li>
-        <p>En muchos tours, los guías explican la importancia espiritual de la laguna y el Apu Salkantay para las comunidades locales.
-            Algunos grupos ofrecen la opción de participar en rituales andinos, como una ceremonia de agradecimiento a la Pachamama.</p>
-        <li><u>Costo del tour:</u></li>
-        <p>El costo promedio de un tour grupal desde Cusco varía entre 50 y 100 soles por persona (dependiendo del operador e inclusiones). Los servicios suelen incluir:
-            <ul type="circle">  
-            <li>Transporte ida y vuelta.</li>
-            <li>Desayuno y almuerzo.</li>
-            <li>Guía turístico bilingüe.</li>
-            <li>Entrada a Soraypampa.</li>
-            </ul>
-        </p>
-        <center><img src="imagenes/camino empinado.jpeg" width="300" height="500" ></center>
-    </ul>
-    <hr>
-    <center>Comida</center>
-    <hr>
-    <p>En las cercanías de la laguna Huamantay, especialmente en las paradas previas al inicio del trekking, como los pueblos de Mollepata y Soraypampa, se puede disfrutar de la comida típica andina, 
-        que refleja la riqueza cultural y gastronómica de la región de Cusco. Aunque la laguna en sí no tiene restaurantes o puntos de venta (por ser un lugar remoto y natural), los tours suelen incluir 
-        alimentos preparados en los pueblos cercanos. Aquí te detallo algunas opciones de comida típica que puedes encontrar:</p>
-        <p><u>Platos tradicionales:</u><br>
-            <ol>
-            <li>Chiri uchu (comida fría):</li>
-            Tradicional de Cusco, aunque no exclusivo de la zona, es una mezcla de carnes (como cuy y charqui), maíz, queso, tortilla de maíz y rocoto. Es una opción especial en festividades, pero a veces se encuentra en la región.
-            <li>Trucha frita:</li>
-            La trucha, criada en lagunas y ríos de la región andina, es muy popular. Se sirve frita, acompañada de papas, arroz y ensalada. Es un plato común en los almuerzos tras el trekking.
-            <li>Pachamanca:</li>
-            Este plato es una preparación ancestral que incluye carnes (pollo, cerdo o cordero), papas, habas y hierbas andinas como huacatay, cocinados en un horno subterráneo con piedras calientes. Es menos común en los tours regulares, pero puede encontrarse en eventos o comidas comunitarias.
-            <li>Cuy al horno:</li>
-            El cuy es un plato típico de la región andina y un manjar para celebraciones. Se sirve acompañado de papas doradas, ensalada y ají. Aunque no es típico para un trekking, algunos restaurantes en Mollepata lo ofrecen.
-            </ol>
-        </p>
-        <p><u>Bebidas tradicionales:</u><br>
-            <ol>
-            <li>Mate de coca:</li>
-            Infusión de hojas de coca, muy consumida para prevenir o aliviar el mal de altura (soroche). Es común que se sirva antes o después de la caminata.
-            <li>Chicha de jora:</li>
-            Bebida fermentada a base de maíz, con un leve contenido alcohólico. Es muy tradicional en las zonas rurales de Cusco.
-            <li>Chicha morada:</li>
-            Bebida refrescante y dulce elaborada con maíz morado, frutas y especias como canela y clavo. Es muy popular como acompañamiento en las comidas.
-            <li>Agua de muña:</li>
-            Una infusión a base de muña, una planta andina con propiedades digestivas y relajantes.
-            </ol>
-        </p>
-        <center><img src="imagenes/Coca.jpeg" width="300" height="500" ></center>
-    <hr>
-    <center>Consejos Practicos</center>
-    <hr>
-        <p>Si prefieres una experiencia más privada o personalizada, es posible contratar tours privados o incluso organizar el viaje de manera independiente.
-            Respetar las normas del lugar, como no arrojar basura y no nadar en la laguna, es sumamente importante ya que es un sitio sagrado para las comunidades locales.<br>
-            Como recomendaciones especificas podemos decir que:
-            <ul type="circle">            
-                <li>Llevar casacas corta viento y resistente al agua, ya que las temperaturas son bajas y pueden variar rápidamente.</li>
-                <li>Usar botas de trekking para evitar accidentes en terrenos irregulares.</li>
-                <li>Llevar protector solar, gorra y gafas de sol, ya que la radiación solar es intensa en esta altitud. No dudes en quitarte la gorra si se te hace demasiado, la caminata es ardua, asi que tener tension no sera para nada beneficioso</li>
-                <li>Empacar agua y snacks para la caminata, aunque muchos tours incluyen comidas.</li>
-                <li>Considerar llevar algunos medicamentos para <strong>el mal de altura</strong> o soroche, como pastillas o te de coca</li>    
-                <li>En la parte mas empinada de la subida, las personas localen brindan el servicio de llevar a los turistas a caballo, es buena opcion para nuevos aventureros.</li>
-            </ul>
-        </p> 
-        <center><img src="imagenes/caballos1.png" width="700" height="600" ></center>    
-    <hr>
-  
-    <h2> <strong> <center>¡Cuentanos tu experiencia!</center> </strong> </h2>
-    
-    <hr>
-    <h3>Registra tus datos aqui:</h3>
-    <br>
-    <form action="laguna_huamantay.html" method="post">
-        <table>
-        <tr>
-            <td>Apellidos</td>
-            <td><input type="text" name="txtApellidos" value="" placeholder="Ingrese apellidos"></td>
-        </tr>
-        <tr>
-            <td>Nombres</td>
-            <td><input type="text" name="txtNombres" value="" placeholder="Ingrese Nombres"></td>
-        </tr>
-        <tr>
-            <td>Fecha de visita</td>
-            <td><input type="date" name="fecha_visita"></td>
-        </tr>
-        <tr>
-            <td>Foto</td>
-            <td><input type="file" name="foto"></td>
-        </tr>
-        <tr>
-            <td>Comentarios</td>
-            <td>
-            <textarea name="Comentarios" placeholder="">
-            </textarea>
-            </td>
-        </tr>
-        <tr>
-            <td><input type="submit" value="enviar"></td>
-            <td><input type="reset" value="limpiar"></td>
-        </tr>
-        </table>
-    </form>
+        
+     
+
+    <!-- Formulario de comentarios -->
+    <footer>
+        <h3>Cuéntanos tu experiencia</h3>
+        <form action="#" method="post">
+            <table>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre"></td>
+                </tr>
+                <tr>
+                    <td>Fecha de visita:</td>
+                    <td><input type="date" id="fecha" name="fecha" required></td>
+                </tr>
+                <tr>
+                    <td>Lugares visitados:</td>
+                    <td><textarea id="lugares" name="lugares" rows="3" required placeholder="Describa los lugares visitados"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Recomendaciones:</td>
+                    <td><textarea id="recomendaciones" name="recomendaciones" rows="3" required placeholder="Ingrese sus recomendaciones"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Puntuación (1-5):</td>
+                    <td><input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required></td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Enviar</button></td>
+                    <td><button type="reset">Limpiar</button></td>
+                </tr>
+            </table>
+        </form>
+    </footer>
 </body>
 </html>
