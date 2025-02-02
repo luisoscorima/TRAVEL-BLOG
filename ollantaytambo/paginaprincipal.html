@@ -1,278 +1,136 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Viaje a Cusco</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #faf5ef;
-            color: #595552;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ffffff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 1rem 0;
-        }
-        header h1 {
-            color: #3ba1c8;
-            text-align: center;
-            padding: 15px;
-            margin: 0;
-        }
-        .banner {
-            width: 100%;
-            height: 100vh;
-            background-image: url(https://lp-cms-production.imgix.net/2019-06/GettyImages-513889873_high.jpg?q=40&w=2000&auto=format); /* Reemplaza con la URL de tu imagen */
-            background-size: cover;
-            background-position: center;
-            object-fit: cover;
-            background-repeat: no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #ffffff;
-            font-size: 40px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        section {
-            margin: 20px;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #0e2d3a;
-            border-bottom: 2px solid #ffc226;
-            padding-bottom: 7px;
-        }
-        h3 {
-            color: #0f2719;
-        }
-        .divider {
-            border-bottom: 2px solid #ffc226;
-            margin: 20px 0;
-        }
-        button {
-            background-color: #3ba1c8;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #2e8abf;
-        }
-        footer {
-            background-color: #223d4870;
-            color: #ffffff;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            background: #333;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        nav ul li a:hover {
-            background: #555;
-        }
-        strong {
-            color: #3ba1c8;
-        }
-        i {
-            font-style: italic;
-        }
-        table {
-            width: 100%;
-            border-spacing: 20px;
-        }
-        th {
-            vertical-align: top;
-            text-align: left;
-        }
-        img {
-            border-radius: 8px;
-            max-width: 100%;
-            height: auto;
-        }
-        p {
-            line-height: 1.2;
-            text-align: justify;
-            margin: 10px 0;
-            font-weight: normal;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de Viaje a Cusco</title>
+  <!-- Enlazamos el CSS externo -->
+  <link rel="stylesheet" href="../css/estilo2.css" type="text/css">
+
 </head>
 <body>
-    <header>
-        <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Blog Viajero UTP: Descubre Cusco</a></h1>
-        <nav>
-            <ul>
-                <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
-                <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
-                <li><a href="../lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
-                <li><a href="../pisac/pisac.html">Pisac</a></li>
-                <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
+  <!-- Encabezado fijo con logo e ítems de menú -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <!-- Reemplaza "logo.png" por la ruta de tu imagen -->
+        <a href="../index.html"><img src="logo.png" alt="Blog Viajero UTP"></a>
+      </div>
+      <nav>
+        <ul>
+          <li class="dropdown">
+            <a href="#">Lugares</a>
+            <ul class="dropdown-content">
+              <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
+              <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
+              <li><a href="../lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
+              <li><a href="../pisac/pisac.html">Pisac</a></li>
+              <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
             </ul>
-        </nav>
-    </header>
-    <div class="banner"><span>Ollantaytambo</span></div>
+          </li>
+          <li><a href="tour.html">Tour y Actividades</a></li>
+          <li><a href="consejos.html">Consejos prácticos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<section>
-    <h2><center>OLLANTAYTAMBO</center></h2>
-    <section>
-        <table>
-            <tr>
-                <th>
-                    <h3>Historia</h3>
-                    <p>
-                        En esta sección, te invitamos a explorar las raíces de uno de los sitios más emblemáticos del Valle Sagrado de los Incas. Aquí encontrarás:
-                    </p>
-                    <p>
-                        <strong>La Historia:</strong> Desde su origen como un importante centro militar, religioso y agrícola del Imperio Inca hasta su papel en la resistencia incaica durante la llegada de los españoles.
-                    </p>
-                    <p>
-                        <strong>Fechas Festivas Importantes:</strong> Conoce las celebraciones tradicionales que aún mantienen viva la cultura y las costumbres de Ollantaytambo, como la Fiesta del Señor de Choquekillca.
-                    </p>
-                    <p>
-                        <strong>Leyendas Comunes:</strong> Descubre las historias y mitos que rodean este mágico lugar, desde relatos sobre el amor <i><u>prohibido de Ollantay y Cusi Coyllur</u> </i> hasta otras narraciones llenas de misterio y conexión espiritual.
-                    </p>
-                </th>
-                <th>
-                    <img src="../images/ollantaytambo_his_historia.jpg" width="800" height="800">
-                </th>
-            </tr>
-        </table>
-        <div class="divider"></div>
-        <p>
-            <center><i>Prepárate para sumergirte en la riqueza histórica y cultural de Ollantaytambo, un lugar que guarda secretos de un pasado glorioso y sigue cautivando a sus visitantes.</i></center>
-        </p>
-        <center>
-            <a href="historiaOllan.html"><button>Ver más</button></a>
-        </center>
-    </section>
-    <section>
-        <table>
-            <tr>
-                <th>
-                    <h3>Tour y Actividades</h3>
-                    <p>
-                        En esta sección, te ofrecemos una guía completa para aprovechar al máximo tu visita a este increíble destino. Aquí encontrarás:
-                    </p>
-                    <p>
-                        <strong>Zonas Turísticas:</strong> Descubre los principales atractivos de Ollantaytambo, desde su imponente complejo arqueológico hasta sus pintorescas calles adoquinadas.
-                    </p>
-                    <p>
-                        <strong>Tours y Actividades:</strong> Te presentamos los mejores tours disponibles y las actividades que puedes realizar en cada parada, como caminatas, paseos en bicicleta y visitas guiadas que te conectarán con la cultura y la historia local.
-                    </p>
-                    <p>
-                        <strong>Recomendaciones:</strong> Una selección de restaurantes donde podrás disfrutar de la deliciosa gastronomía peruana y hoteles que harán de tu estancia una experiencia inolvidable.
-                    </p>
-                </th>
-                <th>
-                    <img src="../images/ollantaytambo_his_tour.jpg"width="800" height="800" >
-                </th>
-            </tr>
-        </table>
-        <div class="divider"></div>
-        <p>
-            <center><i>¡Prepárate para una aventura llena de historia, naturaleza y tradición en el corazón del Valle Sagrado!</i></center>
-        </p>
-        <center>
-            <a href="zonturisOllan.html"><button>Ver más</button></a>
-        </center>
-    </section>
-    <section>
-        <table>
-            <tr>
-                <th>
-                    <h3>Consejos Practicos</h3>
-                    <p>
-                        En esta sección, te ayudamos a planificar tu viaje de manera inteligente y preparada. Aquí encontrarás:
-                    </p>
-                    <p>
-                        <strong>Guía por Temporadas:</strong> Información sobre qué esperar en cada época del año, ya sea la temporada seca o la lluviosa.
-                    </p>
-                    <p>
-                        <strong>Accesorios y Ropa Recomendados: </strong> Consejos sobre qué llevar contigo, desde ropa cómoda y resistente hasta accesorios esenciales para tu comodidad y seguridad.
-                    </p>
-                    <p>
-                        <strong>Clima Esperado: </strong> Un resumen del clima típico de la región para que sepas cómo prepararte según la temporada.
-                    </p>
-                    <p>
-                        <strong>Advertencias y Precauciones:: </strong> Consejos útiles sobre cómo cuidar tu salud, protegerte del sol, y estar listo para los desafíos que puedas encontrar durante tu visita.
-                    </p>
-                </th>
-                <th>
-                    <img src="../images/ollantaytambo_his_recom.jpg"width="800" height="800">
-                </th>
-            </tr>
-        </table>
-        <div class="divider"></div>
-        <p>
-            <center><i>¡Prepárate para disfrutar de Ollantaytambo al máximo con estos prácticos consejos que harán de tu experiencia algo inolvidable!</i></center>
-        </p>
-        <center>
-            <a href="../consejosprac/consejospracolla.html"><button>Ver más</button></a>
-        </center>
-    </section>
-    
-</section>
+  <!-- Banner tipo carrusel -->
+  <div class="carousel">
+    <div class="slide" style="background-image: url('https://lp-cms-production.imgix.net/2019-06/GettyImages-513889873_high.jpg?q=40&w=2000&auto=format');"></div>
+    <div class="slide" style="background-image: url('https://via.placeholder.com/2000x1000?text=Slide+2');"></div>
+    <div class="slide" style="background-image: url('https://via.placeholder.com/2000x1000?text=Slide+3');"></div>
+    <div class="carousel-caption"><span>Ollantaytambo</span></div>
+  </div>
 
-    <!-- Formulario de comentarios -->
-    <footer>
-        <h3>Cuéntanos tu experiencia</h3>
-        <form action="#" method="post">
-            <table>
-                <tr>
-                    <td>Nombre:</td>
-                    <td><input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre"></td>
-                </tr>
-                <tr>
-                    <td>Fecha de visita:</td>
-                    <td><input type="date" id="fecha" name="fecha" required></td>
-                </tr>
-                <tr>
-                    <td>Lugares visitados:</td>
-                    <td><textarea id="lugares" name="lugares" rows="3" required placeholder="Describa los lugares visitados"></textarea></td>
-                </tr>
-                <tr>
-                    <td>Recomendaciones:</td>
-                    <td><textarea id="recomendaciones" name="recomendaciones" rows="3" required placeholder="Ingrese sus recomendaciones"></textarea></td>
-                </tr>
-                <tr>
-                    <td>Puntuación (1-5):</td>
-                    <td><input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required></td>
-                </tr>
-                <tr>
-                    <td><button type="submit">Enviar</button></td>
-                    <td><button type="reset">Limpiar</button></td>
-                </tr>
-            </table>
-        </form>
-    </footer>
+  <!-- Contenido principal -->
+  <div class="container">
+    <!-- Título de sección en morado fosforecente -->
+    <h2>OLLANTAYTAMBO</h2>
+
+    <!-- Grid de tarjetas (cards) para cada sección -->
+    <div class="cards-container">
+      <!-- Tarjeta Historia -->
+      <div class="card">
+        <div class="card-image" style="background-image: url('../images/ollantaytambo_his_historia.jpg');"></div>
+        <div class="card-overlay">
+          <h3>Historia</h3>
+          <div class="card-text">
+            <p>En esta sección, te invitamos a explorar las raíces de uno de los sitios más emblemáticos del Valle Sagrado de los Incas. Aquí encontrarás:</p>
+            <p><strong>La Historia:</strong> Desde su origen como un importante centro militar, religioso y agrícola del Imperio Inca hasta su papel en la resistencia incaica durante la llegada de los españoles.</p>
+            <p><strong>Fechas Festivas Importantes:</strong> Conoce las celebraciones tradicionales que aún mantienen viva la cultura y las costumbres de Ollantaytambo, como la Fiesta del Señor de Choquekillca.</p>
+            <p><strong>Leyendas Comunes:</strong> Descubre las historias y mitos que rodean este mágico lugar, desde relatos sobre el amor <i><u>prohibido de Ollantay y Cusi Coyllur</u></i> hasta narraciones llenas de misterio y conexión espiritual.</p>
+          </div>
+          <a href="historiaOllan.html"><button>Ver más</button></a>
+        </div>
+      </div>
+
+      <!-- Tarjeta Tour y Actividades -->
+      <div class="card">
+        <div class="card-image" style="background-image: url('../images/ollantaytambo_his_tour.jpg');"></div>
+        <div class="card-overlay">
+          <h3>Tour y Actividades</h3>
+          <div class="card-text">
+            <p>En esta sección, te ofrecemos una guía completa para aprovechar al máximo tu visita a este increíble destino. Aquí encontrarás:</p>
+            <p><strong>Zonas Turísticas:</strong> Descubre los principales atractivos de Ollantaytambo, desde su imponente complejo arqueológico hasta sus pintorescas calles adoquinadas.</p>
+            <p><strong>Tours y Actividades:</strong> Te presentamos los mejores tours y actividades, como caminatas, paseos en bicicleta y visitas guiadas que te conectarán con la cultura local.</p>
+            <p><strong>Recomendaciones:</strong> Una selección de restaurantes y hoteles para que tu experiencia sea inolvidable.</p>
+          </div>
+          <a href="zonturisOllan.html"><button>Ver más</button></a>
+        </div>
+      </div>
+
+      <!-- Tarjeta Consejos Prácticos -->
+      <div class="card">
+        <div class="card-image" style="background-image: url('../images/ollantaytambo_his_recom.jpg');"></div>
+        <div class="card-overlay">
+          <h3>Consejos Prácticos</h3>
+          <div class="card-text">
+            <p>En esta sección, te ayudamos a planificar tu viaje de manera inteligente y preparada. Aquí encontrarás:</p>
+            <p><strong>Guía por Temporadas:</strong> Información sobre qué esperar en cada época del año.</p>
+            <p><strong>Accesorios y Ropa Recomendados:</strong> Consejos sobre qué llevar para tu comodidad y seguridad.</p>
+            <p><strong>Clima Esperado:</strong> Un resumen del clima típico de la región para que te prepares adecuadamente.</p>
+            <p><strong>Advertencias y Precauciones:</strong> Consejos útiles para cuidar tu salud y disfrutar al máximo.</p>
+          </div>
+          <a href="../consejosprac/consejospracolla.html"><button>Ver más</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie de página con formulario de comentarios -->
+  <footer>
+    <div class="container">
+      <h3>Cuéntanos tu experiencia</h3>
+      <form action="#" method="post">
+        <table>
+          <tr>
+            <td>Nombre:</td>
+            <td><input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre"></td>
+          </tr>
+          <tr>
+            <td>Fecha de visita:</td>
+            <td><input type="date" id="fecha" name="fecha" required></td>
+          </tr>
+          <tr>
+            <td>Lugares visitados:</td>
+            <td><textarea id="lugares" name="lugares" rows="3" required placeholder="Describa los lugares visitados"></textarea></td>
+          </tr>
+          <tr>
+            <td>Recomendaciones:</td>
+            <td><textarea id="recomendaciones" name="recomendaciones" rows="3" required placeholder="Ingrese sus recomendaciones"></textarea></td>
+          </tr>
+          <tr>
+            <td>Puntuación (1-5):</td>
+            <td><input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required></td>
+          </tr>
+          <tr>
+            <td><button type="submit">Enviar</button></td>
+            <td><button type="reset">Limpiar</button></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </footer>
 </body>
 </html>
