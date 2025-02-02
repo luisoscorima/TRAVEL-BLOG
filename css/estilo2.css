@@ -4,6 +4,12 @@
     margin: 0;
     padding: 0;
   }
+  .strong{
+    color: #D300FF;
+  }
+  .h3{
+    color: #D300FF;
+  }
   
   body {
     font-family: Arial, sans-serif;
@@ -23,7 +29,7 @@
      ESTILOS DEL ENCABEZADO
      ======================= */
   header {
-    background-color: #ffffff;
+    background-color: #bedde3;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -57,12 +63,12 @@
     text-decoration: none;
     color: #333;
     padding: 8px 12px;
-    border-radius: 5px;
+    border-radius: 0px;
     transition: background 0.3s ease;
   }
   
   nav ul li a:hover {
-    background: #f0f0f0;
+    background: #9dc9c8;
   }
   
   /* Dropdown para "Lugares" */
