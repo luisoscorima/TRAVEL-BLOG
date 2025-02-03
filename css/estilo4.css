@@ -374,6 +374,21 @@ table {
     text-align: center;
     padding: 10px;
   }
+  .seccion-comentarios {
+    margin: 20px;
+    padding: 20px;
+    background-color: #faffe3;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .seccion-comentarios h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #10405e;
+    margin-bottom: 20px;
+  }
+  
   .grid-comentarios {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -407,7 +422,7 @@ table {
     background-color: #2e8abf;
   }
   
-  /* Formulario de experiencia: oculto por defecto */
+  /* Formulario de experiencia (oculto por defecto) */
   .formulario-experiencia {
     display: none;
     margin-top: 20px;
@@ -417,7 +432,6 @@ table {
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
   }
   
-  /* Cada campo del formulario */
   .campo-formulario {
     margin-bottom: 15px;
   }
