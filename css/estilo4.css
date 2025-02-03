@@ -246,8 +246,14 @@ table {
     grid-row: 4 ; /* Filas 4 */
     background-image: url("../images/ollantaytambo_tour_itinirario_restaurante1.jpg");
     background-size: cover;
+    height: 200px;
     background-position: center;
     text-align: center;
+    transition: filter 0.3s ease, color 0.3s ease;
+  }
+  .grid_g :hover{
+    filter: brightness(50%);
+    color: #fff;
   }
   .grid_h {
     grid-column: 8 / 10; /* Columnas 8 a 9 */
@@ -375,7 +381,7 @@ table {
     padding: 10px;
   }
    /* Seccion de comentarios */
-   .seccion-comentarios {
+  .seccion-comentarios {
     margin: 20px;
     padding: 20px;
     background-color: #faffe3;
