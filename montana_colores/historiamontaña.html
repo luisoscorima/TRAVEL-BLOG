@@ -1,138 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #faf5ef;
-            color: #595552;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ffffff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            color: #3ba1c8;
-            text-align: center;
-            padding: 15px;
-            margin: 0;
-        }
-        .banner {
-            width: 100%;
-            height: 50vh;
-            background-image: url('banner-image.jpg'); /* Reemplaza con la URL de tu imagen */
-            background-size: cover;
-            background-position: center;
-        }
-        section {
-            margin: 20px;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #3ba1c8;
-            border-bottom: 2px solid #ffc226;
-            padding-bottom: 5px;
-        }
-        h3 {
-            color: #0f2719;
-        }
-        .divider {
-            border-bottom: 2px solid #ffc226;
-            margin: 20px 0;
-        }
-        .info-box {
-            background-color: #ffffff;
-            border: 1px solid #3ba1c8;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 15px 0;
-        }
-        .info-box h4 {
-            background-color: #ffc226;
-            padding: 10px;
-            border-radius: 5px;
-            margin: -15px -15px 15px -15px;
-            color: #0f2719;
-        }
-        .legend {
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ffc226;
-            border-radius: 8px;
-            background-color: #fdfaf4;
-        }
-        button {
-            background-color: #3ba1c8;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #2e8abf;
-        }
-        footer {
-            background-color: #3ba1c8;
-            color: #ffffff;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f4b41a;
-            color: #fff;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .imagen-placeholder {
-            background: #ddd;
-            width: 100px;
-            height: 60px;
-            display: block;
-            text-align: center;
-            line-height: 60px;
-            color: #333;
-            font-size: 12px;
-        }
-    </style>
+    <title>Blog Viajero UTP: Descubre Cusco</title>
+    <link rel="stylesheet" href="../css/estilo6.css">
 </head>
 <body>
     <header>
-        <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Blog Viajero UTP: Descubre Cusco</a></h1>
-        <nav>
+        <div class="container header-container">
+          <div class="logo">
+            <a href="../index.html">
+              <img src="../images/logo_sfondo.png" alt="Blog Viajero UTP">
+            </a>
+          </div>
+          <nav>
             <ul>
-                <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
-                <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
-                <li><a href="../lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
-                <li><a href="../pisac/pisac.html">Pisac</a></li>
-                <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
+              <li class="dropdown">
+                <a href="#">Lugares</a>
+                <ul class="dropdown-content">
+                  <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
+                  <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
+                  <li><a href="../lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
+                  <li><a href="../pisac/pisac.html">Pisac</a></li>
+                  <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
+                </ul>
+              </li>
+              <li><a href="../tourgeneral.html">Tour y Actividades</a></li>
+              <li><a href="../consejospracti.html">Consejos prácticos</a></li>
             </ul>
-        </nav>
-    </header>
+          </nav>
+        </div>
+      </header>
     <div class="banner"></div>
 
     <!-- Sección de Historia -->
@@ -140,8 +39,11 @@
         <h2>Historia de Montaña de colores</h2>
         <p>La montaña de los 7 Colores (también llamado Vinicunca o simplemente ‘montaña arcoíris’) es una de las nuevas y mejores atracciones del Perú. Ubicada a más de 100 kilómetros de la ciudad del Cusco, en una cumbre altitudinal situada a 5,200 metros sobre el nivel del mar (m.s.n.m.). Se trata de una formación montañosa teñida de varias tonalidades producto de la compleja combinación de minerales. Las laderas y la cumbre están teñidas de diversas tonos que incluyen el rojo, morado, verde, amarillo, rosado y otras variaciones. Este atractivo turístico estuvo rodeado de hielo hace no muchos años. Desde el 2016, este lugar recibe a cientos de visitantes al día convirtiéndose, junto con Machu Picchu, en uno de los lugares más visitados en Cusco-Perú. A continuación toda la información sobre la Montaña de 7 Colores..</p>
 
-            <p><img src=" ../images/montaña_tour.jpg"width="500" height="300" > </p>
-            <div class="info-box">
+        <div class="image-container">
+            <img src="../images/montaña_tour.jpg" alt="Montaña de Colores" width="500" height="300">
+        </div>
+
+        <div class="info-box">
             <h4>Festividades</h4>
             <table>
                 <thead>
@@ -157,43 +59,36 @@
                 <tbody>
                     <tr>
                         <td>Febrero-Marzo</td>
-                        <td>Popular y  Cultural</td>
-                        <td> Cuzco y ciudades vecinas</td>
-                        <td>Carnavales cusqueños </td>
+                        <td>Popular y Cultural</td>
+                        <td>Cuzco y ciudades vecinas</td>
+                        <td>Carnavales cusqueños</td>
                         <td>
                             El Carnaval Cusqueño se celebra principalmente en la ciudad de Cusco, pero también hay celebraciones en pueblos cercanos y comunidades del Valle Sagrado.
-                             Las festividades incluyen desfiles, comparsas y danzas tradicionales en las calles de Cusco y alrededores.
-
+                            Las festividades incluyen desfiles, comparsas y danzas tradicionales en las calles de Cusco y alrededores.
                         </td>
-                        <td><img src=" ../images/carnavales-cusco.jpg"width="430" height="170"
-                        
+                        <td><img src="../images/carnavales-cusco.jpg" alt="Carnavales Cusco" width="430" height="170"></td>
                     </tr>
                     <tr>
-                       
                         <td>24-Jun</td>
                         <td>Religiosa y Cultural</td>
                         <td>La Plaza Mayor y en los sitios arqueológicos de Sacsayhuamán</td>
-                        <td>Inti Raymi </td>
+                        <td>Inti Raymi</td>
                         <td>
                             El Inti Raymi es una celebración que rinde homenaje al sol, 
                             la deidad más importante para los antiguos incas. Esta festividad tiene un profundo significado espiritual y cultural
                             , ya que recrea la ceremonia ancestral incaica en la que se celebraba el solsticio de invierno del hemisferio sur.
-
                         </td>
-                        <td><img src=" ../images/intiraymi.jpg"width="430" height="170"
+                        <td><img src="../images/intiraymi.jpg" alt="Inti Raymi" width="430" height="170"></td>
                     </tr>
-                    
                 </tbody>
             </table>
         </div>
+
         <div class="info-box">
             <h4>Leyenda Local</h4>
             <div class="legend">
-                <p><strong>La leyenda de la Montaña de colores:</strong> Según la leyenda, los dioses andinos, preocu
-                    pados por las comunidades que enfrentaban tiempos difíciles, decidieron crear un símbolo de esperanza. 
-                    Durante la noche, Pachamama (la Madre Tierra) y Viracocha (el creador) unieron sus poderes para crear una montaña con los colores del arcoíris. <button onclick="alert('Redirigiendo a la historia completa...')">Ver más</button></p>
+                <p><strong>La leyenda de la Montaña de colores:</strong> Según la leyenda, los dioses andinos, preocupados por las comunidades que enfrentaban tiempos difíciles, decidieron crear un símbolo de esperanza. Durante la noche, Pachamama (la Madre Tierra) y Viracocha (el creador) unieron sus poderes para crear una montaña con los colores del arcoíris. <button onclick="alert('Redirigiendo a la historia completa...')">Ver más</button></p>
             </div>
-            
         </div>
     </section>
 
