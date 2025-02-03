@@ -1,16 +1,16 @@
-/*/* =========================
+/* =====================================
    Datos Generales
-   ========================= */
-body {
+   ===================================== */
+   body {
     font-family: Arial, sans-serif;
-    background-color: #bedde3;
+    background-color: #bedde3; /* Color de fondo general */
     color: #595552;
     line-height: 1.5;
     margin: 0;
     padding: 0;
   }
   
-  /* Contenedor general (para centrar el contenido) */
+  /* Contenedor general (si deseas centrar el contenido) */
   .contenedor-general {
     width: 90%;
     max-width: 1200px;
@@ -18,22 +18,23 @@ body {
     padding: 0 15px;
   }
   
-  /* =========================
-     Estilos del Encabezado
-     ========================= */
+  /* =====================================
+     Estilos del Encabezado y Navegación
+     ===================================== */
   header {
     background-color: #bedde3;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
     padding: 1rem 0;
     text-align: center;
   }
   
-  .contenedor-encabezado {
+  .header-container,
+  .header-container * {
+    /* Uso de flex para distribuir logo y menú */
     display: flex;
-    justify-content: space-between;
     align-items: center;
   }
   
@@ -43,7 +44,7 @@ body {
   
   /* Menú de navegación */
   .menu-navegacion {
-    list-style: none;
+    list-style: none; /* list-style-type: none; */
     display: flex;
     align-items: center;
     padding: 0;
@@ -73,7 +74,7 @@ body {
     top: 100%;
     left: 0;
     background: #bedde3;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
     padding: 10px 0;
     min-width: 180px;
     border-radius: 5px;
@@ -88,9 +89,9 @@ body {
     display: block;
   }
   
-  /* =========================
+  /* =====================================
      Carrusel de Imágenes
-     ========================= */
+     ===================================== */
   .carrusel {
     position: relative;
     overflow: hidden;
@@ -98,7 +99,7 @@ body {
     height: 100vh;
   }
   
-  .diapositiva {
+  .slide {
     position: absolute;
     top: 0;
     left: 0;
@@ -107,21 +108,15 @@ body {
     background-size: cover;
     background-position: center;
     opacity: 0;
-    animation: animacionDiapositivas 15s infinite;
+    animation: slideAnimation 15s infinite;
   }
   
-  /* Ajuste de delay para cada diapositiva */
-  .carrusel .diapositiva:nth-child(1) {
-    animation-delay: 0s;
-  }
-  .carrusel .diapositiva:nth-child(2) {
-    animation-delay: 5s;
-  }
-  .carrusel .diapositiva:nth-child(3) {
-    animation-delay: 10s;
-  }
+  /* Ajuste de delay para cada slide */
+  .carrusel .slide:nth-child(1) { animation-delay: 0s; }
+  .carrusel .slide:nth-child(2) { animation-delay: 5s; }
+  .carrusel .slide:nth-child(3) { animation-delay: 10s; }
   
-  @keyframes animacionDiapositivas {
+  @keyframes slideAnimation {
     0%   { opacity: 0; }
     5%   { opacity: 1; }
     33%  { opacity: 1; }
@@ -129,7 +124,7 @@ body {
     100% { opacity: 0; }
   }
   
-  .leyenda-carrusel {
+  .carousel-caption {
     position: absolute;
     bottom: 20%;
     width: 100%;
@@ -141,9 +136,9 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
   }
   
-  /* =========================
-     Sección: Tour y Gastronomía
-     ========================= */
+  /* =====================================
+     Sección: Conociendo Ollantaytambo y su Gastronomía
+     ===================================== */
   .seccion-tour {
     margin: 20px;
     padding: 20px;
@@ -161,7 +156,7 @@ body {
     text-transform: uppercase;
   }
   
-  /* Fila 1: Descripción del tour con imagen de fondo */
+  /* Fila 1: Descripción del tour (imagen de fondo) */
   .fila-descripcion {
     width: 100%;
     height: 200px; /* Altura ajustable */
@@ -171,14 +166,16 @@ body {
     align-items: center;
     justify-content: center;
   }
-  .contenido-descripcion {
-    background: rgba(0,0,0,0.5); /* Fondo semitransparente para legibilidad */
+  
+  /* Comentario: fondo-descripcion permite un overlay semitransparente para facilitar la lectura */
+  .fondo-descripcion {
+    background: rgba(0,0,0,0.5);
     padding: 10px;
     color: #fff;
     text-align: center;
   }
   
-  /* Fila 2: Título Itinerario con imagen que oscurece al pasar el cursor */
+  /* Fila 2: Título Itinerario */
   .fila-titulo-itinerario {
     position: relative;
     width: 100%;
@@ -186,25 +183,29 @@ body {
     margin-top: 20px;
     overflow: hidden;
   }
+  
   .fila-titulo-itinerario img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; /* Transición para efecto hover */
   }
+  
   .fila-titulo-itinerario:hover img {
-    opacity: 0.5; /* Efecto de oscurecimiento */
+    opacity: 0.5;
   }
+  
   .overlay-titulo {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: flex; /* Para centrar el texto */
     justify-content: center;
     align-items: center;
   }
+  
   .overlay-titulo h3 {
     color: #fff;
     font-size: 36px;
@@ -212,6 +213,7 @@ body {
   }
   
   /* Fila 3, 4 y 5: Itinerario */
+  /* Cada fila usa un grid de 2 columnas: izquierda (80%) y derecha (20%) */
   .fila-itinerario {
     display: grid;
     grid-template-columns: 80% 20%;
@@ -219,82 +221,113 @@ body {
     margin-top: 20px;
   }
   
-  /* Contenedor de la parte izquierda del itinerario (filas 3 y 5) */
-  .contenedor-itinerario-izq {
+  /* Contenedores para la parte izquierda del itinerario */
+  .itinerario-izquierda,
+  .itinerario-derecha {
     display: grid;
-    grid-template-columns: 10% 50% 20%;
+    /* Se divide internamente en 3 columnas.
+       Los porcentajes se aproximan: 10%, 50% y 20% sobre el 80% de ancho.
+       Para simplificar, se usan fracciones: 1fr, 5fr y 2fr. */
+    grid-template-columns: 1fr 5fr 2fr;
     align-items: center;
     background-color: rgba(255,255,255,0.8);
     padding: 10px;
     border-radius: 5px;
   }
   
-  /* Contenedor de la parte derecha del itinerario (fila 4) */
-  .contenedor-itinerario-der {
-    display: grid;
-    grid-template-columns: 20% 50% 10%;
-    align-items: center;
-    background-color: rgba(255,255,255,0.8);
-    padding: 10px;
-    border-radius: 5px;
+  /* Las columnas que se desean vacías */
+  .columna-espacio {
+    /* Sin contenido, se utiliza para crear separación */
   }
   
-  /* Elementos internos del itinerario */
-  .espacio-vacio {
-    /* Espacio vacío: no requiere estilos especiales */
+  /* Columna para la actividad */
+  .columna-actividad {
+    text-align: center;
+    font-weight: bold;
   }
-  .actividad {
+  
+  /* Columna para la imagen */
+  .columna-imagen {
     text-align: center;
   }
-  .imagen-itinerario {
-    text-align: center;
-  }
-  .imagen-itinerario img {
+  
+  .columna-imagen img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
   }
   
-  /* Restaurantes: Sin fondo (los elementos se muestran sin background) */
+  /* Contenedor derecho de cada fila de itinerario: los restaurantes */
+  /* Se usa un ID para cada restaurante para permitir personalizaciones individuales */
   .restaurante {
-    background: none;
+    background: transparent; /* Sin fondo */
     text-align: center;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     font-weight: bold;
   }
   
-  /* Fila 6: Hoteles recomendados (2 columnas 50% cada una) */
+  /* Fila 6: Hoteles recomendados (grid de 2 columnas) */
   .fila-hoteles {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     margin-top: 20px;
   }
+  
+  /* Cada bloque de hotel es un grid de 3 filas (Foto, Descripción, Botón) */
   .hotel {
     background-color: rgba(255,255,255,0.8);
+    display: grid;
+    grid-template-rows: 30% 30% 30%;
+    gap: 5px;
     padding: 10px;
+    border-radius: 5px;
     text-align: center;
+  }
+  
+  .hotel-foto {
+    position: relative;
+  }
+  
+  .hotel-foto img {
+    width: 100%;
+    height: auto;
     border-radius: 5px;
   }
   
-  /* Fila 7: Fotos (3 columnas, cada una de igual ancho) */
+  /* Overlay para el nombre del hotel en la foto */
+  .overlay-hotel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  /* La descripción y el botón ya tienen fondo (definidos en .hotel) */
+  
+  /* Fila 7: Galería de fotos (3 columnas iguales) */
   .fila-fotos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin-top: 20px;
   }
+  
   .foto img {
     width: 100%;
     height: auto;
     border-radius: 5px;
   }
   
-  /* =========================
+  /* =====================================
      Sección: Comentarios
-     ========================= */
+     ===================================== */
   .seccion-comentarios {
     margin: 20px;
     padding: 20px;
@@ -302,6 +335,7 @@ body {
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
   }
+  
   .seccion-comentarios h2 {
     text-align: center;
     font-size: 36px;
@@ -309,12 +343,13 @@ body {
     margin-bottom: 20px;
   }
   
-  /* Grid de comentarios: 4 columnas iguales */
+  /* Grid de 4 comentarios (cada uno 25% de ancho) */
   .grid-comentarios {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
   }
+  
   .comentario {
     background-color: rgba(255,255,255,0.8);
     padding: 10px;
@@ -327,6 +362,7 @@ body {
     text-align: center;
     margin-top: 20px;
   }
+  
   .boton-experiencia button {
     background-color: #3ba1c8;
     color: #fff;
@@ -334,7 +370,9 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s ease;
   }
+  
   .boton-experiencia button:hover {
     background-color: #2e8abf;
   }
@@ -348,13 +386,17 @@ body {
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
   }
+  
+  /* Cada campo del formulario */
   .campo-formulario {
     margin-bottom: 15px;
   }
+  
   .campo-formulario label {
     display: block;
     margin-bottom: 5px;
   }
+  
   .campo-formulario input,
   .campo-formulario textarea {
     width: 100%;
@@ -363,9 +405,154 @@ body {
     border-radius: 4px;
   }
   
-  /* =========================
+  /* =====================================
+     Sección: Restaurantes Recomendados
+     ===================================== */
+  .seccion-restaurantes {
+    margin: 20px;
+    padding: 20px;
+    background-color: #faffe3;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .seccion-restaurantes h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #10405e;
+    margin-bottom: 20px;
+  }
+  
+  /* Grid de restaurantes: cada bloque con 3 columnas */
+  .grid-restaurantes {
+    display: grid;
+    grid-template-columns: 1fr; /* Cada bloque ocupa una fila; dentro de cada bloque se crea otro grid */
+    gap: 20px;
+  }
+  
+  .restaurante-bloque {
+    display: grid;
+    grid-template-columns: 20% 20% 20%; /* Las columnas para foto, platos y botón */
+    gap: 10px;
+    align-items: center;
+    border: 1px solid #2e8abf;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Columna de foto: se usará posición relativa para el overlay */
+  .restaurante-foto {
+    position: relative;
+  }
+  
+  .restaurante-foto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  /* Overlay para mostrar el nombre del restaurante centrado encima de la foto;
+     solo se muestra la descripción al hacer hover */
+  .overlay-restaurante {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 5px;
+  }
+  
+  .restaurante-foto:hover .overlay-restaurante {
+    opacity: 1;
+  }
+  
+  /* La segunda columna (platos) no tiene fondo */
+  .restaurante-platos {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* La tercera columna (botón) */
+  .restaurante-boton {
+    text-align: center;
+  }
+  
+  /* =====================================
+     Sección: Hoteles Recomendados
+     ===================================== */
+  .seccion-hoteles {
+    margin: 20px;
+    padding: 20px;
+    background-color: #faffe3;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .seccion-hoteles h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #10405e;
+    margin-bottom: 20px;
+  }
+  
+  /* Grid de hoteles: cada bloque es un grid de 3 columnas */
+  .grid-hoteles {
+    display: grid;
+    grid-template-columns: 1fr; /* Cada hotel en una fila; luego se define un grid interno */
+    gap: 20px;
+  }
+  
+  .hotel-bloque {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 10px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  /* Reutilizamos estilos para foto y botón de hotel */
+  .hotel-bloque .hotel-foto {
+    position: relative;
+  }
+  
+  .hotel-bloque .hotel-foto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .hotel-bloque .overlay-hotel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .hotel-bloque .hotel-descripcion {
+    background-color: #edefdd;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .hotel-bloque .hotel-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* =====================================
      Pie de Página
-     ========================= */
+     ===================================== */
   footer {
     background-color: #3ba1c8;
     color: #ffffff;
@@ -373,9 +560,11 @@ body {
     padding: 15px;
     margin-top: 30px;
   }
+  
   .boton-regresar {
     margin-top: 10px;
   }
+  
   .boton-regresar button {
     background-color: #3ba1c8;
     color: #fff;
@@ -383,14 +572,16 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s ease;
   }
+  
   .boton-regresar button:hover {
     background-color: #2e8abf;
   }
   
-  /* =========================
+  /* =====================================
      Responsividad
-     ========================= */
+     ===================================== */
   @media (max-width: 768px) {
     /* Menú en columna para pantallas pequeñas */
     .menu-navegacion {
@@ -401,7 +592,8 @@ body {
       grid-template-columns: repeat(2, 1fr);
     }
     /* Hoteles en una columna */
-    .fila-hoteles {
+    .fila-hoteles,
+    .grid-hoteles {
       grid-template-columns: 1fr;
     }
     /* Fotos en 2 columnas */
