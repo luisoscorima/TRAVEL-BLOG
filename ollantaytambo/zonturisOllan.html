@@ -8,13 +8,15 @@
   <link rel="stylesheet" href="../css/estilo4.css" type="text/css">
 </head>
 <body>
-  <!-- ENCABEZADO -->
+  <!-- ================================
+       ENCABEZADO: Logo y Menú de Navegación
+       ================================= -->
   <header>
-    <div class="contenedor-encabezado">
+    <div class="header-container">
       <div class="logo">
         <!-- Logo del sitio -->
-        <a href="../index.html">
-          <img src="../images/logo_sfondo.png" alt="Blog Viajero UTP">
+        <a href="index.html">
+          <img src="imagenes/logo.png" alt="Logo del Blog Viajero UTP">
         </a>
       </div>
       <nav>
@@ -22,143 +24,168 @@
           <li class="dropdown">
             <a href="#">Lugares</a>
             <ul class="submenu">
-              <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
-              <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
-              <li><a href="../lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
-              <li><a href="../pisac/pisac.html">Pisac</a></li>
-              <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
+              <li><a href="#">Ollantaytambo</a></li>
+              <li><a href="#">Montaña de Colores</a></li>
+              <li><a href="#">Laguna Humantay</a></li>
+              <li><a href="#">Pisac</a></li>
+              <li><a href="#">Machu Picchu</a></li>
             </ul>
           </li>
-          <li><a href="../tourgeneral.html">Tour y Actividades</a></li>
-          <li><a href="../consejospracti.html">Consejos prácticos</a></li>
+          <li><a href="#">Tour y Actividades</a></li>
+          <li><a href="#">Consejos Prácticos</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- CARRUSEL DE IMÁGENES -->
+  <!-- ================================
+       CARRUSEL DE IMÁGENES
+       ================================= -->
   <div class="carrusel">
-    <!-- Cada "diapositiva" es un div con fondo (se alternan mediante animación) -->
-    <div class="diapositiva" style="background-image: url('https://lp-cms-production.imgix.net/2019-06/GettyImages-513889873_high.jpg?q=40&w=2000&auto=format');"></div>
-    <div class="diapositiva" style="background-image: url('https://via.placeholder.com/2000x1000?text=Slide+2');"></div>
-    <div class="diapositiva" style="background-image: url('https://via.placeholder.com/2000x1000?text=Slide+3');"></div>
-    <!-- Leyenda sobre el carrusel -->
-    <div class="leyenda-carrusel"><span>Ollantaytambo</span></div>
+    <!-- Cada "slide" es un div con imagen de fondo y se animan de forma cíclica -->
+    <div class="slide" style="background-image: url('imagenes/slide1.jpg');"></div>
+    <div class="slide" style="background-image: url('imagenes/slide2.jpg');"></div>
+    <div class="slide" style="background-image: url('imagenes/slide3.jpg');"></div>
+    <!-- Leyenda del carrusel -->
+    <div class="carousel-caption"><span>Ollantaytambo</span></div>
   </div>
 
-  <!-- SECCIÓN: Conociendo Ollantaytambo y su Gastronomía -->
+  <!-- ============================================
+       Sección: Conociendo Ollantaytambo y su Gastronomía
+       ============================================ -->
   <section class="seccion-tour">
     <h2>Conociendo Ollantaytambo y su Gastronomía</h2>
 
-    <!-- Fila 1: Descripción del tour con imagen de fondo -->
-    <div class="fila-descripcion" style="background-image: url('../images/fondo_tour.jpg');">
-      <!-- Este contenedor sirve para agregar un fondo semitransparente y centrar el texto -->
-      <div class="contenido-descripcion">
+    <!-- Fila 1: Descripción del tour (100% de ancho) con imagen de fondo -->
+    <div class="fila-descripcion">
+      <!-- Este div tiene fondo (se puede modificar la imagen de fondo desde el atributo inline o desde CSS) -->
+      <div class="fondo-descripcion">
         <p>
-          Descubre la riqueza cultural y gastronómica de Ollantaytambo a través de este tour único, donde la historia se funde con sabores tradicionales.
+          Descubre la riqueza cultural y gastronómica de Ollantaytambo a través de este tour único donde la historia se funde con sabores tradicionales.
         </p>
       </div>
     </div>
 
-    <!-- Fila 2: Título Itinerario con imagen que oscurece al pasar el cursor -->
+    <!-- Fila 2: Título del Itinerario (100%) con imagen que oscurece al pasar el cursor -->
     <div class="fila-titulo-itinerario">
-      <img src="../images/imagen_titulo.jpg" alt="Título Itinerario">
-      <!-- Capa de superposición para mostrar el título -->
+      <img src="imagenes/itinerario.jpg" alt="Imagen para Itinerario">
+      <!-- Capa de superposición que muestra el título; al hacer hover se oscurece la imagen -->
       <div class="overlay-titulo">
         <h3>Itinerario</h3>
       </div>
     </div>
 
-    <!-- Fila 3: Itinerario 1 -->
-    <!-- Se utiliza un grid de dos columnas: izquierda (80%) y derecha (20%) -->
+    <!-- Fila 3: Itinerario – Primera fila -->
     <div class="fila-itinerario">
-      <!-- Izquierda: Contenedor interno con tres áreas (10%, 50%, 20%) -->
-      <div class="contenedor-itinerario-izq">
-        <!-- Espacio vacío (10%) -->
-        <div class="espacio-vacio"></div>
-        <!-- Actividad 1 (50%) -->
-        <div class="actividad">
-          <p>Explorar el mercado artesanal</p>
-        </div>
-        <!-- Imagen 1 (20%) -->
-        <div class="imagen-itinerario">
-          <img src="../images/imagen_itinerario1.jpg" alt="Imagen Itinerario 1">
+      <!-- Contenedor izquierdo (80% de ancho) subdividido en tres columnas:
+           1. Espacio vacío (~10% relativo)
+           2. Actividad 1 (~50% relativo)
+           3. Imagen 1 (~20% relativo) -->
+      <div class="itinerario-izquierda">
+        <div class="columna-espacio"> </div>
+        <div class="columna-actividad">Actividad 1: Explorar el mercado artesanal</div>
+        <div class="columna-imagen">
+          <img src="imagenes/itinerario1.jpg" alt="Imagen Itinerario 1">
         </div>
       </div>
-      <!-- Derecha: Información del Restaurante 1 (sin fondo) -->
+      <!-- Contenedor derecho (20% de ancho) para Restaurante 1; sin fondo -->
       <div class="restaurante" id="restaurante-1">
-        <p>Restaurante 1</p>
+        Restaurante 1
       </div>
     </div>
 
-    <!-- Fila 4: Itinerario 2 -->
+    <!-- Fila 4: Itinerario – Segunda fila (inversa: restaurante a la izquierda, actividad a la derecha) -->
     <div class="fila-itinerario">
-      <!-- En esta fila se invierte el orden: la parte izquierda es el Restaurante 2 y la derecha contiene la actividad -->
+      <!-- Contenedor izquierdo para Restaurante 2 -->
       <div class="restaurante" id="restaurante-2">
-        <p>Restaurante 2</p>
+        Restaurante 2
       </div>
-      <div class="contenedor-itinerario-der">
-        <!-- Imagen 2 (20%) -->
-        <div class="imagen-itinerario">
-          <img src="../images/imagen_itinerario2.jpg" alt="Imagen Itinerario 2">
+      <!-- Contenedor derecho (80% de ancho) subdividido en tres columnas:
+           1. Imagen 2 (~20%)
+           2. Actividad 2 (~50%)
+           3. Espacio vacío (~10%) -->
+      <div class="itinerario-derecha">
+        <div class="columna-imagen">
+          <img src="imagenes/itinerario2.jpg" alt="Imagen Itinerario 2">
         </div>
-        <!-- Actividad 2 (50%) -->
-        <div class="actividad">
-          <p>Visitar sitio arqueológico</p>
-        </div>
-        <!-- Espacio vacío (10%) -->
-        <div class="espacio-vacio"></div>
+        <div class="columna-actividad">Actividad 2: Visitar sitio arqueológico</div>
+        <div class="columna-espacio"> </div>
       </div>
     </div>
 
-    <!-- Fila 5: Itinerario 3 -->
+    <!-- Fila 5: Itinerario – Tercera fila -->
     <div class="fila-itinerario">
-      <div class="contenedor-itinerario-izq">
-        <!-- Espacio vacío (10%) -->
-        <div class="espacio-vacio"></div>
-        <!-- Imagen 3 (20%) -->
-        <div class="imagen-itinerario">
-          <img src="../images/imagen_itinerario3.jpg" alt="Imagen Itinerario 3">
+      <!-- Contenedor izquierdo (80%) subdividido en:
+           1. Espacio vacío (~10%)
+           2. Imagen 3 (~20%)
+           3. Actividad 3 (~50%) -->
+      <div class="itinerario-izquierda">
+        <div class="columna-espacio"> </div>
+        <div class="columna-imagen">
+          <img src="imagenes/itinerario3.jpg" alt="Imagen Itinerario 3">
         </div>
-        <!-- Actividad 3 (50%) -->
-        <div class="actividad">
-          <p>Recorrido cultural</p>
-        </div>
+        <div class="columna-actividad">Actividad 3: Recorrido cultural</div>
       </div>
-      <!-- Restaurante 3 (20%) sin fondo -->
+      <!-- Contenedor derecho para Restaurante 3 -->
       <div class="restaurante" id="restaurante-3">
-        <p>Restaurante 3</p>
+        Restaurante 3
       </div>
     </div>
 
-    <!-- Fila 6: Hoteles recomendados (2 columnas al 50%) -->
+    <!-- Fila 6: Hoteles recomendados (dos columnas 50% cada una) -->
     <div class="fila-hoteles">
+      <!-- Cada bloque de hotel es un grid interno -->
       <div class="hotel">
-        <p>Hotel 1</p>
+        <div class="hotel-foto">
+          <img src="imagenes/hotel1.jpg" alt="Hotel 1">
+          <!-- Capa para mostrar el nombre del hotel centrado sobre la foto -->
+          <div class="overlay-hotel">
+            <h4>Hotel 1</h4>
+          </div>
+        </div>
+        <div class="hotel-descripcion">
+          <p>Descripción breve del Hotel 1.</p>
+        </div>
+        <div class="hotel-boton">
+          <button>Conocer más</button>
+        </div>
       </div>
       <div class="hotel">
-        <p>Hotel 2</p>
+        <div class="hotel-foto">
+          <img src="imagenes/hotel2.jpg" alt="Hotel 2">
+          <div class="overlay-hotel">
+            <h4>Hotel 2</h4>
+          </div>
+        </div>
+        <div class="hotel-descripcion">
+          <p>Descripción breve del Hotel 2.</p>
+        </div>
+        <div class="hotel-boton">
+          <button>Conocer más</button>
+        </div>
       </div>
     </div>
 
-    <!-- Fila 7: Fotos (3 columnas, cada una de igual ancho) -->
+    <!-- Fila 7: Galería de Fotos (tres columnas iguales) -->
     <div class="fila-fotos">
       <div class="foto">
-        <img src="../images/foto1.jpg" alt="Foto 1">
+        <img src="imagenes/foto1.jpg" alt="Foto 1">
       </div>
       <div class="foto">
-        <img src="../images/foto2.jpg" alt="Foto 2">
+        <img src="imagenes/foto2.jpg" alt="Foto 2">
       </div>
       <div class="foto">
-        <img src="../images/foto3.jpg" alt="Foto 3">
+        <img src="imagenes/foto3.jpg" alt="Foto 3">
       </div>
     </div>
   </section>
 
-  <!-- SECCIÓN DE COMENTARIOS -->
+  <!-- ============================================
+       Sección de Comentarios
+       ============================================ -->
   <section class="seccion-comentarios">
     <h2>Comentarios</h2>
-    <!-- Grid de 4 comentarios (cada uno ocupa 25%) -->
+    <!-- Grid de 4 comentarios (cada uno 25% de ancho) -->
     <div class="grid-comentarios">
       <div class="comentario">Comentario 1</div>
       <div class="comentario">Comentario 2</div>
@@ -169,9 +196,9 @@
     <div class="boton-experiencia">
       <button id="mostrar-formulario">Cuéntanos tu experiencia</button>
     </div>
-    <!-- Formulario oculto inicialmente; se mostrará al pulsar el botón -->
+    <!-- Formulario de experiencia (oculto por defecto) -->
     <div class="formulario-experiencia" id="formulario-experiencia">
-      <!-- Comentario: Este formulario se utiliza para recoger los comentarios de los usuarios -->
+      <!-- Comentario: Formulario para recoger la experiencia del usuario -->
       <form action="#" method="post">
         <div class="campo-formulario">
           <label for="nombre">Nombre:</label>
@@ -201,7 +228,64 @@
     </div>
   </section>
 
-  <!-- PIE DE PÁGINA -->
+  <!-- ============================================
+       Sección de Restaurantes Recomendados
+       ============================================ -->
+  <section class="seccion-restaurantes">
+    <h2>Restaurantes Recomendados</h2>
+    <!-- Cada restaurante es un bloque en un grid de 3 columnas -->
+    <div class="grid-restaurantes">
+      <div class="restaurante-bloque">
+        <!-- Columna 1: Foto con overlay que muestra el nombre y, al hacer hover, la descripción -->
+        <div class="restaurante-foto">
+          <img src="imagenes/restaurante1.jpg" alt="Restaurante 1">
+          <div class="overlay-restaurante">
+            <h4>Restaurante 1</h4>
+            <p>Descripción breve del restaurante que se muestra al pasar el cursor.</p>
+          </div>
+        </div>
+        <!-- Columna 2: Platos (sin fondo) -->
+        <div class="restaurante-platos">
+          <p>Platos famosos</p>
+        </div>
+        <!-- Columna 3: Botón "Conocer más" -->
+        <div class="restaurante-boton">
+          <button>Conocer más</button>
+        </div>
+      </div>
+      <!-- Se pueden agregar más bloques de restaurante siguiendo la misma estructura -->
+    </div>
+  </section>
+
+  <!-- ============================================
+       Sección de Hoteles Recomendados
+       ============================================ -->
+  <section class="seccion-hoteles">
+    <h2>Hoteles Recomendados</h2>
+    <!-- Cada hotel es un bloque en un grid de 3 columnas -->
+    <div class="grid-hoteles">
+      <div class="hotel-bloque">
+        <!-- Columna 1: Foto con overlay del nombre -->
+        <div class="hotel-foto">
+          <img src="imagenes/hotel3.jpg" alt="Hotel 3">
+          <div class="overlay-hotel"><h4>Hotel 3</h4></div>
+        </div>
+        <!-- Columna 2: Descripción con fondo -->
+        <div class="hotel-descripcion">
+          <p>Breve descripción del Hotel 3.</p>
+        </div>
+        <!-- Columna 3: Botón centrado -->
+        <div class="hotel-boton">
+          <button>Conocer más</button>
+        </div>
+      </div>
+      <!-- Se pueden agregar más bloques de hotel -->
+    </div>
+  </section>
+
+  <!-- ============================================
+       PIE DE PÁGINA
+       ============================================ -->
   <footer>
     <p>&copy; 2025 Blog Viajero UTP</p>
     <div class="boton-regresar">
@@ -209,15 +293,14 @@
     </div>
   </footer>
 
-  <!-- JavaScript para mostrar/ocultar el formulario de experiencia -->
+  <!-- ============================================
+       JavaScript para mostrar/ocultar el formulario de experiencia
+       ============================================ -->
   <script>
-    document.getElementById('mostrar-formulario').addEventListener('click', function() {
+    // Al hacer click en el botón, se muestra u oculta el formulario
+    document.getElementById('mostrar-formulario').addEventListener('click', function(){
       var formulario = document.getElementById('formulario-experiencia');
-      if (formulario.style.display === 'none' || formulario.style.display === '') {
-        formulario.style.display = 'block';
-      } else {
-        formulario.style.display = 'none';
-      }
+      formulario.style.display = (formulario.style.display === 'block') ? 'none' : 'block';
     });
   </script>
 </body>
