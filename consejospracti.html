@@ -3,278 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consejos Practicos</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #faf5ef;
-            color: #595552;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ffffff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 1rem 0;
-        }
-        header h1 {
-            color: #3ba1c8;
-            text-align: center;
-            padding: 15px;
-            margin: 0;
-        }
-        .banner {
-            width: 100%;
-            height: 50vh;
-            background-image: url(https://thumbs.dreamstime.com/b/salinas-de-maras-peru-salt-natural-mine-inca-salt-pans-maras-sacred-valley-peru-near-cuzco-84748169.jpg); 
-            background-size: cover;
-            background-position: center;
-        }
-        section {
-            margin: 20px;
-            padding: 20px;
-            background-color: #faffe3;
-            border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #3ba1c8;
-            border-bottom: 2px solid #ffc226;
-            padding-bottom: 5px;
-        }
-        h4 {
-            color: #0c2732;
-            padding-bottom: 5px;
-            font-size: 4em;
-        }
-        h3 {
-            color: #0f2719;
-        }
-        .divider {
-            border-bottom: 2px solid #ffc226;
-            margin: 20px 0;
-        }
-        button {
-            background-color: #3ba1c8;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #2e8abf;
-        }
-        footer {
-            background-color: #3ba1c8;
-            color: #ffffff;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f4b41a;
-            color: #fff;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .imagen-placeholder {
-            background: #ddd;
-            width: 100px;
-            height: 60px;
-            display: block;
-            text-align: center;
-            line-height: 60px;
-            color: #333;
-            font-size: 12px;
-        }
-        td{
-            vertical-align: top;
-            text-align: left;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            background: #333;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        nav ul li a:hover {
-            background: #555;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-            border-spacing: 10px;
-            border-top-width: 5px;
-            border-bottom-width: 5px;
-            border-left-width: 2px;
-            border-right-width: 2px;
-            margin: 10px;
-        }
-    </style>
+    <title>Blog Viajero UTP :: Consejos Prácticos</title>
+    <link rel="stylesheet" href="css/place.css" type="text/css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
     <header>
-        <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Blog Viajero UTP: Descubre Cusco</a></h1>
-        <nav>
-            <ul>
-                <li><a href="./ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
-                <li><a href="./montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
-                <li><a href="./lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
-                <li><a href="./pisac/pisac.html">Pisac</a></li>
-                <li><a href="./machupiichu/paginaprincipal.html">Machu Picchu</a></li>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html"><img src="images/logo_blog_banner_white.png" alt="logo"></a></div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav-links"> 
+                <li class="dropdown">
+                    <a href="#">Lugares</a>
+                    <ul class="dropdown-content">
+                        <li><a href="./ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
+                        <li><a href="./montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
+                        <li><a href="./lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
+                        <li><a href="./pisac/pisac.html">Pisac</a></li>
+                        <li><a href="./machupiichu/paginaprincipal.html">Machu Picchu</a></li>
+                    </ul>
+                </li>
+                <li><a href="tourgeneral.html">Tours y Actividades</a></li>
+          <li><a href="consejospracti.html">Consejos Prácticos</a></li>
             </ul>
+            <button class="plan-trip">Planea tu visita</button>
         </nav>
     </header>
-    <div class="banner"></div>
 
-    <!-- Sección de Ollantaytambo -->
-    <section>
+    <main>
+        <div class="banner"><span>Consejos Prácticos</span></div>
+        <!-- Sección de Ollantaytambo -->
+        <section>
+            <h2>Verano</h2>
+            <h3>Clima esperado</h3>
+            <p>Las temperaturas son de </p>
+            <button>Ver más</button>
+            <div class="divider"></div>
+            <h3>¿Qué se recomienda llevar?</h3>
+            <p>Llevar ropa ligera para protegerse del sol</p>
+            <button>Ver más</button>
+            <div class="divider"></div>
+            <h3>Advertencias</h3>
+            <p>Ten cuidado con tus objetos personales, no lleves alimentos en tus paseos</p>
+            <button >Ver más</button>
+        </section>
+
+        <!-- Repite para otros lugares -->
+        <section>
+            <h2>Invierno</h2>
+            <h3>Clima esperado</h3>
+            <p>Las temperaturas son de </p>
+            <button >Ver más</button>
+            <div class="divider"></div>
+            <h3>¿Qué se recomienda llevar?</h3>
+            <p>Llevar ropa ligera para protegerse del sol</p>
+            <button >Ver más</button>
+            <div class="divider"></div>
+            <h3>Advertencias</h3>
+            <p>Ten cuidado con tus objetos personales, no lleves alimentos en tus paseos</p>
+            <button>Ver más</button>
+        </section>
+
+        <section>
+            <h2>Otoño</h2>
+            <h3>Clima esperado</h3>
+            <p>Las temperaturas son de </p>
+            <button >Ver más</button>
+            <div class="divider"></div>
+            <h3>¿Qué se recomienda llevar?</h3>
+            <p>Llevar ropa ligera para protegerse del sol</p>
+            <button >Ver más</button>
+            <div class="divider"></div>
+            <h3>Advertencias</h3>
+            <p>Ten cuidado con tus objetos personales, no lleves alimentos en tus paseos</p>
+            <button>Ver más</button>
+        </section>
+        <section>
+            <h2>Primavera</h2>
+            <h3>Clima esperado</h3>
+            <p>Las temperaturas son de </p>
+            <button>Ver más</button>
+            <div class="divider"></div>
+            <h3>¿Qué se recomienda llevar?</h3>
+            <p>Llevar ropa ligera para protegerse del sol</p>
+            <button >Ver más</button>
+            <div class="divider"></div>
+            <h3>Advertencias</h3>
+            <p>Ten cuidado con tus objetos personales, no lleves alimentos en tus paseos</p>
+            <button >Ver más</button>
+        </section>
+        <center><h1>CONSEJOS PRACTICOS PARA TU VISITA A MACHU PICCHU</h1></center>
+        <section>
         <h2>Verano</h2>
         <h3>Clima esperado</h3>
-        <p>Las temperaturas son de </p>
+        <p>Las temperaturas son de 20°C a 25°C durante el día, y por la noche pueden descender a 10°C.</p>
         <button>Ver más</button>
         <div class="divider"></div>
-        <h3>¿Qué se recomienda llevar?</h3>
-        <p>Llevar ropa ligera para protegerse del sol</p>
+        <h3>Qué se recomienda llevar</h3>
+        <p>Llevar ropa ligera para el día, un abrigo para la noche, y accesorios para protegerse del sol como sombrero y protector solar.</p>
         <button>Ver más</button>
         <div class="divider"></div>
         <h3>Advertencias</h3>
-        <p>Ten cuidado con tus objetos personales, no lleves alimentos en tus paseos</p>
-        <button >Ver más</button>
-    </section>
+        <p>Ten cuidado con tus objetos personales, evita llevar alimentos o bebidas que no hayan sido comprados dentro del parque.</p>
+        <button>Ver más</button>
+        </section>
 
     <!-- Repite para otros lugares -->
-    <section>
+        <section>
         <h2>Invierno</h2>
         <h3>Clima esperado</h3>
-        <p>Las temperaturas son de </p>
-        <button >Ver más</button>
+        <p>Las temperaturas son de 15°C a 20°C durante el día, con noches frías que pueden llegar a los 5°C.</p>
+        <button>Ver más</button>
         <div class="divider"></div>
-        <h3>¿Qué se recomienda llevar?</h3>
-        <p>Llevar ropa ligera para protegerse del sol</p>
-        <button >Ver más</button>
+        <h3>Qué se recomienda llevar</h3>
+        <p>Llevar ropa abrigadora, chaquetas impermeables, y botas para el frío y la lluvia.</p>
+        <button>Ver más</button>
         <div class="divider"></div>
         <h3>Advertencias</h3>
-        <p>Ten cuidado con tus objetos personales, no lleves alimentos en tus paseos</p>
+        <p>Las lluvias pueden ser frecuentes, por lo que es recomendable llevar ropa impermeable y tener precaución con el terreno resbaladizo.</p>
         <button>Ver más</button>
-    </section>
+        </section>
 
     <section>
         <h2>Otoño</h2>
         <h3>Clima esperado</h3>
-        <p>Las temperaturas son de </p>
-        <button >Ver más</button>
+        <p>Las temperaturas son de 18°C a 22°C durante el día, y por la noche descienden a 8°C.</p>
+        <button>Ver más</button>
         <div class="divider"></div>
-        <h3>¿Qué se recomienda llevar?</h3>
-        <p>Llevar ropa ligera para protegerse del sol</p>
-        <button >Ver más</button>
+        <h3>Qué se recomienda llevar</h3>
+        <p>Ropa ligera para el día y algo más abrigado para la noche. También es importante llevar gafas de sol y protector solar.</p>
+        <button>Ver más</button>
         <div class="divider"></div>
         <h3>Advertencias</h3>
-        <p>Ten cuidado con tus objetos personales, no lleves alimentos en tus paseos</p>
+        <p>Debido a la altitud, se recomienda tomar descansos frecuentes y beber agua para evitar el mal de altura.</p>
         <button>Ver más</button>
-    </section>
-    <section>
+        </section>
+
+        <section>
         <h2>Primavera</h2>
         <h3>Clima esperado</h3>
-        <p>Las temperaturas son de </p>
+        <p>Las temperaturas son de 20°C a 26°C, con noches frescas que pueden llegar a los 10°C.</p>
         <button>Ver más</button>
         <div class="divider"></div>
-        <h3>¿Qué se recomienda llevar?</h3>
-        <p>Llevar ropa ligera para protegerse del sol</p>
-        <button >Ver más</button>
+        <h3>Qué se recomienda llevar</h3>
+        <p>Ropa cómoda para caminatas, protector solar, gafas de sol, y una chaqueta ligera para las noches frescas.</p>
+        <button>Ver más</button>
         <div class="divider"></div>
         <h3>Advertencias</h3>
-        <p>Ten cuidado con tus objetos personales, no lleves alimentos en tus paseos</p>
-        <button >Ver más</button>
-    </section>
-    <center><h1>CONSEJOS PRACTICOS PARA TU VISITA A MACHU PICCHU</h1></center>
-    <section>
-    <h2>Verano</h2>
-    <h3>Clima esperado</h3>
-    <p>Las temperaturas son de 20°C a 25°C durante el día, y por la noche pueden descender a 10°C.</p>
-    <button>Ver más</button>
-    <div class="divider"></div>
-    <h3>Qué se recomienda llevar</h3>
-    <p>Llevar ropa ligera para el día, un abrigo para la noche, y accesorios para protegerse del sol como sombrero y protector solar.</p>
-    <button>Ver más</button>
-    <div class="divider"></div>
-    <h3>Advertencias</h3>
-    <p>Ten cuidado con tus objetos personales, evita llevar alimentos o bebidas que no hayan sido comprados dentro del parque.</p>
-    <button>Ver más</button>
-    </section>
+        <p>Evita sobrecargar tu mochila, ya que el parque tiene muchas escaleras y caminatas largas. Usa zapatos cómodos.</p>
+        <button>Ver más</button>
+        </section>
+        
+    </main>
 
-<!-- Repite para otros lugares -->
-    <section>
-    <h2>Invierno</h2>
-    <h3>Clima esperado</h3>
-    <p>Las temperaturas son de 15°C a 20°C durante el día, con noches frías que pueden llegar a los 5°C.</p>
-    <button>Ver más</button>
-    <div class="divider"></div>
-    <h3>Qué se recomienda llevar</h3>
-    <p>Llevar ropa abrigadora, chaquetas impermeables, y botas para el frío y la lluvia.</p>
-    <button>Ver más</button>
-    <div class="divider"></div>
-    <h3>Advertencias</h3>
-    <p>Las lluvias pueden ser frecuentes, por lo que es recomendable llevar ropa impermeable y tener precaución con el terreno resbaladizo.</p>
-    <button>Ver más</button>
-    </section>
-
-   <section>
-    <h2>Otoño</h2>
-    <h3>Clima esperado</h3>
-    <p>Las temperaturas son de 18°C a 22°C durante el día, y por la noche descienden a 8°C.</p>
-    <button>Ver más</button>
-    <div class="divider"></div>
-    <h3>Qué se recomienda llevar</h3>
-    <p>Ropa ligera para el día y algo más abrigado para la noche. También es importante llevar gafas de sol y protector solar.</p>
-    <button>Ver más</button>
-    <div class="divider"></div>
-    <h3>Advertencias</h3>
-    <p>Debido a la altitud, se recomienda tomar descansos frecuentes y beber agua para evitar el mal de altura.</p>
-    <button>Ver más</button>
-    </section>
-
-    <section>
-    <h2>Primavera</h2>
-    <h3>Clima esperado</h3>
-    <p>Las temperaturas son de 20°C a 26°C, con noches frescas que pueden llegar a los 10°C.</p>
-    <button>Ver más</button>
-    <div class="divider"></div>
-    <h3>Qué se recomienda llevar</h3>
-    <p>Ropa cómoda para caminatas, protector solar, gafas de sol, y una chaqueta ligera para las noches frescas.</p>
-    <button>Ver más</button>
-    <div class="divider"></div>
-    <h3>Advertencias</h3>
-    <p>Evita sobrecargar tu mochila, ya que el parque tiene muchas escaleras y caminatas largas. Usa zapatos cómodos.</p>
-    <button>Ver más</button>
-    </section>
     <!-- Formulario de comentarios -->
     <footer>
         <h3>Cuéntanos tu experiencia</h3>
