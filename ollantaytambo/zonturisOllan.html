@@ -1,307 +1,262 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zona Turística</title>
-  <!-- Enlazamos el CSS externo -->
-  <link rel="stylesheet" href="../css/estilo4.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>probando</title>
+    <link rel="stylesheet" href="../css/estilo4.css" type="text/css">
 </head>
 <body>
-  <!-- ================================
-       ENCABEZADO: Logo y Menú de Navegación
-       ================================= -->
-  <header>
-    <div class="header-container">
-      <div class="logo">
-        <!-- Logo del sitio -->
-        <a href="index.html">
-          <img src="imagenes/logo.png" alt="Logo del Blog Viajero UTP">
-        </a>
-      </div>
-      <nav>
-        <ul class="menu-navegacion">
-          <li class="dropdown">
-            <a href="#">Lugares</a>
-            <ul class="submenu">
-              <li><a href="#">Ollantaytambo</a></li>
-              <li><a href="#">Montaña de Colores</a></li>
-              <li><a href="#">Laguna Humantay</a></li>
-              <li><a href="#">Pisac</a></li>
-              <li><a href="#">Machu Picchu</a></li>
+    <header>
+        <div class="container header-container">
+          <div class="logo">
+            <!-- Reemplaza "logo.png" por la ruta de tu imagen -->
+            <a href="../index.html"><img src="../images/logo_sfondo.png" alt="Blog Viajero UTP"></a>
+          </div>
+          <nav>
+            <ul>
+              <li class="dropdown">
+                <a href="#">Lugares</a>
+                <ul class="dropdown-content">
+                  <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
+                  <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
+                  <li><a href="../lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
+                  <li><a href="../pisac/pisac.html">Pisac</a></li>
+                  <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
+                </ul>
+              </li>
+              <li><a href="../tourgeneral.html">Tour y Actividades</a></li>
+              <li><a href="../consejospracti.html">Consejos prácticos</a></li>
             </ul>
-          </li>
-          <li><a href="#">Tour y Actividades</a></li>
-          <li><a href="#">Consejos Prácticos</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+          </nav>
+        </div>
+    </header>
+    <div class="carousel">
+        <div class="slide" style="background-image: url('https://www.infobae.com/new-resizer/hdqxzhpLCqWGrRKgY8rjCvsk3BU=/arc-anglerfish-arc2-prod-infobae/public/KLER3AVAOBB6ZO5YHKZ2M5VATE.jpg');"></div>
+        <div class="slide" style="background-image: url('https://www.peru.travel/Contenido/Noticia/Imagen/es/1721/1.0/Principal/ollantaytambo-ds.jpg');"></div>
+        <div class="slide" style="background-image: url('https://portal.andina.pe/EDPfotografia3/Thumbnail/2022/01/12/000838883W.jpg');"></div>
+        <div class="carousel-caption"><span>Ollantaytambo</span></div>
+      </div>
+      <h4><center>Conociendo Ollantaytambo y su Gastronomía </center></h4><br>
+    <div class="grid-container">
+        <div class="grid_a">
+            <p>
+                <center><Strong>Duracion: </Strong> 2 dias <br></center>
+            </p>
+            <table>
+                <tr>
+                    <td>
+                        <Strong>Incluye: </Strong>
+                      <ul type="circle">
+                        <li>Transporte ida y vuelta desde Hotel Luna creciente</li>
+                        <li>Guía turístico bilingüe (Español/Inglés)</li>
+                        <li> Entradas a parque arqueologico.</li>
+                        <li>Almuerzo en restaurante local Ollantay</li>
+                      <li>Degustación de chancho al palo, Guiso de alpaca, trucha frita, mate de coca</li>
+                      </ul>
+                    </td>
+                    <td>
+                     <Strong>Que llevar: </Strong>
+                     <ul type="circle">
+                       <li>Ropa cómoda y zapatos adecuados para caminar.</li>
+                       <li>Protector solar, gorra o sombrero.</li>
+                       <li> Entradas a parque arqueologico.</li>
+                       <li>Botella de agua reutilizable.</li>
+                       <li>Cámara o teléfono para fotos.</li>
+                     </ul> 
+                    </td>
+                </tr>
+            </table>
+                
+                
+            <p>
+                <center><Strong>PRECIO: 500 USD</Strong> por persona</center>
+            </p>
+        </div>
+        <div class="grid_p"><h2><center>Itinerario</center></h2></div>
+        <div class="grid_b">
+            <h3><center>1. Explorar el Mercado Artesanal</center></h3><br>
+            <p>
+                <strong>Duracion:</strong>2 horas<br>
+                <strong>Horario:</strong>9:00 AM - 11:00 AM<br>
+                <strong>Actividades:</strong><br>
+            </p>
+                <ul type="circle">
+                    <li>Recorrido por el mercado de frutas con un guía experto</li>
+                    <li>Recorrido por el mercado de recuerdos con un guía experto</li>
+                    <li>Recorrido por el mercado de ropa tradicional con un guía experto</li>
+                    <li>Sesion de fotos con ropa tipica de la zona</li>
+                    <li>tiempo de descanso (15min)</li>
+                </ul> 
 
-  <!-- ================================
-       CARRUSEL DE IMÁGENES
-       ================================= -->
-  <div class="carrusel">
-    <!-- Cada "slide" es un div con imagen de fondo y se animan de forma cíclica -->
-    <div class="slide" style="background-image: url('imagenes/slide1.jpg');"></div>
-    <div class="slide" style="background-image: url('imagenes/slide2.jpg');"></div>
-    <div class="slide" style="background-image: url('imagenes/slide3.jpg');"></div>
-    <!-- Leyenda del carrusel -->
-    <div class="carousel-caption"><span>Ollantaytambo</span></div>
-  </div>
+        </div>
+        <div class="grid_c"><img src="../images/ollantaytambo_tour_itinirario_mercado2.jpg" width="150" height="150"></div>
+        <div class="grid_q"><img src="../images/ollantaytambo_tour_itinirario_mercado.jpg" width="150" height="150"></div>
+        <div class="grid_d"></div>
+        <div class="grid_e"><img src="../images/ollantaytambo_tour_itinirario_restaurante1.jpg" width="150" height="150"></div>
+        <div class="grid_r"><img src="../images/ollantaytambo_tour_itinirario_restaurante2.jpg" width="150" height="150"></div>
+        <div class="grid_f">
+            <h3><center>2. Almuerzo tipico</center></h3><br>
+            <p>
+                <strong>Duracion:</strong>1 horas<br>
+                <strong>Horario:</strong>11:30 AM - 1:00 PM<br>
+                <strong>Actividades:</strong><br>
+            </p>
+                <ul type="circle">
+                    <li>Nos dirijimos al restaurante <strong><i>Ollantay</i></strong></li>
+                    <li>Tomaremos una foto</li>
+                    <li>Degustaremos de los platos tipicos</li>
+                    <li>tiempo de descanso (15min)</li>
+                </ul> 
 
-  <!-- ============================================
-       Sección: Conociendo Ollantaytambo y su Gastronomía
-       ============================================ -->
-  <section class="seccion-tour">
-    <h2>Conociendo Ollantaytambo y su Gastronomía</h2>
+        </div>
+        <div class="grid_g">
+            <h3>Restaurante: Ollantay</h3>
+            <p>
+            <i><center><strong>¡Ven y comparte con nosotros un recorrido por los sabores que hacen única a nuestra región!</strong></center></i></p>
+            <p>Calificacion:<strong>4 estrellas</strong></p>
+        </div>
+        <div class="grid_h">
+            <h3>Platos famosos de carta</h3>
+                        <ul type="circle">
+                          <li>Cuy al horno</li>
+                          <li>Trucha frita</li>
+                          <li>Caldo de llama</li>
+                          <li>Chancho al palo</li>
+                          <li>Guiso de alpaca</li>
+                        </ul>
+          <br><center><button>Conocer el lugar</button></center>
+        </div>
+        <div class="grid_i"><img src="../images/ollantaytambo_tour_itinirario_refugio1.jpg" width="150" height="150"></div>
+        <div class="grid_s"> <img src="../images/ollantaytambo_tour_itinirario_refugio2.jpg" width="150" height="150"></div>
+        <div class="grid_j">
+            <h3><center>3. Entrada al parque arqueologico Ollantaytambo</center></h3><br>
+            <p>
+                <strong>Duracion:</strong>4 horas<br>
+                <strong>Duracion de viaje:</strong>15 min <u>(no se cuenta de las 4 horas en el parque)</u><br>
+                <strong>Horario:</strong>1:00 PM - 5:00 AM<br>
+                <strong>Actividades:</strong><br>
+            </p>
+                <ul type="circle">
+                    <li>Viaje en miniban al parque</li>
+                    <li>Foto en la entrada</li>
+                    <li>Recorrido por el parque arqueologico</li>
+                    <li>Sesion de fotos en el parque</li>
+                    <li>1 hora libres para sus actividades</li>
+                </ul> 
 
-    <!-- Fila 1: Descripción del tour (100% de ancho) con imagen de fondo -->
-    <div class="fila-descripcion">
-      <!-- Este div tiene fondo (se puede modificar la imagen de fondo desde el atributo inline o desde CSS) -->
-      <div class="fondo-descripcion">
-        <p>
-          Descubre la riqueza cultural y gastronómica de Ollantaytambo a través de este tour único donde la historia se funde con sabores tradicionales.
-        </p>
-      </div>
+        </div>
+        <div class="grid_k">
+            <h3>Especialidades andinas</h3>
+            <p>
+                <i><center><strong>Ven a Especialidades Andinas y descubre sabores auténticos en un ambiente
+                                 tranquilo y acogedor. Perfecto para comenzar el día o cerrar la jornada con un toque de 
+                                 tradición.</strong></center></i></p>
+            </p>
+            <p>Calificacion: <strong>4 estrellas</strong></p>
+        </div>
+        <div class="grid_l">
+            <h3>Un poco de lo que ofrecemos</h3>
+            <ul type="circle">
+              <li>Mate de coca</li>
+              <li>Ponche de kiwuicha</li>
+              <li>Quinua con Leche</li>
+              <li>Infusión de Muña</li>
+              <li>Ponche de kiwuicha</li>
+            </ul>
+            <br><center><button>Conocer el lugar</button></center>
+        </div>
+        <div class="grid_m">
+            <h3><center>4. Cena tradicional</center></h3><br>
+            <p>
+                <strong>Duracion:</strong>4 horas<br>
+                <strong>Duracion de viaje <i>Regreso</i>:</strong>15 min <u>(no se cuenta de las 2 horas de cena)</u><br>
+                <strong>Horario:</strong>5:30 PM - 9:30 AM<br>
+                <strong>Actividades:</strong><br>
+            </p>
+            </ul>
+            <ul type="circle"></ul>
+                <li>Regreso en miniban al pueblito</li>
+                <li>Nos dirijimos al restaurante <strong><i>Especialidades Andinas</i></strong></li>
+                <li>Eleccion de potajes </li>
+                <li>Degustacion de potajes</li>
+                <li>vsisitaremos el centro del parque donde habra un espectaculo</li>
+            </ul> 
+        </div>
+        <div class="grid_n"><img src="../images/ollantaytambo_tour_itinirario_cena1.jpg" width="400" height="200"></div>
+        <div class="grid_o"><img src="../images/ollantaytambo_tour_itinirario_cena1.jpg" width="400" height="200"></div>
+        <div class="grid_t"><br><h3>Hotel: Luna Creciente</h3><br></div>
+        <div class="grid_u"><br>
+            <p>Calificacion: <strong>4 estrellas</strong></p>
+            <p><strong>Tipo de habitacion</strong>matrimonial, facimilar, simple, vip, doble</p>
+            <p>Habitaciones desde <strong>S/50</strong></p>
+            <p><strong>Desayuno buffet incluido</strong></p>
+            <br><center><button>Conocer el lugar</button></center>
+        </div>
+        <div class="grid_y">
+            <h3><center>5. Noche de locura</center></h3><br>
+            <p>
+                <strong>Duracion:</strong>4 horas<br>
+                <strong>Duracion de viaje <i>Regreso</i>:</strong>15 min <u>(no se cuenta de las 2 horas de cena)</u><br>
+                <strong>Horario:</strong>10:30 PM - 2:30 AM<br>
+                <strong>Actividades:</strong><br>
+            </p>
+                <ul type="number">
+                    <li>Regresamos al hotel</li>
+                    <li>Nos dirigimos a la discoteca <strong><i>La llama loca</i></strong></li>
+                    <li>tendremos visponible una sala VIP </li>
+                    <li>Bailaremos hasta el amanecer</li>
+                    <li>Regresaremos al hotel a descansar.</li>
+                </ul> 
+        </div>
+        <div class="grid_z"><img src="../images/ollantaytambo_tour_itinirario_cena1.jpg" width="400" height="200"></div>
+        <div class="grid_aa"><img src="../images/ollantaytambo_tour_itinirario_cena1.jpg" width="400" height="200"></div>
+        <div class="grid_v"><img src="../images/ollantaytambo_tour_itinirario_cena2.jpg" width="500" height="400"></div>
+        <div class="grid_w"><img src="../images/ollantaytambo_principal.jpg" width="500" height="400"></div>
+        <div class="grid_x"><img src="../images/ollantaytambo_tour_itinirario_bajo.jpg" width="500" height="400"></div>
     </div>
-
-    <!-- Fila 2: Título del Itinerario (100%) con imagen que oscurece al pasar el cursor -->
-    <div class="fila-titulo-itinerario">
-      <img src="imagenes/itinerario.jpg" alt="Imagen para Itinerario">
-      <!-- Capa de superposición que muestra el título; al hacer hover se oscurece la imagen -->
-      <div class="overlay-titulo">
-        <h3>Itinerario</h3>
-      </div>
-    </div>
-
-    <!-- Fila 3: Itinerario – Primera fila -->
-    <div class="fila-itinerario">
-      <!-- Contenedor izquierdo (80% de ancho) subdividido en tres columnas:
-           1. Espacio vacío (~10% relativo)
-           2. Actividad 1 (~50% relativo)
-           3. Imagen 1 (~20% relativo) -->
-      <div class="itinerario-izquierda">
-        <div class="columna-espacio"> </div>
-        <div class="columna-actividad">Actividad 1: Explorar el mercado artesanal</div>
-        <div class="columna-imagen">
-          <img src="imagenes/itinerario1.jpg" alt="Imagen Itinerario 1">
+    <section class="seccion-comentarios">
+        <h2>Comentarios</h2>
+        <!-- Grid de 4 comentarios -->
+        <div class="grid-comentarios">
+          <div class="comentario">Comentario 1</div>
+          <div class="comentario">Comentario 2</div>
+          <div class="comentario">Comentario 3</div>
+          <div class="comentario">Comentario 4</div>
         </div>
-      </div>
-      <!-- Contenedor derecho (20% de ancho) para Restaurante 1; sin fondo -->
-      <div class="restaurante" id="restaurante-1">
-        Restaurante 1
-      </div>
-    </div>
-
-    <!-- Fila 4: Itinerario – Segunda fila (inversa: restaurante a la izquierda, actividad a la derecha) -->
-    <div class="fila-itinerario">
-      <!-- Contenedor izquierdo para Restaurante 2 -->
-      <div class="restaurante" id="restaurante-2">
-        Restaurante 2
-      </div>
-      <!-- Contenedor derecho (80% de ancho) subdividido en tres columnas:
-           1. Imagen 2 (~20%)
-           2. Actividad 2 (~50%)
-           3. Espacio vacío (~10%) -->
-      <div class="itinerario-derecha">
-        <div class="columna-imagen">
-          <img src="imagenes/itinerario2.jpg" alt="Imagen Itinerario 2">
+        <!-- Botón para mostrar el formulario de experiencia -->
+        <div class="boton-experiencia">
+          <button id="mostrar-formulario">Cuéntanos tu experiencia</button>
         </div>
-        <div class="columna-actividad">Actividad 2: Visitar sitio arqueológico</div>
-        <div class="columna-espacio"> </div>
-      </div>
-    </div>
-
-    <!-- Fila 5: Itinerario – Tercera fila -->
-    <div class="fila-itinerario">
-      <!-- Contenedor izquierdo (80%) subdividido en:
-           1. Espacio vacío (~10%)
-           2. Imagen 3 (~20%)
-           3. Actividad 3 (~50%) -->
-      <div class="itinerario-izquierda">
-        <div class="columna-espacio"> </div>
-        <div class="columna-imagen">
-          <img src="imagenes/itinerario3.jpg" alt="Imagen Itinerario 3">
+        <!-- Formulario de experiencia (oculto por defecto) -->
+        <div class="formulario-experiencia" id="formulario-experiencia">
+          <form action="#" method="post">
+            <div class="campo-formulario">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+            </div>
+            <div class="campo-formulario">
+              <label for="fecha">Fecha de visita:</label>
+              <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div class="campo-formulario">
+              <label for="lugares">Lugares visitados:</label>
+              <textarea id="lugares" name="lugares" rows="3" placeholder="Describa los lugares visitados" required></textarea>
+            </div>
+            <div class="campo-formulario">
+              <label for="recomendaciones">Recomendaciones:</label>
+              <textarea id="recomendaciones" name="recomendaciones" rows="3" placeholder="Ingrese sus recomendaciones" required></textarea>
+            </div>
+            <div class="campo-formulario">
+              <label for="puntuacion">Puntuación (1-5):</label>
+              <input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required>
+            </div>
+            <div class="campo-formulario">
+              <button type="submit">Enviar</button>
+              <button type="reset">Limpiar</button>
+            </div>
+          </form>
         </div>
-        <div class="columna-actividad">Actividad 3: Recorrido cultural</div>
-      </div>
-      <!-- Contenedor derecho para Restaurante 3 -->
-      <div class="restaurante" id="restaurante-3">
-        Restaurante 3
-      </div>
-    </div>
-
-    <!-- Fila 6: Hoteles recomendados (dos columnas 50% cada una) -->
-    <div class="fila-hoteles">
-      <!-- Cada bloque de hotel es un grid interno -->
-      <div class="hotel">
-        <div class="hotel-foto">
-          <img src="imagenes/hotel1.jpg" alt="Hotel 1">
-          <!-- Capa para mostrar el nombre del hotel centrado sobre la foto -->
-          <div class="overlay-hotel">
-            <h4>Hotel 1</h4>
-          </div>
-        </div>
-        <div class="hotel-descripcion">
-          <p>Descripción breve del Hotel 1.</p>
-        </div>
-        <div class="hotel-boton">
-          <button>Conocer más</button>
-        </div>
-      </div>
-      <div class="hotel">
-        <div class="hotel-foto">
-          <img src="imagenes/hotel2.jpg" alt="Hotel 2">
-          <div class="overlay-hotel">
-            <h4>Hotel 2</h4>
-          </div>
-        </div>
-        <div class="hotel-descripcion">
-          <p>Descripción breve del Hotel 2.</p>
-        </div>
-        <div class="hotel-boton">
-          <button>Conocer más</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Fila 7: Galería de Fotos (tres columnas iguales) -->
-    <div class="fila-fotos">
-      <div class="foto">
-        <img src="imagenes/foto1.jpg" alt="Foto 1">
-      </div>
-      <div class="foto">
-        <img src="imagenes/foto2.jpg" alt="Foto 2">
-      </div>
-      <div class="foto">
-        <img src="imagenes/foto3.jpg" alt="Foto 3">
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       Sección de Comentarios
-       ============================================ -->
-  <section class="seccion-comentarios">
-    <h2>Comentarios</h2>
-    <!-- Grid de 4 comentarios (cada uno 25% de ancho) -->
-    <div class="grid-comentarios">
-      <div class="comentario">Comentario 1</div>
-      <div class="comentario">Comentario 2</div>
-      <div class="comentario">Comentario 3</div>
-      <div class="comentario">Comentario 4</div>
-    </div>
-    <!-- Botón centrado para mostrar el formulario de experiencia -->
-    <div class="boton-experiencia">
-      <button id="mostrar-formulario">Cuéntanos tu experiencia</button>
-    </div>
-    <!-- Formulario de experiencia (oculto por defecto) -->
-    <div class="formulario-experiencia" id="formulario-experiencia">
-      <!-- Comentario: Formulario para recoger la experiencia del usuario -->
-      <form action="#" method="post">
-        <div class="campo-formulario">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
-        </div>
-        <div class="campo-formulario">
-          <label for="fecha">Fecha de visita:</label>
-          <input type="date" id="fecha" name="fecha" required>
-        </div>
-        <div class="campo-formulario">
-          <label for="lugares">Lugares visitados:</label>
-          <textarea id="lugares" name="lugares" rows="3" placeholder="Describa los lugares visitados" required></textarea>
-        </div>
-        <div class="campo-formulario">
-          <label for="recomendaciones">Recomendaciones:</label>
-          <textarea id="recomendaciones" name="recomendaciones" rows="3" placeholder="Ingrese sus recomendaciones" required></textarea>
-        </div>
-        <div class="campo-formulario">
-          <label for="puntuacion">Puntuación (1-5):</label>
-          <input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required>
-        </div>
-        <div class="campo-formulario">
-          <button type="submit">Enviar</button>
-          <button type="reset">Limpiar</button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- ============================================
-       Sección de Restaurantes Recomendados
-       ============================================ -->
-  <section class="seccion-restaurantes">
-    <h2>Restaurantes Recomendados</h2>
-    <!-- Cada restaurante es un bloque en un grid de 3 columnas -->
-    <div class="grid-restaurantes">
-      <div class="restaurante-bloque">
-        <!-- Columna 1: Foto con overlay que muestra el nombre y, al hacer hover, la descripción -->
-        <div class="restaurante-foto">
-          <img src="imagenes/restaurante1.jpg" alt="Restaurante 1">
-          <div class="overlay-restaurante">
-            <h4>Restaurante 1</h4>
-            <p>Descripción breve del restaurante que se muestra al pasar el cursor.</p>
-          </div>
-        </div>
-        <!-- Columna 2: Platos (sin fondo) -->
-        <div class="restaurante-platos">
-          <p>Platos famosos</p>
-        </div>
-        <!-- Columna 3: Botón "Conocer más" -->
-        <div class="restaurante-boton">
-          <button>Conocer más</button>
-        </div>
-      </div>
-      <!-- Se pueden agregar más bloques de restaurante siguiendo la misma estructura -->
-    </div>
-  </section>
-
-  <!-- ============================================
-       Sección de Hoteles Recomendados
-       ============================================ -->
-  <section class="seccion-hoteles">
-    <h2>Hoteles Recomendados</h2>
-    <!-- Cada hotel es un bloque en un grid de 3 columnas -->
-    <div class="grid-hoteles">
-      <div class="hotel-bloque">
-        <!-- Columna 1: Foto con overlay del nombre -->
-        <div class="hotel-foto">
-          <img src="imagenes/hotel3.jpg" alt="Hotel 3">
-          <div class="overlay-hotel"><h4>Hotel 3</h4></div>
-        </div>
-        <!-- Columna 2: Descripción con fondo -->
-        <div class="hotel-descripcion">
-          <p>Breve descripción del Hotel 3.</p>
-        </div>
-        <!-- Columna 3: Botón centrado -->
-        <div class="hotel-boton">
-          <button>Conocer más</button>
-        </div>
-      </div>
-      <!-- Se pueden agregar más bloques de hotel -->
-    </div>
-  </section>
-
-  <!-- ============================================
-       PIE DE PÁGINA
-       ============================================ -->
-  <footer>
-    <p>&copy; 2025 Blog Viajero UTP</p>
-    <div class="boton-regresar">
-      <a href="paginaprincipal.html"><button>Volver a página principal</button></a>
-    </div>
-  </footer>
-
-  <!-- ============================================
-       JavaScript para mostrar/ocultar el formulario de experiencia
-       ============================================ -->
-  <script>
-    // Al hacer click en el botón, se muestra u oculta el formulario
-    document.getElementById('mostrar-formulario').addEventListener('click', function(){
-      var formulario = document.getElementById('formulario-experiencia');
-      formulario.style.display = (formulario.style.display === 'block') ? 'none' : 'block';
-    });
-  </script>
+      </section>
 </body>
 </html>
