@@ -12,7 +12,7 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #edf3d7;
+    background-image: url(../images/fontotal.png);
     color: #595552;
     line-height: 1.5;
   }
@@ -27,11 +27,12 @@
      ESTILOS DEL ENCABEZADO
      ======================= */
  header {
-        background-color: #bedde3;
+        background-color: #e0ded0;
         position: sticky;
         top: 0;
         z-index: 1000;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        color: #ffc30f;
  }
       
 .header-container {
@@ -163,34 +164,57 @@ table {
         color: #10405e; 
         text-transform: uppercase;
       }
-      
+      h4{
+        font-size: 46px;
+        color: #1c2336;
+        text-align: center;
+        background-color: #e0ded0;
+      }
+      button {
+        background-color: #3ba1c8;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover {
+        background-color: #2e8abf;
+    }
 /* Estilo general del contenedor */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(9, 1fr); /* 9 columnas */
-    grid-template-rows: repeat(14, 1fr); /* 14 filas */
-    gap: 10px; /* Espaciado entre los elementos */
+    grid-template-rows: repeat(14, auto); /* 14 filas */
+    gap: 10px; 
     margin: 0 auto 0 auto;
     width: 90%;
-    padding: 0 15px;
+    padding: 0 10px;
     position: static;
-    background: linear-gradient(180deg, rgb(203, 241, 240), rgb(100, 173, 188));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.881));
   }
   
   /* Definición de áreas */
   .grid_a {
     grid-column: 1 / 10; /* Ocupa todas las columnas */
     grid-row: 1 ; /* Ocupa las primeras 1 filas */
-    background-image: url('ruta-de-la-imagen-fondo.jpg'); /* Imagen de fondo */
-    background-size: cover;
+    background-color: #ffffffbd;
+    color: #000000;
     background-position: center;
     padding: 70px;
   }
+  .grid_a:hover{
+    background-color: #03060fbd;
+    color: #ffffff;
+  }
+
   .grid_p{
     text-align: center;
-    padding: 70px;
+    padding: 0px;
     grid-column: 1 / 10; /* Ocupa todas las columnas */
     grid-row: 2 ; /* Ocupa las primeras 1 filas */
+    height: 10px;
   }
   
   .grid_b {
@@ -248,19 +272,21 @@ table {
     background-size: cover;
     height: 200px;
     background-position: center;
-    text-align: center;
     transition: filter 0.3s ease, color 0.3s ease;
+    text-align: center;
   }
-  .grid_g :hover{
-    filter: brightness(50%);
-    color: #fff;
+  .grid_g:hover{
+    background-image: none;
+    background-color: #333;
+    color: #ffb700;
   }
   .grid_h {
     grid-column: 8 / 10; /* Columnas 8 a 9 */
     grid-row: 5 ; /* Filas 5 */
-    background-color: #849a9881;
+    background-color: #a1f3fa8a;
     text-align: center;
-    padding: 20px 30px 20px 20px;
+    padding: 10px;
+    color: #08122d;
   }
   
   .grid_i {
@@ -268,6 +294,7 @@ table {
     grid-row: 7 ; /* Filas 7*/
     background-size: cover;
     background-position: center;
+    
   }
   .grid_s {
     grid-column: 2 / 4; /* Columnas 2 a 3 */
@@ -289,17 +316,24 @@ table {
     grid-row: 7; /* Filas 7 */
     background-image: url("../images/ollantaytambo_tour_rest_humitas.jpg");
     background-size: cover;
+    height: 200px;
     background-position: center;
-    text-align: center;
+    transition: filter 0.3s ease, color 0.3s ease;
     padding: 10px;
+  }
+  .grid_k:hover{
+    background-image: none;
+    background-color: #333;
+    color: #ffb700;
   }
   
   .grid_l {
     grid-column: 8 / 10; /* Columnas 8 a 9 */
     grid-row: 8; /* Filas 8*/
-    background-color: #80a3a867;
+    background-color: #a1f3fa8a;
     text-align: center;
     padding: 10px;
+    color: #08122d;
   }
   
   .grid_m {
@@ -326,16 +360,25 @@ table {
   .grid_t {
     grid-column: 8 / 10; /* Columnas 8 a 9 */
     grid-row: 10 ; /* Filas 10 */
-    background-color: url("../images/ollantaytambo_tour_hotel.jpg") ;
-    text-align: center;
+    background-image: url(https://www.ahstatic.com/photos/3254_ho_00_p_1024x768.jpg) ;
+    height: 200px;
+    background-position: center;
+    transition: filter 0.3s ease, color 0.3s ease;
     padding: 10px;
+    text-align: center;
+  }
+  .grid_t:hover{
+    background-image: none;
+    background-color: #333;
+    color: #ffb700;
   }
   .grid_u {
     grid-column: 8 / 10; /* Columnas 8 a 9 */
     grid-row: 11 ; /* Filas 12 */
-    background-color: #80a3a867;
+    background-color: #a1f3fa8a;
     text-align: center;
     padding: 10px;
+    color: #08122d;
   }
 
   .grid_v {
@@ -368,14 +411,14 @@ table {
   }
   
   .grid_z {
-    grid-column: 6 / 9; /* Columnas 6 a 8 */
+    grid-column: 6 / 8; /* Columnas 6 a 7 */
     grid-row: 11; /* Filas 11 */
     text-align: center;
     padding: 10px;
   }
   
   .grid_aa {
-    grid-column: 6 / 9; /* Columnas 6 a 8 */
+    grid-column: 6 / 8; /* Columnas 6 a 7 */
     grid-row: 12; /* Filas 12 */
     text-align: center;
     padding: 10px;
@@ -384,7 +427,7 @@ table {
   .seccion-comentarios {
     margin: 20px;
     padding: 20px;
-    background-color: #faffe3;
+    background-color: #e0ded0;
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
   }
