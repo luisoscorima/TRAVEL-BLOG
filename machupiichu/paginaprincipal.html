@@ -3,242 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Viaje a Cusco</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #faf5ef;
-            color: #595552;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ffffff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 1rem 0;
-        }
-        header h1 {
-            color: #3ba1c8;
-            text-align: center;
-            padding: 15px;
-            margin: 0;
-        }
-        .banner {
-            width: 100%;
-            height: 100vh;
-            background-image: url(https://content.r9cdn.net/rimg/dimg/4c/ac/7e6077e1-city-45618-165ce416a23.jpg?crop=true&width=1020&height=498); /* Reemplaza con la URL de tu imagen */
-            background-size: cover;
-            background-position: center;
-            object-fit: cover;
-            background-repeat: no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #ffffff;
-            font-size: 40px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        section {
-            margin: 20px;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #0e2d3a;
-            border-bottom: 2px solid #ffc226;
-            padding-bottom: 7px;
-        }
-        h3 {
-            color: #0f2719;
-        }
-        .divider {
-            border-bottom: 2px solid #ffc226;
-            margin: 20px 0;
-        }
-        button {
-            background-color: #3ba1c8;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #2e8abf;
-        }
-        footer {
-            background-color: #223d4870;
-            color: #ffffff;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            background: #333;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        nav ul li a:hover {
-            background: #555;
-        }
-        strong {
-            color: #3ba1c8;
-        }
-        i {
-            font-style: italic;
-        }
-        table {
-            width: 100%;
-            border-spacing: 20px;
-        }
-        th {
-            vertical-align: top;
-            text-align: left;
-        }
-        img {
-            border-radius: 8px;
-            max-width: 100%;
-            height: auto;
-        }
-        p {
-            line-height: 1.2;
-            text-align: justify;
-            margin: 10px 0;
-            font-weight: normal;
-        }
-    </style>
+    <title>Blog Viajero UTP :: Machu Picchu</title>
+    <link rel="stylesheet" href="../css/place_machu_picchu.css" type="text/css">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
 </head>
 <body>
     <header>
-        <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Blog Viajero UTP: Descubre Cusco</a></h1>
-        <nav>
-            <ul>
-                <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
-                <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
-                <li><a href="../lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
-                <li><a href="../pisac/pisac.html">Pisac</a></li>
-                <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html"><img src="../images/logo_blog_banner_white.png" alt="logo"></a></div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav-links"> 
+                <li class="dropdown">
+                    <a href="#">Lugares</a>
+                    <ul class="dropdown-content">
+                        <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
+                        <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
+                        <li><a href="../lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
+                        <li><a href="../pisac/pisac.html">Pisac</a></li>
+                        <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
+                    </ul>
+                </li>
+                <li><a href="../tourgeneral.html">Tours y Actividades</a></li>
+          <li><a href="../consejospracti.html">Consejos Prácticos</a></li>
             </ul>
+            <button class="plan-trip">Planea tu visita</button>
         </nav>
     </header>
-    <div class="banner"><span>MACHU PICCHU</span></div>
 
-<section>
-    <<h2><center>MACHU PICCHU</center></h2>
-    <section>
-        <table>
-            <tr>
-                <th>
-                    <h3>Historia</h3>
-                    <p>
-                        En esta sección, te invitamos a explorar las raíces de una de las maravillas del mundo. Aquí encontrarás:
-                    </p>
-                    <p>
-                        <strong>La Historia:</strong> Desde su construcción en el siglo XV por el emperador Pachacútec hasta su redescubrimiento en 1911 por Hiram Bingham.
-                    </p>
-                    <p>
-                        <strong>Fechas Festivas Importantes:</strong> Conoce las celebraciones tradicionales, como el Inti Raymi, que mantienen viva la cultura inca.
-                    </p>
-                    <p>
-                        <strong>Leyendas Comunes:</strong> Descubre los mitos que rodean este lugar, como la conexión espiritual de los Incas con la montaña y sus misteriosos templos.
-                    </p>
-                </th>
-                <th>
-                    <img src="../images/historia de machupichu.jpg" width="800" height="800">
-                </th>
-            </tr>
-        </table>
-        <div class="divider"></div>
-        <p>
-            <center><i>Prepárate para sumergirte en la riqueza histórica y cultural de Machu Picchu, una ciudad sagrada que sigue cautivando a sus visitantes.</i></center>
-        </p>
-        <center>
-            <a href="historiamachupichu.html"><button>Ver más</button></a>
-        </center>
-    </section>
-    <section>
-        <table>
-            <tr>
-                <th>
-                    <h3>Tour y Actividades</h3>
-                    <p>
-                        En esta sección, te ofrecemos una guía completa para aprovechar al máximo tu visita. Aquí encontrarás:
-                    </p>
-                    <p>
-                        <strong>Zonas Turísticas:</strong> Descubre los principales atractivos, desde la Puerta del Sol hasta el Templo del Cóndor.
-                    </p>
-                    <p>
-                        <strong>Tours y Actividades:</strong> Explora los mejores recorridos, caminatas y experiencias guiadas que te conectarán con la historia inca.
-                    </p>
-                    <p>
-                        <strong>Recomendaciones:</strong> Restaurantes y alojamientos recomendados para una estancia inolvidable.
-                    </p>
-                </th>
-                <th>
-                    <img src="../images/tour_machupichu.jpg" width="800" height="800">
-                </th>
-            </tr>
-        </table>
-        <div class="divider"></div>
-        <p>
-            <center><i>¡Descubre la magia de Machu Picchu con experiencias inolvidables en el corazón de los Andes!</i></center>
-        </p>
-        <center>
-            <a href="zonaturisticamachu.html"><button>Ver más</button></a>
-        </center>
-    </section>
-    <section>
-        <table>
-            <tr>
-                <th>
-                    <h3>Consejos Prácticos</h3>
-                    <p>
-                        En esta sección, te ayudamos a planificar tu viaje de manera inteligente. Aquí encontrarás:
-                    </p>
-                    <p>
-                        <strong>Guía por Temporadas:</strong> Información sobre el clima en cada época del año.
-                    </p>
-                    <p>
-                        <strong>Accesorios y Ropa Recomendados:</strong> Consejos sobre qué llevar para una visita cómoda y segura.
-                    </p>
-                    <p>
-                        <strong>Clima Esperado:</strong> Datos sobre las condiciones meteorológicas para prepararte mejor.
-                    </p>
-                    <p>
-                        <strong>Advertencias y Precauciones:</strong> Consejos para cuidar tu salud y seguridad durante el recorrido.
-                    </p>
-                </th>
-                <th>
-                    <img src="../images/consejero machupichu.jpg" width="500" height="500">
-                </th>
-            </tr>
-        </table>
-        <div class="divider"></div>
-        <p>
-            <center><i>¡Disfruta de Machu Picchu al máximo con estos prácticos consejos!</i></center>
-        </p>
-        <center>
-            <a href="../consejospracti.html"><button>Ver más</button></a>
-        </center>
-    </section>
+    <main>
+        <div class="banner"><span>Santuario Arqueológico de Machu Picchu</span></div>
+        <section>
+            <table>
+                <tr>
+                    <th>
+                        <h3>Historia</h3>
+                        <p>
+                            En esta sección, te invitamos a explorar las raíces de una de las maravillas del mundo. Aquí encontrarás:
+                        </p>
+                        <p>
+                            <strong>La Historia:</strong> Desde su construcción en el siglo XV por el emperador Pachacútec hasta su redescubrimiento en 1911 por Hiram Bingham.
+                        </p>
+                        <p>
+                            <strong>Fechas Festivas Importantes:</strong> Conoce las celebraciones tradicionales, como el Inti Raymi, que mantienen viva la cultura inca.
+                        </p>
+                        <p>
+                            <strong>Leyendas Comunes:</strong> Descubre los mitos que rodean este lugar, como la conexión espiritual de los Incas con la montaña y sus misteriosos templos.
+                        </p>
+                    </th>
+                    <th>
+                        <img src="../images/historia de machupichu.jpg" width="800" height="800">
+                    </th>
+                </tr>
+            </table>
+            <div class="divider"></div>
+            <p>
+                <center><i>Prepárate para sumergirte en la riqueza histórica y cultural de Machu Picchu, una ciudad sagrada que sigue cautivando a sus visitantes.</i></center>
+            </p>
+            <center>
+                <a href="historiamachupichu.html"><button>Ver más</button></a>
+            </center>
+        </section>
+        <section>
+            <table>
+                <tr>
+                    <th>
+                        <h3>Tour y Actividades</h3>
+                        <p>
+                            En esta sección, te ofrecemos una guía completa para aprovechar al máximo tu visita. Aquí encontrarás:
+                        </p>
+                        <p>
+                            <strong>Zonas Turísticas:</strong> Descubre los principales atractivos, desde la Puerta del Sol hasta el Templo del Cóndor.
+                        </p>
+                        <p>
+                            <strong>Tours y Actividades:</strong> Explora los mejores recorridos, caminatas y experiencias guiadas que te conectarán con la historia inca.
+                        </p>
+                        <p>
+                            <strong>Recomendaciones:</strong> Restaurantes y alojamientos recomendados para una estancia inolvidable.
+                        </p>
+                    </th>
+                    <th>
+                        <img src="../images/tour_machupichu.jpg" width="800" height="800">
+                    </th>
+                </tr>
+            </table>
+            <div class="divider"></div>
+            <p>
+                <center><i>¡Descubre la magia de Machu Picchu con experiencias inolvidables en el corazón de los Andes!</i></center>
+            </p>
+            <center>
+                <a href="zonaturisticamachu.html"><button>Ver más</button></a>
+            </center>
+        </section>
+        <section>
+            <table>
+                <tr>
+                    <th>
+                        <h3>Consejos Prácticos</h3>
+                        <p>
+                            En esta sección, te ayudamos a planificar tu viaje de manera inteligente. Aquí encontrarás:
+                        </p>
+                        <p>
+                            <strong>Guía por Temporadas:</strong> Información sobre el clima en cada época del año.
+                        </p>
+                        <p>
+                            <strong>Accesorios y Ropa Recomendados:</strong> Consejos sobre qué llevar para una visita cómoda y segura.
+                        </p>
+                        <p>
+                            <strong>Clima Esperado:</strong> Datos sobre las condiciones meteorológicas para prepararte mejor.
+                        </p>
+                        <p>
+                            <strong>Advertencias y Precauciones:</strong> Consejos para cuidar tu salud y seguridad durante el recorrido.
+                        </p>
+                    </th>
+                    <th>
+                        <img src="../images/consejero machupichu.jpg" width="500" height="500">
+                    </th>
+                </tr>
+            </table>
+            <div class="divider"></div>
+            <p>
+                <center><i>¡Disfruta de Machu Picchu al máximo con estos prácticos consejos!</i></center>
+            </p>
+            <center>
+                <a href="../consejospracti.html"><button>Ver más</button></a>
+            </center>
+        </section>
+    </main>
     
     <!-- Formulario de comentarios -->
     <footer>
