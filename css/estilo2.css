@@ -13,7 +13,7 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #bedde3;
+    background-image: url(../images/fontotal.png);
     color: #595552;
     line-height: 1.5;
   }
@@ -29,11 +29,12 @@
      ESTILOS DEL ENCABEZADO
      ======================= */
   header {
-    background-color: #bedde3;
+    background-color: #e0ded0;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #ffc30f;
   }
   
   .header-container {
@@ -96,40 +97,22 @@
     display: block;
   }
   
-  /* =======================
-     ESTILOS DEL CARRUSEL
-     ======================= */
-  .carousel {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100vh;
-  }
-  
-  .carousel .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    animation: slideAnimation 15s infinite;
-  }
-  
-  /* Ajuste de delay para cada slide */
-  .carousel .slide:nth-child(1) { animation-delay: 0s; }
-  .carousel .slide:nth-child(2) { animation-delay: 5s; }
-  .carousel .slide:nth-child(3) { animation-delay: 10s; }
-  
-  @keyframes slideAnimation {
-    0%   { opacity: 0; }
-    5%   { opacity: 1; }
-    33%  { opacity: 1; }
-    38%  { opacity: 0; }
-    100% { opacity: 0; }
-  }
+  .banner {
+            width: 100%;
+            height: 600px;
+            background-image: url('../images/pisac_portada.jpg');
+            background-size: cover;
+            background-position: center;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
   
   /* Leyenda del carrusel */
   .carousel-caption {
