@@ -1,0 +1,288 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf5ef;
+    color: #595552;
+    margin: 0;
+    padding: 0;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: auto;
+}
+header h1 {
+    color: #3ba1c8;
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+}
+.banner {
+    
+    width: 100%;
+    height: 800px;
+    background-image: url('../images/pisac_portada.jpg'); /* Reemplaza con la URL de tu imagen */
+    background-size: cover;
+    background-position: top;
+    object-fit: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.banner span {
+    position: relative;
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.banner p{
+    color: #dcbb50;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    text-align: center;
+    font-size: 24px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Logo */
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Main*/ 
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #0e2d3a;
+    border-bottom: 2px solid #ffc226;
+    padding-bottom: 7px;
+}
+h3 {
+    color: #0f2719;
+}
+.divider {
+    border-bottom: 2px solid #ffc226;
+    margin: 20px 0;
+}
+button {
+    background-color: #3ba1c8;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #2e8abf;
+}
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
+footer h2 {
+    color: #ffffff;
+    border-bottom: 2px solid #ffc226;
+    padding-bottom: 7px;
+}
+
+table {
+    width: 100%;
+    border-spacing: 20px;
+}
+th {
+    vertical-align: top;
+    text-align: left;
+}
+img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+p {
+    line-height: 1.2;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: normal;
+}
+footer p{
+    text-align: center;
+}
+ul {
+    list-style-position: inside;
+    padding: 0;
+}
+ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-links li a:hover {
+    background: #3ba1c8;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+  
+nav ul li {
+    position: relative;
+    margin-right: 20px;
+}
+  
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 0px;
+    transition: background 0.3s ease;
+}
+  
+nav ul li a:hover {
+    background: #9dc9c8;
+}
+
+strong {
+    color: #3ba1c8;
+}
+i {
+    font-style: italic;
+}
+
+/* Dropdown para "Lugares" */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #bedde3;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 10px 0;
+    min-width: 180px;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+  
+  .dropdown-content li a {
+    padding: 8px 16px;
+    display: block;
+    color: #333;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/* Botón */
+.plan-trip {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.plan-trip:hover {
+    background: lightgray;
+}
+
+/* Icono de menú hamburguesa */
+.menu-icon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Ocultar el checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+    }
+
+    .plan-trip {
+        display: none;
+    }
+}
