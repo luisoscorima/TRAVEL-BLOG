@@ -13,7 +13,7 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #bedde3;
+    background-image: url(../images/fontotal.png);
     color: #595552;
     line-height: 1.5;
   }
@@ -29,11 +29,12 @@
      ESTILOS DEL ENCABEZADO
      ======================= */
   header {
-    background-color: #bedde3;
+    background-color: #e0ded0;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #ffc30f;
   }
   
   .header-container {
