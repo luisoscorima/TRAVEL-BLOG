@@ -374,7 +374,8 @@ table {
     text-align: center;
     padding: 10px;
   }
-  .seccion-comentarios {
+   /* Seccion de comentarios */
+   .seccion-comentarios {
     margin: 20px;
     padding: 20px;
     background-color: #faffe3;
