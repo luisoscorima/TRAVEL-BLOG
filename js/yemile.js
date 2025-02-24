@@ -46,3 +46,68 @@ function validar() {
     alert(`Bienvenido ${usuario.nombre}`);
     location.href = "experiencia.html"; // Cambia "menu.html" por la página a la que deseas redirigir
 }
+
+ // SECCION PREGUNTAS PRECUENTES
+ document.addEventListener('DOMContentLoaded', function() {
+    const accordionButtons = document.querySelectorAll('.acordion button');
+    
+    accordionButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        
+        // Cierra todos los acordeones
+        accordionButtons.forEach(btn => {
+          btn.setAttribute('aria-expanded', 'false');
+          btn.nextElementSibling.style.maxHeight = null;
+        });
+        
+        // Si el acordeón clickeado estaba cerrado, lo abre
+        if (!expanded) {
+          this.setAttribute('aria-expanded', 'true');
+          const content = this.nextElementSibling;
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+  });
+
+   // SECCION CONTENEDOR
+    // Cuando el DOM se haya cargado...
+    document.addEventListener("DOMContentLoaded", function () {
+        // Selecciona todas las secciones que queremos animar
+        const sections = document.querySelectorAll(".section");
+
+        // Configuración del IntersectionObserver
+        const observerOptions = {
+          threshold: 0.15, // cuando el 15% del elemento sea visible
+        };
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              // Si se desea, se puede dejar de observar el elemento
+              sectionObserver.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        sections.forEach((section) => {
+          sectionObserver.observe(section);
+        });
+      });
+
+      //pie de pagina
+      //Ejemplo de interacción: Al hacer clic en el email se muestra un mensaje
+      document.getElementById("newsletter-email").addEventListener("click", function () {
+        alert("¡Gracias por tu interés! Revisa tu correo para confirmar la suscripción.");
+      });
+
+
+let images = [
+  "https://www.caminosalkantay.com/blog/wp-content/uploads/2024/09/Machu-Picchu-epoca-lluvias-1024x683.jpg",
+  "https://www.mundomapi.com/images/tours/valle-sagrado-tours-cusco-1597877674.jpg",
+  "https://www.boletomachupicchu.com/gutblt/wp-content/uploads/2020/02/laguna-humantay.jpg"
+];
+
+
