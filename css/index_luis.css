@@ -595,6 +595,10 @@ progress {
   height: auto;
 }
 
+.img-cover {
+  object-fit: fill;
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;

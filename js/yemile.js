@@ -1,5 +1,11 @@
 // Array para almacenar los usuarios registrados
-let usuarios = [];
+let usuarios = [
+  {
+    name:'Administrador',
+    email:'admin@blog.com',
+    password:'1234'
+  }
+];
 
 // Función para registrar un nuevo usuario
 function registrar() {
