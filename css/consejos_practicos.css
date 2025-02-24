@@ -468,3 +468,92 @@ i {
     padding-top: 20px;
     font-size: 0.9em;
   }
+
+  /*CARRUSEL*/
+   /* Contenedor principal del carrusel */
+   .carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 650px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: -150px; /* Ajusta este valor según la altura de tu header */
+    z-index: -1; /* Envía la imagen detrás del header */
+  }
+  .carousel span {
+    position: relative;
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+  /* Contenedor de los slides */
+  .slides {
+    position: relative;
+    height: 400px; /* Puedes ajustar la altura */
+  }
+  /* Cada slide se posiciona de manera absoluta y se oculta por defecto */
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  /* Slide activo */
+  .slide.active {
+    opacity: 1;
+  }
+  /* La imagen ocupará todo el slide */
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* Overlay central para título y descripción */
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 30px;
+    border-radius: 5px;
+  }
+  .overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .overlay p {
+    font-size: 1rem;
+  }
+  /* Controles: botones prev y next */
+  .controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* Permite clickear los botones sin interferir en el slide */
+  }
+  .controls button {
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    pointer-events: auto;
+  }

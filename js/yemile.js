@@ -50,17 +50,14 @@ function validar() {
  // SECCION PREGUNTAS PRECUENTES
  document.addEventListener('DOMContentLoaded', function() {
     const accordionButtons = document.querySelectorAll('.acordion button');
-    
     accordionButtons.forEach(button => {
       button.addEventListener('click', function() {
         const expanded = this.getAttribute('aria-expanded') === 'true';
-        
         // Cierra todos los acordeones
         accordionButtons.forEach(btn => {
           btn.setAttribute('aria-expanded', 'false');
           btn.nextElementSibling.style.maxHeight = null;
         });
-        
         // Si el acordeón clickeado estaba cerrado, lo abre
         if (!expanded) {
           this.setAttribute('aria-expanded', 'true');
@@ -102,7 +99,36 @@ function validar() {
       document.getElementById("newsletter-email").addEventListener("click", function () {
         alert("¡Gracias por tu interés! Revisa tu correo para confirmar la suscripción.");
       });
+  //CARRUSEL
+  // Seleccionar elementos
+  const slides = document.querySelectorAll('.slide');
+  const nextBtn = document.getElementById('next');
+  const prevBtn = document.getElementById('prev');
+  let currentSlide = 0;
+  const totalSlides = slides.length;
 
+  // Función para mostrar el slide correspondiente
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+  }
+
+  // Eventos para los botones
+  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlide);
+
+  // Cambio automático cada 5 segundos
+  setInterval(nextSlide, 5000);
 
 let images = [
   "https://www.caminosalkantay.com/blog/wp-content/uploads/2024/09/Machu-Picchu-epoca-lluvias-1024x683.jpg",
