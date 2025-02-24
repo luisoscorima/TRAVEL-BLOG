@@ -1,7 +1,7 @@
 
 window.addEventListener('DOMContentLoaded', event => {
 
-    // Navbar shrink function
+    // Función navbar Sjrink: Ajusta el navbar según el scroll
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
@@ -15,13 +15,13 @@ window.addEventListener('DOMContentLoaded', event => {
 
     };
 
-    // Shrink the navbar 
+    // llama a la función cuando la página se actualiza
     navbarShrink();
 
-    // Shrink the navbar when page is scrolled
+    // Ejecuta la función cuando se hace scroll
     document.addEventListener('scroll', navbarShrink);
 
-    // Activate Bootstrap scrollspy on the main nav element
+    // Busca mainNav y activa Bootstrap scrollspy, que hace que se resalte automáticamente según la sección donde se navegue
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     };
 
-    // Collapse responsive navbar when toggler is visible
+    // Colapsa el navbar (menu) cuando se clickea uno de los nav-links
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
