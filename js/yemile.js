@@ -1,5 +1,11 @@
 // Array para almacenar los usuarios registrados
-let usuarios = [];
+let usuarios = [
+  {
+    name:'Administrador',
+    email:'admin@blog.com',
+    password:'1234'
+  }
+];
 
 // Función para registrar un nuevo usuario
 function registrar() {
@@ -43,7 +49,7 @@ function validar() {
     }
 
     // Si todo es correcto, redirigir al usuario
-    alert(`Bienvenido ${usuario.nombre}`);
+    alert(`Bienvenido ${usuario.name}`);
     location.href = "experiencia.html"; // Cambia "menu.html" por la página a la que deseas redirigir
 }
 
