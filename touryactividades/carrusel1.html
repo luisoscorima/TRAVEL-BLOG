@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carruselprincipal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="carrusel1.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+   <div class="swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="https://inkatimetours.com/wp-content/uploads/2020/12/TOUR-A-CUSCO-Y-SUS-MARAVILLAS-33-jpg.webp" />
+          </div> 
+        <div class="swiper-slide">
+        <img src="https://www.cuscotoursperu.com/wp-content/uploads/laguna-humantay.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://whc.unesco.org/uploads/thumbs/site_0274_0048-1000-667-20241115153520.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://inkatimetours.com/wp-content/uploads/2020/12/TOUR-A-CUSCO-Y-SUS-MARAVILLAS-33-jpg.webp" />
+      </div>   
+      <div class="swiper-slide">
+        <img src="https://media.gettyimages.com/id/517695920/es/foto/moray-the-incan-agricultural-site-in-peru.jpg?s=612x612&w=0&k=20&c=jGHPosurLWU-0m17dpybocKmlVM_cGuru1Ux-cmeYfk=" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://media.gettyimages.com/id/804215718/es/foto/mercado-de-recuerdos-en-ollantaytambo-per%C3%BA.jpg?s=612x612&w=0&k=20&c=1Oej8pyuXV-u7V300pHHn5tL_OTK8BzqCQaojLceZIU=" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://media.gettyimages.com/id/536035960/es/foto/women-in-traditional-dress-in-ollantaytambo.jpg?s=612x612&w=0&k=20&c=GTR-Y4OhrNP0Q9UOqQABPL94X7fNvRHeQhZZKgE3ooc=" />
+      </div>      
+      <div class="swiper-slide">
+        <img src="https://media.gettyimages.com/id/2148113078/es/foto/peru-the-inca-archaeological-site-of-ollantaytambo.jpg?s=612x612&w=0&k=20&c=1QNJjMc4tTDff2Mpu8bRFt0GttlTxWPt_5JJOskZ9TM=" />
+      </div>
+    </div>
+    <div class="swiper-button swiper-button-next"></div>
+    <div class="swiper-button swiper-button-prev"></div>
+  </div>
+
+<div style="margin:3em; text-align:center ">
+        <button type="button" class="btn btn-primary btn-lg" id="load1" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order">Cotiza</button>
+        <button type="button" class="btn btn-primary btn-lg" id="load2" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Processing Order">Experiencias</button>
+</div>
+
+<main class="main">
+    
+    
+    <button class="section"> 
+      <div class="box">Machu Picchu</div>
+    </button> 
+   
+    <button class="section">
+      <div class="box">Ollantaytambo</div>
+    </button>
+   
+    <button class="section">
+      <div class="box">Pisac</div>
+    </button>
+    
+    <a href="actividadeslaguna.html"
+    <button class="section">
+      <div class="box">Laguna Huamantay</div>
+    </button> </a>
+
+</main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="carrusel1.js"></script> 
+  <script>
+    // Inicialización de Swiper
+    const swiper = new Swiper(".swiper", {
+      slidesPerView: 5,
+      spaceBetween: 0,
+      centeredSlides: true,
+      loop: true,
+      simulateTouch: 'ontouchstart' in window || navigator.maxTouchPoints > 0,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    // Calcula la altura de las diapositivas
+    const calculateHeight = () => {
+      const swiperSlideElements = Array.from(document.querySelectorAll('.swiper .swiper-slide'));
+      if (!swiperSlideElements.length) return;
+      const width = swiperSlideElements[0].getBoundingClientRect().width;
+      const height = Math.round(width / (16 / 9));
+      swiperSlideElements.map(element => element.style.height = `${height}px`);
+    };
+
+    document.addEventListener("DOMContentLoaded", calculateHeight);
+    addEventListener('resize', calculateHeight);
+    $('.btn').on('click', function() {
+            var $this = $(this);
+            $this.button('loading');
+            setTimeout(function() {
+                $this.button('reset');
+            }, 8000);
+        });
+  </script>
+</body>
+</html>
