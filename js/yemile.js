@@ -23,7 +23,7 @@ function registrar() {
     // Guardar el nuevo usuario en el array
     usuarios.push({ nombre, email, password });
     alert("¡Registro exitoso! Ahora puedes iniciar sesión.");
-    console.log(usuarios); // Para depuración: muestra los usuarios registrados
+    console.log(usuarios); 
 }
 
 // Función para validar el inicio de sesión
