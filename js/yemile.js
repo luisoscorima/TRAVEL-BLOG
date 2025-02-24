@@ -69,11 +69,9 @@ function validar() {
   });
 
    // SECCION CONTENEDOR
-    // Cuando el DOM se haya cargado...
     document.addEventListener("DOMContentLoaded", function () {
         // Selecciona todas las secciones que queremos animar
         const sections = document.querySelectorAll(".section");
-
         // Configuración del IntersectionObserver
         const observerOptions = {
           threshold: 0.15, // cuando el 15% del elemento sea visible
@@ -88,17 +86,14 @@ function validar() {
             }
           });
         }, observerOptions);
-
         sections.forEach((section) => {
           sectionObserver.observe(section);
         });
       });
-
-      //pie de pagina
-      //Ejemplo de interacción: Al hacer clic en el email se muestra un mensaje
-      document.getElementById("newsletter-email").addEventListener("click", function () {
+  //pie de pagina
+    document.getElementById("newsletter-email").addEventListener("click", function () {
         alert("¡Gracias por tu interés! Revisa tu correo para confirmar la suscripción.");
-      });
+    });
   //CARRUSEL
   // Seleccionar elementos
   const slides = document.querySelectorAll('.slide');
@@ -112,21 +107,17 @@ function validar() {
     slides.forEach(slide => slide.classList.remove('active'));
     slides[index].classList.add('active');
   }
-
   function nextSlide() {
     currentSlide = (currentSlide + 1) % totalSlides;
     showSlide(currentSlide);
   }
-
   function prevSlide() {
     currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
     showSlide(currentSlide);
   }
-
   // Eventos para los botones
   nextBtn.addEventListener('click', nextSlide);
   prevBtn.addEventListener('click', prevSlide);
-
   // Cambio automático cada 5 segundos
   setInterval(nextSlide, 5000);
 

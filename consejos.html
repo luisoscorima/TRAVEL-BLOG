@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Viajero UTP :: Consejos Prácticos</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <!-- CSS inline para fines de ejemplo -->
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Cinzel', serif;
+      background-color: #000;
+      color: #225a64;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      position: relative;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.365);
+      text-align: center;
+      height: auto;
+    }
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 20px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .logo img {
+      max-width: 100px;
+      height: auto;
+    }
+    /* Menú de navegación */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links li a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-size: 12px;
+    }
+    .nav-links li a:hover {
+      background: #3a707a81;
+      color:#c7c7c7
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin-right: 18px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fdfdfd;
+      padding: 8px 8px;
+      transition: background 0.3s ease;
+    }
+    nav ul li a:hover {
+      background: #264a50be;
+    }
+    .plan-trip {
+      background: white;
+      color: #224046;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+    .plan-trip:hover {
+      background: lightgray;
+    }
+    .menu-icon {
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      display: none;
+    }
+    #menu-toggle {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+      }
+      .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+      }
+      .menu-icon {
+        display: block;
+      }
+      #menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+      }
+      .plan-trip {
+        display: none;
+      }
+    }
+    /* Sección principal */
+    section {
+      margin: 20px;
+      padding: 20px;
+      background-color: #faffe300;
+      border-radius: 0px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #ffffff;
+      border-bottom: 2px solid #17525c;
+      padding-bottom: 7px;
+    }
+    h3 {
+      color: #32636c;
+    }
+    .divider {
+      border-bottom: 2px solid #17525c;
+      margin: 20px 0;
+    }
+    button {
+      background-color: #31555c;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #2e8abf;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background: linear-gradient(to bottom,#000000, #153f47);
+      color: white;
+      margin-top: 20px;
+    }
+    footer h2 {
+      color: #fff;
+      border-bottom: 2px solid #264a50;
+      padding-bottom: 7px;
+    }
+    table {
+      width: 100%;
+      border-spacing: 20px;
+    }
+    th {
+      vertical-align: top;
+      text-align: left;
+    }
+    img {
+      border-radius: 8px;
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+    p {
+      line-height: 1.2;
+      text-align: justify;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+    footer p {
+      text-align: center;
+    }
+    ul {
+      list-style-position: inside;
+      padding: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    strong {
+      color: #7d9ea4;
+    }
+    i {
+      font-style: italic;
+    }
+    /* Dropdown para "Lugares" */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #4b929f7b;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+      padding: 10px 0;
+      min-width: 180px;
+      border-radius: 5px;
+      z-index: 1000;
+    }
+    .dropdown-content li a {
+      padding: 8px 16px;
+      display: block;
+      color: #333;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    /* Sección Contenedor para temporadas */
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+    .season {
+      background: #ffffff00;
+      margin-bottom: 3rem;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .season header,
+    .season footer {
+      background: #183d43;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    .season header h2 {
+      font-size: 2rem;
+    }
+    .season footer p {
+      font-size: 0.9rem;
+    }
+    .season nav {
+      background: linear-gradient(to bottom, #153f47, #000000);
+      padding: 0.5rem;
+      text-align: center;
+    }
+    .season nav ul {
+      list-style: none;
+      display: inline-flex;
+      gap: 1rem;
+    }
+    .season nav ul li a {
+      color: #ffffff;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+    .season nav ul li a:hover {
+      color: #f7f7f7;
+    }
+    .season main {
+      padding: 1.5rem;
+    }
+    .season .section {
+      margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 3s ease-out, transform 5s ease-out;
+    }
+    .season .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .season .section h3 {
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+    .season .section .content {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .season .section .content img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+    .season .section .content .text {
+      font-size: 0.95rem;
+    }
+    .season .section .content .text p,
+    .season .section .content .text ul {
+      margin-top: 0.5rem;
+    }
+    .season .section .content .text ul {
+      list-style: disc;
+      margin-left: 1.2rem;
+    }
+    .selector,
+    .property {
+      font-weight: bold;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    @media (max-width: 600px) {
+      .season .section .content {
+        flex-direction: column;
+        align-items: center;
+      }
+      .season .section .content img {
+        margin-bottom: 1rem;
+      }
+    }
+    /* Sección de Preguntas Frecuentes */
+    .contenedor {
+      margin: 0 auto;
+      padding: 2rem;
+      max-width: 600px;
+      font-family: Arial, sans-serif;
+    }
+    .contenedor h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .acordion .accordionitem {
+      border-bottom: 1px solid #37747f;
+    }
+    .acordion button {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 1rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      outline: none;
+      position: relative;
+    }
+    .acordion button:after {
+      content: "\002B";
+      font-size: 1.5rem;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      transition: transform 0.2s;
+    }
+    .acordion button[aria-expanded="true"]:after {
+      transform: rotate(45deg);
+    }
+    .acordion .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      padding: 0 1rem;
+    }
+    .acordion .accordion-content p {
+      margin: 1rem 0;
+    }
+    /* Pie de página */
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .footer-section {
+      flex: 1 1 300px;
+      padding: 10px;
+    }
+    .footer-section h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .footer-section p {
+      margin: 8px 0;
+    }
+    .footer-section a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-section a:hover {
+      color: #ffcc00;
+    }
+    .footer-bottom {
+      border-top: 1px solid #555;
+      padding-top: 20px;
+      font-size: 0.9em;
+    }
+    /* Carrusel */
+    .carousel {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 650px;
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: -150px;
+      z-index: -1;
+    }
+    .carousel span {
+      position: relative;
+      color: white;
+      font-size: 48px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+    .slides {
+      position: relative;
+      height: 400px;
+    }
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+    .slide.active {
+      opacity: 1;
+    }
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px 30px;
+      border-radius: 5px;
+      pointer-events: none; 
+    }
+    .overlay h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      pointer-events: auto;
+    }
+    .overlay p {
+      font-size: 1rem;
+    }
+    .controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    .controls button {
+      background: rgba(0,0,0,0.5);
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      padding: 10px;
+      cursor: pointer;
+      pointer-events: auto;
+    }
+    /* desplazamieto en los iconos principales*/
+    #verano {
+    padding-top: 100px; /* Espacio para el desplazamiento */
+    margin-top: -100px; /* Compensa el espacio adicional */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo_blog_banner_white.png" alt="logo">
+        </a>
+      </div>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="#">Lugares</a>
+          <ul class="dropdown-content">
+            <li><a href="./ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
+            <li><a href="./montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
+            <li><a href="./lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
+            <li><a href="./pisac/pisac.html">Pisac</a></li>
+            <li><a href="./machupiichu/paginaprincipal.html">Machu Picchu</a></li>
+          </ul>
+        </li>
+        <li><a href="tourgeneral.html">Tours y Actividades</a></li>
+        <li><a href="consejospracti.html">Consejos Prácticos</a></li>
+      </ul>
+      <button class="plan-trip">Planea tu visita</button>
+    </nav>
+  </header>
+
+  <!-- Carrusel -->
+  <div class="carousel">
+    <div class="slides">
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <img src="../images/verano.jpg" alt="Imagen 1">
+        <div class="overlay">
+          <h2><a href="#verano">VERANO</a></h2>
+          <p>¡Vive la magia de Cusco bajo la lluvia!</p>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="../images/machupichu_mejor_version.jpg" alt="Imagen 2">
+        <div class="overlay">
+          <h2><a href="#otono">OTOÑO</a></h2>
+          <p>Disfruta de Cusco en su mejor versión.</p>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="../images/invierno.jpg" alt="Imagen 3">
+        <div class="overlay">
+          <h2><a href="#invierno">INVIERNO</a></h2>
+          <p>¡Aventúrate en la temporada seca!</p>
+        </div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="slide">
+        <img src="../images/laguna_mejor_version.jpg"alt="Imagen 4">
+        <div class="overlay">
+          <h2><a href="#primavera">PRIMAVERA</a></h2>
+          <p>¡Ideal para viajeros que buscan tranquilidad y belleza natural!</p>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <button id="prev">&#10094;</button>
+      <button id="next">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- Sección de Contenido -->
+  <main>
+    <div class="container">
+      <!-- Temporada Verano -->
+      <section class="season" id="verano">
+        <header>
+          <h2>Verano</h2>
+        </header>
+        <nav>
+          <ul>
+            <li><a href="#fecha-verano">Fecha</a></li>
+            <li><a href="#clima-verano">Clima</a></li>
+            <li><a href="#equipar-verano">Equipar</a></li>
+            <li><a href="#comida-verano">Comida</a></li>
+            <li><a href="#recomen-verano">Recom.</a></li>
+          </ul>
+        </nav>
+        <main>
+          <!-- Sección Fecha -->
+          <section class="section" id="fecha-verano">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-white.png" alt="Icono fecha" />
+              <div class="text">
+                <h3>Fecha calendario</h3>
+                <p>INICIA: <span class="selector">21</span> de <span class="property">diciembre</span>.</p>
+                <p>FINALIZA: <span class="selector">20</span> de <span class="property">marzo</span>.</p>
+              </div>
+            </div>
+          </section>
+          <!-- Sección Clima -->
+          <section class="section" id="clima-verano">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-yellow.png" alt="Icono clima" />
+              <div class="text">
+                <h3>Clima esperado</h3>
+                <p>Temporada de lluvias. Días soleados intercalados con lluvias intensas, especialmente por las tardes.</p>
+                <p><span class="property">Mañana:</span> <span class="selector">12°C - 18°C</span></p>
+                <p><span class="property">Tarde:</span> <span class="selector">18°C - 22°C</span> (puede llover)</p>
+                <p><span class="property">Noche:</span> <span class="selector">8°C - 12°C</span></p>
+              </div>
+            </div>
+          </section>
+          <!-- Sección Equipar -->
+          <section class="section" id="equipar-verano">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-blue.png" alt="Icono equipar" />
+              <div class="text">
+                <h3>Recomendaciones a equipar</h3>
+                <p><span class="property">Accesorios:</span></p>
+                <ul>
+                  <li>Impermeable o poncho para lluvia.</li>
+                  <li>Zapatos resistentes al agua y antideslizantes.</li>
+                  <li>Sombrero o gorra para el sol.</li>
+                  <li>Protector solar y lentes de sol.</li>
+                </ul>
+                <p><span class="property">Ropa:</span></p>
+                <ul>
+                  <li>Capas ligeras (camisetas, polos).</li>
+                  <li>Chaqueta impermeable.</li>
+                  <li>Pantalones cómodos y de secado rápido.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- Sección Comida -->
+          <section class="section" id="comida-verano">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-red.png" alt="Icono comida" />
+              <div class="text">
+                <h3>Comida Típica</h3>
+                <ul>
+                  <li><span class="property">Chuño cola:</span> Sopa espesa de carne y chuño (papa deshidratada).</li>
+                  <li><span class="property">Trucha frita:</span> Proveniente de los ríos de la región.</li>
+                  <li><span class="property">Chicha morada:</span> Bebida refrescante de maíz morado.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- Sección Recomendaciones generales -->
+          <section class="section" id="recomen-verano">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-purple.png" alt="Icono recomendaciones" />
+              <div class="text">
+                <h3>Recomendaciones generales</h3>
+                <ul>
+                  <li>Evita caminatas largas bajo la lluvia, especialmente en zonas rurales.</li>
+                  <li>Lleva siempre un botiquín básico y pastillas para el mal de altura <span class="property">(soroche)</span>.</li>
+                  <li>Si acampas, asegúrate de llevar una carpa impermeable y dormir en zonas elevadas para evitar inundaciones.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer>
+          <p>Vive la magia de Cusco bajo la lluvia <span class="emoji">☀️</span></p>
+        </footer>
+      </section>
+      
+      <!-- Temporada Otoño -->
+      <section class="season" id="otono">
+        <header>
+          <h2>Otoño</h2>
+        </header>
+        <nav>
+          <ul>
+            <li><a href="#fecha-otono">Fecha</a></li>
+            <li><a href="#clima-otono">Clima</a></li>
+            <li><a href="#equipar-otono">Equipar</a></li>
+            <li><a href="#comida-otono">Comida</a></li>
+            <li><a href="#recomen-otono">Recom.</a></li>
+          </ul>
+        </nav>
+        <main>
+          <!-- Sección Fecha -->
+          <section class="section" id="fecha-otono">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-white.png" alt="Icono fecha" />
+              <div class="text">
+                <h3>Fecha calendario</h3>
+                <p>INICIA: <span class="selector">21</span> de <span class="property">marzo</span>.</p>
+                <p>FINALIZA: <span class="selector">20</span> de <span class="property">junio</span>.</p>
+              </div>
+            </div>
+          </section>
+          <!-- Sección Clima -->
+          <section class="section" id="clima-otono">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-yellow.png" alt="Icono clima" />
+              <div class="text">
+                <h3>Clima esperado</h3>
+                <p>Transición de lluvias a días más secos. Menos lluvias hacia mayo y junio.</p>
+                <p><span class="property">Mañana:</span> <span class="selector">10°C - 16°C</span></p>
+                <p><span class="property">Tarde:</span> <span class="selector">16°C - 20°C</span> (puede llover)</p>
+                <p><span class="property">Noche:</span> <span class="selector">5°C - 10°C</span></p>
+              </div>
+            </div>
+          </section>
+          <!-- Sección Equipar -->
+          <section class="section" id="equipar-otono">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-blue.png" alt="Icono equipar" />
+              <div class="text">
+                <h3>Recomendaciones a equipar</h3>
+                <p><span class="property">Accesorios:</span></p>
+                <ul>
+                  <li>Mochila pequeña para capas de ropa.</li>
+                  <li>Botella de agua reutilizable.</li>
+                  <li>Bastones de trekking (si planeas caminatas).</li>
+                </ul>
+                <p><span class="property">Ropa:</span></p>
+                <ul>
+                  <li>Chaqueta ligera para la mañana y noche.</li>
+                  <li>Camisetas de manga larga y pantalones cómodos.</li>
+                  <li>Buff o bufanda para el frío.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- Sección Comida -->
+          <section class="section" id="comida-otono">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-red.png" alt="Icono comida" />
+              <div class="text">
+                <h3>Comida Típica</h3>
+                <ul>
+                  <li><span class="property">Cuy al horno:</span> Plato tradicional andino.</li>
+                  <li><span class="property">Olluquito con charqui:</span> Guiso de ollucos y carne seca.</li>
+                  <li><span class="property">Mazamorra morada:</span> Postre de maíz morado y frutas.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- Sección Recomendaciones generales -->
+          <section class="section" id="recomen-otono">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-purple.png" alt="Icono recomendaciones" />
+              <div class="text">
+                <h3>Recomendaciones generales</h3>
+                <ul>
+                  <li>Ideal para visitar <span class="property">Machu Picchu</span> y el <span class="property">Valle Sagrado</span>, ya que hay menos lluvias.</li>
+                  <li>Aprovecha los días despejados para fotos panorámicas.</li>
+                  <li>Si acampas, lleva saco de dormir térmico, ya que las noches son frías.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer>
+          <p>Disfruta de cusco en su mejor versión <span class="emoji">🍂</span></p>
+        </footer>
+      </section>
+      
+      <!-- Temporada Invierno -->
+      <section class="season" id="invierno">
+        <header>
+          <h2>Invierno</h2>
+        </header>
+        <nav>
+          <ul>
+            <li><a href="#fecha-invierno">Fecha</a></li>
+            <li><a href="#clima-invierno">Clima</a></li>
+            <li><a href="#equipar-invierno">Equipar</a></li>
+            <li><a href="#comida-invierno">Comida</a></li>
+            <li><a href="#recomen-invierno">Recom.</a></li>
+          </ul>
+        </nav>
+        <main>
+          <!-- Sección Fecha -->
+          <section class="section" id="fecha-invierno">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-white.png" alt="Icono fecha" />
+              <div class="text">
+                <h3>Fecha calendario</h3>
+                <p>INICIA: <span class="selector">21</span> de <span class="property">junio</span>.</p>
+                <p>FINALIZA: <span class="selector">20</span> de <span class="property">septiembre</span>.</p>
+              </div>
+            </div>
+          </section>
+          <!-- Sección Clima -->
+          <section class="section" id="clima-invierno">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-yellow.png" alt="Icono clima" />
+              <div class="text">
+                <h3>Clima esperado</h3>
+                <p>Temporada seca. Días soleados y noches frías. Pocas lluvias.</p>
+                <p><span class="property">Mañana:</span> <span class="selector">5°C - 12°C</span></p>
+                <p><span class="property">Tarde:</span> <span class="selector">18°C - 22°C</span> (puede llover)</p>
+                <p><span class="property">Noche:</span> <span class="selector">0°C - 5°C</span> (puede bajar a bajo cero en zonas altas)</p>
+              </div>
+            </div>
+          </section>
+          <!-- Sección Equipar -->
+          <section class="section" id="equipar-invierno">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-blue.png" alt="Icono equipar" />
+              <div class="text">
+                <h3>Recomendaciones a equipar</h3>
+                <p><span class="property">Accesorios:</span></p>
+                <ul>
+                  <li>Guantes y gorro para el frío.</li>
+                  <li>Botella térmica para bebidas calientes.</li>
+                  <li>Mochila con espacio para capas de ropa.</li>
+                </ul>
+                <p><span class="property">Ropa:</span></p>
+                <ul>
+                  <li>Chaqueta térmica o de plumas.</li>
+                  <li>Camisetas térmicas y pantalones abrigados.</li>
+                  <li>Calzado cómodo y resistente al frío.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- Sección Comida -->
+          <section class="section" id="comida-invierno">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-red.png" alt="Icono comida" />
+              <div class="text">
+                <h3>Comida Típica</h3>
+                <ul>
+                  <li><span class="property">Rocoto relleno:</span> Rocoto relleno con carne y queso.</li>
+                  <li><span class="property">Chairo:</span> Sopa de carne y verduras andinas.</li>
+                  <li><span class="property">Tamales cusqueños:</span> Masa de maíz rellena con carne.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- Sección Recomendaciones generales -->
+          <section class="section" id="recomen-invierno">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-purple.png" alt="Icono recomendaciones" />
+              <div class="text">
+                <h3>Recomendaciones generales</h3>
+                <ul>
+                  <li>Es la mejor época para trekking <span class="property">(Camino Inca, Salkantay)</span>.</li>
+                  <li>Lleva bloqueador solar, ya que el sol es intenso durante el día.</li>
+                  <li>Si acampas, lleva un saco de dormir para temperaturas bajo cero y una colchoneta aislante.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer>
+          <p>Aventurate en la temporada seca<span class="emoji">💦</span></p>
+        </footer>
+      </section>
+      
+      <!-- Temporada Primavera -->
+      <section class="season" id="primavera">
+        <header>
+          <h2>Primavera</h2>
+        </header>
+        <nav>
+          <ul>
+            <li><a href="#fecha-primavera">Fecha</a></li>
+            <li><a href="#clima-primavera">Clima</a></li>
+            <li><a href="#equipar-primavera">Equipar</a></li>
+            <li><a href="#comida-primavera">Comida</a></li>
+            <li><a href="#recomen-primavera">Recom.</a></li>
+          </ul>
+        </nav>
+        <main>
+          <!-- Sección Fecha -->
+          <section class="section" id="fecha-primavera">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-white.png" alt="Icono fecha" />
+              <div class="text">
+                <h3>Fecha calendario</h3>
+                <p>INICIA: <span class="selector">21</span> de <span class="property">septiembre</span>.</p>
+                <p>FINALIZA: <span class="selector">20</span> de <span class="property">diciembre</span>.</p>
+              </div>
+            </div>
+          </section>
+          <!-- Sección Clima -->
+          <section class="section" id="clima-primavera">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-yellow.png" alt="Icono clima" />
+              <div class="text">
+                <h3>Clima esperado</h3>
+                <p>Transición de secano a lluvias. Días cálidos y noches frescas.</p>
+                <p><span class="property">Mañana:</span> <span class="selector">10°C - 16°C</span></p>
+                <p><span class="property">Tarde:</span> <span class="selector">18°C - 22°C</span> (puede llover)</p>
+                <p><span class="property">Noche:</span> <span class="selector">5°C - 12°C</span> (puede bajar a bajo cero en zonas altas)</p>
+              </div>
+            </div>
+          </section>
+          <!-- Sección Equipar -->
+          <section class="section" id="equipar-primavera">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-blue.png" alt="Icono equipar" />
+              <div class="text">
+                <h3>Recomendaciones a equipar</h3>
+                <p><span class="property">Accesorios:</span></p>
+                <ul>
+                  <li>Sombrero o gorra para el sol.</li>
+                  <li>Protector solar y lentes de sol.</li>
+                  <li>Bolsa impermeable para proteger electrónicos.</li>
+                </ul>
+                <p><span class="property">Ropa:</span></p>
+                <ul>
+                  <li>Capas ligeras (camisetas, polos).</li>
+                  <li>Chaqueta ligera para la noche.</li>
+                  <li>Pantalones cómodos y zapatos para caminar.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- Sección Comida -->
+          <section class="section" id="comida-primavera">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-red.png" alt="Icono comida" />
+              <div class="text">
+                <h3>Comida Típica</h3>
+                <ul>
+                  <li><span class="property">Pachamanca:</span> Plato andino cocido bajo tierra.</li>
+                  <li><span class="property">Humitas:</span> Tamales dulces de maíz.</li>
+                  <li><span class="property">Adobo cusqueño:</span> Guiso de cerdo con especias.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- Sección Recomendaciones generales -->
+          <section class="section" id="recomen-primavera">
+            <div class="content">
+              <img src="https://assets.codepen.io/197359/flower-purple.png" alt="Icono recomendaciones" />
+              <div class="text">
+                <h3>Recomendaciones generales</h3>
+                <ul>
+                  <li>Ideal para visitar sitios arqueológicos y mercados locales.</li>
+                  <li>Prepárate para lluvias esporádicas hacia noviembre y diciembre.</li>
+                  <li>Si acampas, lleva una carpa resistente al viento y lluvia ligera.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer>
+          <p>Ideal para viajeros que buscan tranquilidad y belleza natural <span class="emoji">🌸</span></p>
+        </footer>
+      </section>
+    </div>
+    
+    <!-- Sección de Preguntas Frecuentes -->
+    <section>
+      <div class="contenedor">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="acordion">
+          <div class="accordionitem">
+            <button id="accordion-button-1" aria-expanded="false">
+              <span class="accordion-title">¿Cómo me preparo para el mal de altura (soroche)?</span>
+            </button>
+            <div class="accordion-content">
+              <p>El mal de altura es común en Cusco debido a su altitud (3,399 msnm). Para prevenirlo:</p>
+              <ul>
+                <li>Toma té de coca al llegar <strong>(es natural y ayuda a aclimatarte).</strong></li>
+                <li>Descansa el primer día y evita esfuerzos físicos intensos.</li>
+                <li>Bebe mucha agua y evita alcohol y comidas pesadas.</li>
+                <li>Si los síntomas persisten <strong>(dolor de cabeza, náuseas)</strong>, consulta a un médico o toma pastillas para la altura <strong>(como Sorojchi Pills)</strong>.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordionitem">
+            <button id="accordion-button-2" aria-expanded="false">
+              <span class="accordion-title">¿Qué debo llevar en mi mochila para explorar Cusco?</span>
+            </button>
+            <div class="accordion-content">
+              <p>Depende de la época, pero en general:</p>
+              <ul>
+                <li><strong>Accesorios:</strong> Protector solar, lentes de sol, gorra o sombrero, botella de agua, impermeable o poncho para lluvia.</li>
+                <li><strong>Ropa:</strong> Capas ligeras (camisetas, polos), chaqueta abrigada, pantalones cómodos y zapatos para caminar.</li>
+                <li><strong>Extras:</strong> Dinero en efectivo (soles), cámara fotográfica, power bank y documentos (pasaporte o DNI).</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordionitem">
+            <button id="accordion-button-3" aria-expanded="false">
+              <span class="accordion-title">¿Es seguro beber agua del grifo en Cusco?</span>
+            </button>
+            <div class="accordion-content">
+              <p>No es recomendable. El agua del grifo en Cusco no es segura para consumo directo. Opta por:</p>
+              <ul>
+                <li>Agua embotellada (la opción más común y segura).</li>
+                <li>Tabletas purificadoras o filtros de agua si vas a acampar.</li>
+                <li>Bebidas calientes como té o café, que se preparan con agua hervida.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordionitem">
+            <button id="accordion-button-4" aria-expanded="false">
+              <span class="accordion-title">¿Es seguro beber agua del grifo en Cusco?</span>
+            </button>
+            <div class="accordion-content">
+              <p>Depende de tus preferencias:</p>
+              <ul>
+                <li><strong>Temporada seca (mayo - septiembre):</strong> Ideal para trekking (Camino Inca, Salkantay) y visitas a Machu Picchu. Los días son soleados, pero las noches son frías.</li>
+                <li><strong>Temporada de lluvias (noviembre - marzo):</strong> Menos turistas, pero con lluvias frecuentes. Es ideal si prefieres un ambiente más tranquilo y verde.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Pie de Página -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Ubícanos</h3>
+          <p>Jr. Micalle 123, Cusco</p>
+        </div>
+        <div class="footer-section">
+          <h3>Suscríbete a nuestro Newsletter</h3>
+          <p id="newsletter-email">
+            <a href="mailto:conocecusco@blog.utp.pe">conocecusco@blog.utp.pe</a>
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Contáctanos</h3>
+          <p><a href="tel:+51987654321">+51 987654321</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Derechos Reservados © 2025 Conoce Cusco - Blog UTP</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Registro y validación de usuarios
+      let usuarios = [];
+      function registrar() {
+          const nombre = document.forms["registroForm"]["nombre"].value;
+          const email = document.forms["registroForm"]["email"].value;
+          const password = document.forms["registroForm"]["password"].value;
+          const usuarioExistente = usuarios.find(user => user.email === email);
+          if (usuarioExistente) {
+              alert("El correo electrónico ya está registrado.");
+              return;
+          }
+          usuarios.push({ nombre, email, password });
+          alert("¡Registro exitoso! Ahora puedes iniciar sesión.");
+          console.log(usuarios);
+      }
+      function validar() {
+          const email = document.forms["loginForm"]["email"].value;
+          const password = document.forms["loginForm"]["password"].value;
+          const usuario = usuarios.find(user => user.email === email);
+          if (!usuario) {
+              alert("Usuario no registrado.");
+              document.forms["loginForm"]["email"].focus();
+              return;
+          }
+          if (usuario.password !== password) {
+              alert("Contraseña incorrecta.");
+              document.forms["loginForm"]["password"].focus();
+              return;
+          }
+          alert(`Bienvenido ${usuario.nombre}`);
+          location.href = "experiencia.html";
+      }
+
+      // Acordeón de Preguntas Frecuentes
+      document.addEventListener('DOMContentLoaded', function() {
+          const accordionButtons = document.querySelectorAll('.acordion button');
+          accordionButtons.forEach(button => {
+              button.addEventListener('click', function() {
+                  const expanded = this.getAttribute('aria-expanded') === 'true';
+                  accordionButtons.forEach(btn => {
+                      btn.setAttribute('aria-expanded', 'false');
+                      btn.nextElementSibling.style.maxHeight = null;
+                  });
+                  if (!expanded) {
+                      this.setAttribute('aria-expanded', 'true');
+                      const content = this.nextElementSibling;
+                      content.style.maxHeight = content.scrollHeight + "px";
+                  }
+              });
+          });
+      });
+
+      // Animación de secciones (scroll)
+      document.addEventListener("DOMContentLoaded", function () {
+          const sections = document.querySelectorAll(".section");
+          const observerOptions = { threshold: 0.15 };
+          const sectionObserver = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                      entry.target.classList.add("visible");
+                      sectionObserver.unobserve(entry.target);
+                  }
+              });
+          }, observerOptions);
+          sections.forEach((section) => {
+              sectionObserver.observe(section);
+          });
+      });
+
+      // Newsletter interaction
+      document.getElementById("newsletter-email").addEventListener("click", function () {
+          alert("¡Gracias por tu interés! Revisa tu correo para confirmar la suscripción.");
+      });
+
+      // Carrusel
+      const slides = document.querySelectorAll('.slide');
+      const nextBtn = document.getElementById('next');
+      const prevBtn = document.getElementById('prev');
+      let currentSlide = 0;
+      const totalSlides = slides.length;
+      function showSlide(index) {
+          slides.forEach(slide => slide.classList.remove('active'));
+          slides[index].classList.add('active');
+      }
+      function nextSlide() {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          showSlide(currentSlide);
+      }
+      function prevSlide() {
+          currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+          showSlide(currentSlide);
+      }
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+      setInterval(nextSlide, 5000);
+
+      // Array de imágenes (opcional)
+      let images = [
+          "https://www.caminosalkantay.com/blog/wp-content/uploads/2024/09/Machu-Picchu-epoca-lluvias-1024x683.jpg",
+          "https://www.mundomapi.com/images/tours/valle-sagrado-tours-cusco-1597877674.jpg",
+          "https://www.boletomachupicchu.com/gutblt/wp-content/uploads/2020/02/laguna-humantay.jpg"
+      ];
+      //desplazamiento de seccion
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+       });
+       });
+    </script>
+</body>
+</html>
