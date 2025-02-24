@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" type="text/css" href="css/yemile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/yemile.js"></script>
+</head>
+<body>
+    <div class="main">
+        <input type="checkbox" id="efecto" aria-hidden="true">
+        <div class="signup">
+            <form id="registroForm">
+                <label for="efecto" aria-hidden="true">Registrarse</label>
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <button type="button" onclick="registrar()">Registrarse</button>
+            </form>
+        </div>
+        <div class="login">
+            <form id="loginForm">
+                <label for="efecto" aria-hidden="true">Login</label>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <button type="button" onclick="validar()">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
