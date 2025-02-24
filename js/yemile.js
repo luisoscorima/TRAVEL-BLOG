@@ -1,4 +1,3 @@
-// Array para almacenar los usuarios registrados
 let usuarios = [
   {
     name:'Administrador',
@@ -6,8 +5,6 @@ let usuarios = [
     password:'1234'
   }
 ];
-
-// Función para registrar un nuevo usuario
 function registrar() {
     // Obtener los valores del formulario de registro
     const nombre = document.forms["registroForm"]["nombre"].value;
@@ -51,9 +48,9 @@ function validar() {
         document.forms["loginForm"]["password"].select();
         return;
     }
-    // Si todo es correcto, redirigir al usuario
+    // redirige al usuario
     alert(`Bienvenido ${usuario.nombre}`);
-    location.href = "experiencias/experiencias_luis.html"; // Cambia "menu.html" por la página a la que deseas redirigir
+    location.href = "experiencias/experiencias_luis.html"; 
 }
 
 
