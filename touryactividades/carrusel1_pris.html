@@ -1,106 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carruselprincipal</title>
+    <title>Blog Viajero UTP :: Tour y Actividades</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="carrusel1.css"/>
+    <link rel="stylesheet" href="../css/carrusel1_pris.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="../css/index_luis.css" rel="stylesheet" />
+    <style>
+      .banner {
+        position: relative;
+        width: 100%;
+        height: 650px;
+        background-image: url('../images/carnavales-cusco.jpg');
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        font-size: 40px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 0px;
+        z-index: -1;
+      }
+
+      .swiper {
+        width: 100%;
+        padding: 20px 0;
+      }
+
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+    </style>
 </head>
 <body>
-   <div class="swiper">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <img src="https://inkatimetours.com/wp-content/uploads/2020/12/TOUR-A-CUSCO-Y-SUS-MARAVILLAS-33-jpg.webp" />
-          </div> 
-        <div class="swiper-slide">
-        <img src="https://www.cuscotoursperu.com/wp-content/uploads/laguna-humantay.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://whc.unesco.org/uploads/thumbs/site_0274_0048-1000-667-20241115153520.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://inkatimetours.com/wp-content/uploads/2020/12/TOUR-A-CUSCO-Y-SUS-MARAVILLAS-33-jpg.webp" />
-      </div>   
-      <div class="swiper-slide">
-        <img src="https://media.gettyimages.com/id/517695920/es/foto/moray-the-incan-agricultural-site-in-peru.jpg?s=612x612&w=0&k=20&c=jGHPosurLWU-0m17dpybocKmlVM_cGuru1Ux-cmeYfk=" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://media.gettyimages.com/id/804215718/es/foto/mercado-de-recuerdos-en-ollantaytambo-per%C3%BA.jpg?s=612x612&w=0&k=20&c=1Oej8pyuXV-u7V300pHHn5tL_OTK8BzqCQaojLceZIU=" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://media.gettyimages.com/id/536035960/es/foto/women-in-traditional-dress-in-ollantaytambo.jpg?s=612x612&w=0&k=20&c=GTR-Y4OhrNP0Q9UOqQABPL94X7fNvRHeQhZZKgE3ooc=" />
-      </div>      
-      <div class="swiper-slide">
-        <img src="https://media.gettyimages.com/id/2148113078/es/foto/peru-the-inca-archaeological-site-of-ollantaytambo.jpg?s=612x612&w=0&k=20&c=1QNJjMc4tTDff2Mpu8bRFt0GttlTxWPt_5JJOskZ9TM=" />
-      </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="../index_luis.html">
+                <img src="../images/logo_blog_banner_white.png" alt="logo">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownLocations" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Lugares
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="dropdownLocations">
+                            <li><a class="dropdown-item" href="#">OLLANTAYTAMBO</a></li>
+                            <li><a class="dropdown-item" href="#">PISAQ</a></li>
+                            <li><a class="dropdown-item" href="#">LAGUNA</a></li>
+                            <li><a class="dropdown-item" href="../machu-picchu/principal_machu_luis.html">MACHU PICCHU</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../touryactividades/carrusel1_pris.html">Tours y Actividades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#signup">Consejos Prácticos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#signup">
+                        <button class="btn rounded-pill px-2 py-1 fw-bold">Planea tu visita</button>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="banner">
+        <p><span>Tours y Actividades</span></p>
+        <p class="lead">Descubre la maravilla inca en lo más alto de los Andes peruanos</p>
     </div>
-    <div class="swiper-button swiper-button-next"></div>
-    <div class="swiper-button swiper-button-prev"></div>
-  </div>
 
-<div style="margin:3em; text-align:center ">
-        <button type="button" class="btn btn-primary btn-lg" id="load1" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order">Cotiza</button>
-        <button type="button" class="btn btn-primary btn-lg" id="load2" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Processing Order">Experiencias</button>
-</div>
+    <!-- Contenido principal con Swiper -->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://inkatimetours.com/wp-content/uploads/2020/12/TOUR-A-CUSCO-Y-SUS-MARAVILLAS-33-jpg.webp" /></div>
+            <div class="swiper-slide"><img src="https://www.cuscotoursperu.com/wp-content/uploads/laguna-humantay.jpg" /></div>
+            <div class="swiper-slide"><img src="https://whc.unesco.org/uploads/thumbs/site_0274_0048-1000-667-20241115153520.jpg" /></div>
+            <div class="swiper-slide"><img src="https://media.gettyimages.com/id/517695920/es/foto/moray-the-incan-agricultural-site-in-peru.jpg?s=612x612&w=0&k=20&c=jGHPosurLWU-0m17dpybocKmlVM_cGuru1Ux-cmeYfk=" /></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
 
-<main class="main">
-    
-    
-    <button class="section"> 
-      <div class="box">Machu Picchu</div>
-    </button> 
-   
-    <button class="section">
-      <div class="box">Ollantaytambo</div>
-    </button>
-   
-    <button class="section">
-      <div class="box">Pisac</div>
-    </button>
-    
-    <a href="actividadeslaguna.html"
-    <button class="section">
-      <div class="box">Laguna Huamantay</div>
-    </button> </a>
+    <div style="margin:3em; text-align:center">
+        <button type="button" class="btn btn-primary btn-lg" id="load1">Cotiza</button>
+        <button type="button" class="btn btn-primary btn-lg" id="load2">Experiencias</button>
+    </div>
 
-</main>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="carrusel1.js"></script> 
-  <script>
-    // Inicialización de Swiper
-    const swiper = new Swiper(".swiper", {
-      slidesPerView: 5,
-      spaceBetween: 0,
-      centeredSlides: true,
-      loop: true,
-      simulateTouch: 'ontouchstart' in window || navigator.maxTouchPoints > 0,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
+    <main class="main">
+        <button class="section"><div class="box">Machu Picchu</div></button>
+        <button class="section"><div class="box">Ollantaytambo</div></button>
+        <button class="section"><div class="box">Pisac</div></button>
+        <a href="actividadeslaguna.html">
+            <button class="section"><div class="box">Laguna Huamantay</div></button>
+        </a>
+    </main>
 
-    // Calcula la altura de las diapositivas
-    const calculateHeight = () => {
-      const swiperSlideElements = Array.from(document.querySelectorAll('.swiper .swiper-slide'));
-      if (!swiperSlideElements.length) return;
-      const width = swiperSlideElements[0].getBoundingClientRect().width;
-      const height = Math.round(width / (16 / 9));
-      swiperSlideElements.map(element => element.style.height = `${height}px`);
-    };
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".swiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            centeredSlides: true,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                320: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+            }
+        });
 
-    document.addEventListener("DOMContentLoaded", calculateHeight);
-    addEventListener('resize', calculateHeight);
-    $('.btn').on('click', function() {
+        $('.btn').on('click', function() {
             var $this = $(this);
             $this.button('loading');
-            setTimeout(function() {
-                $this.button('reset');
-            }, 8000);
+            setTimeout(() => $this.button('reset'), 8000);
         });
-  </script>
+    </script>
 </body>
 </html>
