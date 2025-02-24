@@ -12,6 +12,8 @@ function registrar() {
     const usuarioExistente = usuarios.find(user => user.email === email);
     if (usuarioExistente) {
         alert("El correo electrónico ya está registrado.");
+        document.forms["registroForm"]["email"].focus();
+        document.forms["registroForm"]["email"].select();
         return;
     }
 
@@ -33,18 +35,19 @@ function validar() {
     if (!usuario) {
         alert("Usuario no registrado.");
         document.forms["loginForm"]["email"].focus();
+        document.forms["loginForm"]["email"].select();
         return;
     }
 
     if (usuario.password !== password) {
         alert("Contraseña incorrecta.");
         document.forms["loginForm"]["password"].focus();
+        document.forms["loginForm"]["password"].select();
         return;
     }
-
     // Si todo es correcto, redirigir al usuario
     alert(`Bienvenido ${usuario.nombre}`);
-    location.href = "experiencia.html"; // Cambia "menu.html" por la página a la que deseas redirigir
+    location.href = ".."; // Cambia "menu.html" por la página a la que deseas redirigir
 }
 
  // SECCION PREGUNTAS PRECUENTES
