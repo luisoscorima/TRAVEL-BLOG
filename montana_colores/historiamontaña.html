@@ -1,220 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #faf5ef;
-            color: #595552;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ffffff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            color: #3ba1c8;
-            text-align: center;
-            padding: 15px;
-            margin: 0;
-        }
-        .banner {
-            width: 100%;
-            height: 50vh;
-            background-image: url('banner-image.jpg'); /* Reemplaza con la URL de tu imagen */
-            background-size: cover;
-            background-position: center;
-        }
-        section {
-            margin: 20px;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #3ba1c8;
-            border-bottom: 2px solid #ffc226;
-            padding-bottom: 5px;
-        }
-        h3 {
-            color: #0f2719;
-        }
-        .divider {
-            border-bottom: 2px solid #ffc226;
-            margin: 20px 0;
-        }
-        .info-box {
-            background-color: #ffffff;
-            border: 1px solid #3ba1c8;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 15px 0;
-        }
-        .info-box h4 {
-            background-color: #ffc226;
-            padding: 10px;
-            border-radius: 5px;
-            margin: -15px -15px 15px -15px;
-            color: #0f2719;
-        }
-        .legend {
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ffc226;
-            border-radius: 8px;
-            background-color: #fdfaf4;
-        }
-        button {
-            background-color: #3ba1c8;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #2e8abf;
-        }
-        footer {
-            background-color: #3ba1c8;
-            color: #ffffff;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f4b41a;
-            color: #fff;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .imagen-placeholder {
-            background: #ddd;
-            width: 100px;
-            height: 60px;
-            display: block;
-            text-align: center;
-            line-height: 60px;
-            color: #333;
-            font-size: 12px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Viajero UTP: Montaña de Colores</title>
+  <link rel="stylesheet" href="../css/estilo6.css" type="text/css">
 </head>
 <body>
-    <header>
-        <h1>Blog de Viaje a Cusco</h1>
-    </header>
-    <div class="banner"></div>
+  <!-- Encabezado -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../images/logo_sfondo.png" alt="Blog Viajero UTP">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li class="dropdown">
+            <a href="#">Lugares</a>
+            <ul class="dropdown-content">
+              <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
+              <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
+              <li><a href="../lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
+              <li><a href="../pisac/pisac.html">Pisac</a></li>
+              <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
+            </ul>
+          </li>
+          <li><a href="../tourgeneral.html">Tour y Actividades</a></li>
+          <li><a href="../consejospracti.html">Consejos prácticos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Sección de Historia -->
-    <section>
-        <h2>Historia de Montaña de colores</h2>
-        <p>La montaña de los 7 Colores (también llamado Vinicunca o simplemente ‘montaña arcoíris’) es una de las nuevas y mejores atracciones del Perú. Ubicada a más de 100 kilómetros de la ciudad del Cusco, en una cumbre altitudinal situada a 5,200 metros sobre el nivel del mar (m.s.n.m.). Se trata de una formación montañosa teñida de varias tonalidades producto de la compleja combinación de minerales. Las laderas y la cumbre están teñidas de diversas tonos que incluyen el rojo, morado, verde, amarillo, rosado y otras variaciones. Este atractivo turístico estuvo rodeado de hielo hace no muchos años. Desde el 2016, este lugar recibe a cientos de visitantes al día convirtiéndose, junto con Machu Picchu, en uno de los lugares más visitados en Cusco-Perú. A continuación toda la información sobre la Montaña de 7 Colores..</p>
+  <!-- Carrusel de imágenes -->
+  <div class="carousel">
+    <div class="slide" style="background-image: url('../images/montaña_tour.jpg');"></div>
+    <div class="slide" style="background-image: url('../images/montañafondo4.jpeg');"></div>
+    <div class="slide" style="background-image: url('../images/montañafondo5.jpeg');"></div>
+</div>
 
-            <p><img src=" ../images/montaña_tour.jpg"width="500" height="300" > </p>
-            <div class="info-box">
-            <h4>Festividades</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Fecha</th>
-                        <th>Tipo</th>
-                        <th>Lugar</th>
-                        <th>Festividad</th>
-                        <th>Descripción</th>
-                        <th>Imagen</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Febrero-Marzo</td>
-                        <td>Popular y  Cultural</td>
-                        <td> Cuzco y ciudades vecinas</td>
-                        <td>Carnavales cusqueños </td>
-                        <td>
-                            El Carnaval Cusqueño se celebra principalmente en la ciudad de Cusco, pero también hay celebraciones en pueblos cercanos y comunidades del Valle Sagrado.
-                             Las festividades incluyen desfiles, comparsas y danzas tradicionales en las calles de Cusco y alrededores.
+  <!-- Contenedor principal -->
+  <div class="container">
+    <div class="grid_principal">
+      <!-- Grid A: Historia de Montaña de Colores -->
+      <div class="grid_a">
+        <h2>Historia de Montaña de Colores</h2>
+        <p>
+          La montaña de los 7 Colores (también llamada Vinicunca o Montaña Arcoíris) es una de las principales atracciones turísticas del Perú. Ubicada a más de 100 km de Cusco, se encuentra a 5,200 metros sobre el nivel del mar, en una formación montañosa con diversos tonos como rojo, verde, morado, amarillo, rosado, y otros, debido a la presencia de minerales específicos. Este paisaje impresionante fue cubierto por nieve hasta hace pocos años. Desde 2016, se ha convertido en uno de los principales destinos turísticos del país.
+        </p>
+      </div>
 
-                        </td>
-                        <td><img src=" ../images/carnavales-cusco.jpg"width="430" height="170"
-                        
-                    </tr>
-                    <tr>
-                       
-                        <td>24-Jun</td>
-                        <td>Religiosa y Cultural</td>
-                        <td>La Plaza Mayor y en los sitios arqueológicos de Sacsayhuamán</td>
-                        <td>Inti Raymi </td>
-                        <td>
-                            El Inti Raymi es una celebración que rinde homenaje al sol, 
-                            la deidad más importante para los antiguos incas. Esta festividad tiene un profundo significado espiritual y cultural
-                            , ya que recrea la ceremonia ancestral incaica en la que se celebraba el solsticio de invierno del hemisferio sur.
+      <!-- Grid B: Imagen de la Montaña -->
+      <div class="grid_b">
+        <img src="../images/montaña_tour.jpg" alt="Montaña de Colores">
+      </div>
 
-                        </td>
-                        <td><img src=" ../images/intiraymi.jpg"width="430" height="170"
-                    </tr>
-                    
-                </tbody>
-            </table>
+      <!-- Grid C: Tabla de Festividades -->
+      <div class="grid_c">
+        <h2>Festividades</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Tipo</th>
+              <th>Lugar</th>
+              <th>Festividad</th>
+              <th>Descripción</th>
+              <th>Imagen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Febrero-Marzo</td>
+              <td>Popular y Cultural</td>
+              <td>Cuzco y ciudades vecinas</td>
+              <td>Carnavales Cusqueños</td>
+              <td>
+                El Carnaval Cusqueño se celebra principalmente en la ciudad de Cusco, pero también hay celebraciones en pueblos cercanos y comunidades del Valle Sagrado.
+              </td>
+              <td><img src="../images/carnavales-cusco.jpg" alt="Carnavales Cusco" width="200" height="150"></td>
+            </tr>
+            <tr>
+              <td>24-Jun</td>
+              <td>Religiosa y Cultural</td>
+              <td>La Plaza Mayor y Sacsayhuamán</td>
+              <td>Inti Raymi</td>
+              <td>
+                El Inti Raymi es una celebración ancestral que honra al sol, el dios más importante para los incas.
+              </td>
+              <td><img src="../images/intiraymi.jpg" alt="Inti Raymi" width="200" height="150"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Grid D: Leyenda Local -->
+      <div class="grid_d">
+        <h2>Leyenda Local</h2>
+      </div>
+
+      <!-- Grid E: Leyenda de la Montaña -->
+      <div class="grid_e">
+        <h4>La leyenda de la Montaña de Colores</h4>
+        <p>
+          Según la leyenda andina, los dioses crearon la Montaña de Colores como un símbolo de esperanza para las comunidades que atravesaban tiempos difíciles. Pachamama (Madre Tierra) y Viracocha (el creador) unieron sus fuerzas durante la noche para dar vida a esta maravilla natural.
+        </p>
+      </div>
+
+      <!-- Grid F: Imagen y botón de más información -->
+      <div class="grid_f">
+        <img src="../images/leyendamontaña.jpg" alt="Leyenda Montaña de Colores">
+        <div class="button-container">
+          <a href="historiaMontana.html"><button>Ver más</button></a>
         </div>
-        <div class="info-box">
-            <h4>Leyenda Local</h4>
-            <div class="legend">
-                <p><strong>La leyenda de la Montaña de colores:</strong> Según la leyenda, los dioses andinos, preocu
-                    pados por las comunidades que enfrentaban tiempos difíciles, decidieron crear un símbolo de esperanza. 
-                    Durante la noche, Pachamama (la Madre Tierra) y Viracocha (el creador) unieron sus poderes para crear una montaña con los colores del arcoíris. <button onclick="alert('Redirigiendo a la historia completa...')">Ver más</button></p>
-            </div>
-            
-        </div>
-    </section>
+      </div>
+    </div>
+  </div>
 
-    <!-- Formulario de comentarios -->
-    <footer>
-        <h2>Cuéntanos tu experiencia</h2>
-        <form>
-            <label for="name">Nombre:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="place">Lugar visitado:</label><br>
-            <select id="place" name="place">
-                <option value="ollantaytambo">Ollantaytambo</option>
-                <option value="pisaq">Pisaq</option>
-                <option value="machupichu">Machupichu</option>
-                <option value="laguna-huamantay">Laguna Huamantay</option>
-                <option value="montana-colores">Montaña de Colores</option>
-            </select><br><br>
-
-            <label for="date">Fecha de visita:</label><br>
-            <input type="date" id="date" name="date" required><br><br>
-
-            <label for="comments">Comentarios:</label><br>
-            <textarea id="comments" name="comments" rows="4" required></textarea><br><br>
-
-            <label for="rating">Puntuación:</label><br>
-            <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
-
-            <button type="submit">Enviar</button>
-        </form>
-    </footer>
+  <!-- Pie de página con formulario -->
+  <footer>
+    <h3>Cuéntanos tu experiencia</h3>
+    <form action="#" method="post">
+      <table>
+        <tr>
+          <td>Nombre:</td>
+          <td><input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre"></td>
+        </tr>
+        <tr>
+          <td>Fecha de visita:</td>
+          <td><input type="date" id="fecha" name="fecha" required></td>
+        </tr>
+        <tr>
+          <td>Lugares visitados:</td>
+          <td>
+            <textarea id="lugares" name="lugares" rows="3" required placeholder="Describa los lugares visitados"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>Recomendaciones:</td>
+          <td>
+            <textarea id="recomendaciones" name="recomendaciones" rows="3" required placeholder="Ingrese sus recomendaciones"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>Puntuación (1-5):</td>
+          <td><input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required></td>
+        </tr>
+        <tr>
+          <td><button type="submit">Enviar</button></td>
+          <td><button type="reset">Limpiar</button></td>
+        </tr>
+      </table>
+    </form>
+  </footer>
 </body>
 </html>

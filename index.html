@@ -4,106 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Viajero UTP :: Cusco</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        button {
-            background-color: #3ba1c8;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #2e8abf;
-        }
-        header {
-            background: #e6e9ee;
-            color: #3ba1c8;
-            padding: 1rem 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            background: #333;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        nav ul li a:hover {
-            background: #555;
-        }
-        main {
-            padding: 20px;
-        }
-        section {
-            margin-bottom: 20px;
-            padding: 20px;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-        }
-        h2 {
-            color: #3ba1c8;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background: #333;
-            color: white;
-            margin-top: 20px;
-        }
-        img {
-            max-width: 50%;
-            height: auto;
-            display: block;
-            margin: 10px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
     <header>
-        <h1>Blog Viajero UTP: Descubre Cusco</h1>
-        <nav>
-            <ul>
-                <li><a href="./ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
-                <li><a href="./montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
-                <li><a href="./lagunahuamantay/lagunapagina.html">Laguna Humantay</a></li>
-                <li><a href="./pisac/pisac.html">Pisac</a></li>
-                <li><a href="./machupiichu/paginaprincipal.html">Machu Picchu</a></li>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html"><img src="images/logo_blog_banner_white.png" alt="logo"></a></div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav-links"> 
+                <li class="dropdown">
+                    <a href="#">Lugares</a>
+                    <ul class="dropdown-content">
+                        <li><a href="./ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
+                        <li><a href="./montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
+                        <li><a href="./lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
+                        <li><a href="./pisac/pisac.html">Pisac</a></li>
+                        <li><a href="./machupiichu/paginaprincipal.html">Machu Picchu</a></li>
+                    </ul>
+                </li>
+                <li><a href="tourgeneral.html">Tours y Actividades</a></li>
+          <li><a href="consejospracti.html">Consejos Prácticos</a></li>
             </ul>
+            <button class="plan-trip">Planea tu visita</button>
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Bienvenidos a Cusco</h2>
+        <div class="banner">
+            <span>Vive la auténtica experiencia en Cusco</span>
+            <video class="banner-video" autoplay loop muted playsinline>
+                <source src="images/video_cusco.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
             <p>Explora los lugares más impresionantes de Cusco, cada uno con su propia historia, actividades únicas, gastronomía típica y consejos prácticos para aprovechar al máximo tu visita.</p>
+        </div>
+        <section id="Ollantaytambo">
+            <center>
+                <h2>Ollantaytambo</h2>
+                <a href="./ollantaytambo/paginaprincipal.html"><img src="./images/ollantaytambo_principal.jpg" alt="Vista histórica de Ollantaytambo" style="width: 800px; height: auto; align-content: center ;"></a>
+                <p>Descubre Ollantaytambo aquí.</p>
+                <a href="./ollantaytambo/paginaprincipal.html">
+                    <button>Ver más</button>
+                </a>
+            </center>
+        </section>
+        <section id="montana_colores">
+            <center>
+                <h2>Montaña de Colores</h2>
+                <a href="./montana_colores/menuprincipalmontaña.html"><img src="./images/montaña_tour.jpg" alt="Vista histórica de Montaña de Colores" style="width: 800px; height: auto; align-content: center ;"></a>
+                <p>Descubre Montaña de Colores aquí.</p>
+                <a href="./montana_colores/menuprincipalmontaña.html">
+                    <button>Ver más</button>
+                </a>
+            </center>
+        </section>
+        <section id="laguna_huamantay">
+            <center>
+                <h2>Laguna Humantay</h2>
+                <a href="./lagunahuamantay/principallaguna.html"><img src="./images/vista grande.jpeg" alt="Vista histórica de Pisac" style="width: 800px; height: auto; align-content: center ;"></a>
+                <p>Descubre Laguna Humantay aquí.</p>
+                <a href="./lagunahuamantay/principallaguna.html">
+                    <button>Ver más</button>
+                </a>
+            </center>
+        </section>
+        <section id="pisac">
+            <center>
+                <h2>Pisac</h2>
+                <a href="./pisac/pisac.html"><img src="./images/pisac_portada.jpg" alt="Vista histórica de Pisac" style="width: 800px; height: auto; align-content: center ;"></a>
+                <p>Descubre Pisac aquí.</p>
+                <a href="./pisac/pisac.html">
+                    <button>Ver más</button>
+                </a>
+            </center>
+        </section>
+        <section id="machu_picchu">
+            <center>
+                <h2>Machu Picchu</h2>
+                <a href="./machupiichu/paginaprincipal.html"><img src="./images/machu_picchu_portada.webp" alt="Vista histórica de Pisac" style="width: 800px; height: auto; align-content: center ;"></a>
+                <p>Descubre Machu Picchu aquí.</p>
+                <a href="./machupiichu/paginaprincipal.html">
+                    <button>Ver más</button>
+                </a>
+            </center>
+        </section>
+        <section id="Tour">
+            <center>
+                <h2>Tour y actividades</h2>
+                <a href="./tourgeneral.html"><img src="./images/ollantaytambo_tou_2.jpg" alt="Vista histórica de Pisac" style="width: 800px; height: auto; align-content: center ;"></a>
+                <p>Descubre tour y actividades disponibles.</p>
+                <a href="./tourgeneral.html">
+                    <button>Ver más</button>
+                </a>
+            </center>
+        </section>
+        <section id="consejosprac">
+            <center>
+                <h2>Consejos Prácticos</h2>
+                <a href="./consejospracti.html"><img src="./images/consejos_practicos.webp" alt="Vista histórica de Pisac" style="width: 800px; height: auto; align-content: center ;"></a>
+                <p>Descubre consejos practicos aqui.</p>
+                <a href="./consejospracti.html">
+                    <button>Ver más</button>
+                </a>
+            </center>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Blog Viajero UTP. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Conoce Cusco - Blog UTP. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

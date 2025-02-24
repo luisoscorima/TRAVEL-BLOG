@@ -1,429 +1,262 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zona Turística </title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #faf5ef;
-            color: #595552;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ffffff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 1rem 0;
-        }
-        header h1 {
-            color: #3ba1c8;
-            text-align: center;
-            padding: 15px;
-            margin: 0;
-        }
-        .banner {
-            width: 100%;
-            height: 50vh;
-            background-image: url(https://thumbs.dreamstime.com/b/salinas-de-maras-peru-salt-natural-mine-inca-salt-pans-maras-sacred-valley-peru-near-cuzco-84748169.jpg); 
-            background-size: cover;
-            background-position: center;
-        }
-        section {
-            margin: 20px;
-            padding: 20px;
-            background-color: #faffe3;
-            border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #3ba1c8;
-            border-bottom: 2px solid #ffc226;
-            padding-bottom: 5px;
-        }
-        h4 {
-            color: #0c2732;
-            padding-bottom: 5px;
-            font-size: 4em;
-        }
-        h3 {
-            color: #0f2719;
-        }
-        .divider {
-            border-bottom: 2px solid #ffc226;
-            margin: 20px 0;
-        }
-        button {
-            background-color: #3ba1c8;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #2e8abf;
-        }
-        footer {
-            background-color: #3ba1c8;
-            color: #ffffff;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            background: #333;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        nav ul li a:hover {
-            background: #555;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-            border-spacing: 10px;
-            border-top-width: 5px;
-            border-bottom-width: 5px;
-            border-left-width: 2px;
-            border-right-width: 2px;
-            margin: 10px;
-        }
-    </style>
+    <title>probando</title>
+    <link rel="stylesheet" href="../css/estilo4.css" type="text/css">
 </head>
 <body>
     <header>
-        <h1>Blog Viajero UTP</h1>
-        <nav>
+        <div class="container header-container">
+          <div class="logo">
+            <!-- Reemplaza "logo.png" por la ruta de tu imagen -->
+            <a href="../index.html"><img src="../images/logo_principal_sinfondo.png" alt="Blog Viajero UTP"></a>
+          </div>
+          <nav>
             <ul>
-                <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
-                <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
-                <li><a href="../lagunahuamantay/lagunapagina.html">Laguna Humantay</a></li>
-                <li><a href="../pisac/pisac.html">Pisac</a></li>
-                <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
+              <li class="dropdown">
+                <a href="#">Lugares</a>
+                <ul class="dropdown-content">
+                  <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
+                  <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
+                  <li><a href="../lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
+                  <li><a href="../pisac/pisac.html">Pisac</a></li>
+                  <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
+                </ul>
+              </li>
+              <li><a href="../tourgeneral.html">Tour y Actividades</a></li>
+              <li><a href="../consejospracti.html">Consejos prácticos</a></li>
             </ul>
-        </nav>
-    </header>
-    <div class="banner"></div>
-<section>
-        <h4><center>Conociendo Ollantaytambo y su Gastronomía </center></h4>
-        <table>
-            <tr>
-                <td>
-                    <img src="../images/ollantaytambo_tou_1.jpg" width="500" height="400">
-                </td>
-                <td>
-                    <p>
-                        <Strong>Duracion: </Strong> 2 dias <br>
-                        <Strong>Incluye: </Strong>
-                        <ul type="circle">
-                            <li>Transporte ida y vuelta desde Hotel Luna creciente</li>
-                            <li>Guía turístico bilingüe (Español/Inglés)</li>
-                            <li> Entradas a parque arqueologico.</li>
-                            <li>Almuerzo en restaurante local Ollantay</li>
-                            <li>Degustación de chancho al palo, Guiso de alpaca, trucha frita, mate de coca</li>
-                        </ul><br>
-                        <Strong>Que llevar: </Strong>
-                        <ul type="circle">
-                            <li>Ropa cómoda y zapatos adecuados para caminar.</li>
-                            <li>Protector solar, gorra o sombrero.</li>
-                            <li> Entradas a parque arqueologico.</li>
-                            <li>Botella de agua reutilizable.</li>
-                            <li>Cámara o teléfono para fotos.</li>
-                        </ul> 
-                        <center><Strong>PRECIO: 500 USD</Strong> por persona</center>
-                    </p>
-                </td>
-                <td>
-                    <img src="../images/ollantaytambo_tou_2.jpg" width="500" height="400">
-                </td>
-            </tr>  
-        </table>
-    
-    <section bgcolor="#86eae9">
-        <h2><center>Itinerario</center></h2>
-        <div>
-            <table>
-                <tr>
-                    <td>
-                        <img src="../images/ollantaytambo_tour_itinirario_mercado.jpg" width="500" height="400">
-                    </td>
-                    <td>
-                        <p>
-                        <h3><center>1. Explorar el Mercado Artesanal</center></h3><br>
-                        <strong>Duracion:</strong>2 horas<br>
-                        <strong>Horario:</strong>9:00 AM - 11:00 AM<br>
-                        <strong>Actividades:</strong><br>
-                        <ul type="circle">
-                            <li>Recorrido por el mercado de frutas con un guía experto</li>
-                            <li>Recorrido por el mercado de recuerdos con un guía experto</li>
-                            <li>Recorrido por el mercado de ropa tradicional con un guía experto</li>
-                            <li>Sesion de fotos con ropa tipica de la zona</li>
-                            <li>tiempo de descanso (15min)</li>
-                        </ul> 
-                        </p>
-                    </td>
-                    <td>
-                        <img src="../images/ollantaytambo_tour_itinirario_mercado2.jpg" width="500" height="400">
-                    </td>
-                </tr>  
-            </table>
-            <table>
-                <tr>
-                    <td>
-                        <p>
-                        <h3><center>2. Almuerzo tipico</center></h3><br>
-                        <strong>Duracion:</strong>1 horas<br>
-                        <strong>Horario:</strong>11:30 AM - 1:00 PM<br>
-                        <strong>Actividades:</strong><br>
-                        <ul type="circle">
-                            <li>Nos dirijimos al restaurante <strong><i>Ollantay</i></strong></li>
-                            <li>Tomaremos una foto</li>
-                            <li>Degustaremos de los platos tipicos</li>
-                            <li>tiempo de descanso (15min)</li>
-                        </ul> 
-                        </p>
-                    </td>
-                    <td>
-                    <td>
-                        <img src="../images/ollantaytambo_tour_itinirario_restaurante1.jpg" width="500" height="400">
-                    </td>
-                    <td>
-                        <img src="../images/ollantaytambo_tour_itinirario_restaurante2.jpg" width="500" height="400">
-                    </td>
-                </tr>  
-            </table>
-            <table>
-                <tr>
-                    <td>
-                        <img src="../images/ollantaytambo_tour_itinirario_refugio1.jpg" width="500" height="400">
-                    </td>
-                    <td>
-                        <p>
-                        <h3><center>3. Entrada al parque arqueologico Ollantaytambo</center></h3><br>
-                        <strong>Duracion:</strong>4 horas<br>
-                        <strong>Duracion de viaje:</strong>15 min <u>(no se cuenta de las 4 horas en el parque)</u><br>
-                        <strong>Horario:</strong>1:00 PM - 5:00 AM<br>
-                        <strong>Actividades:</strong><br>
-                        <ul type="circle">
-                            <li>Viaje en miniban al parque</li>
-                            <li>Foto en la entrada</li>
-                            <li>Recorrido por el parque arqueologico</li>
-                            <li>Sesion de fotos en el parque</li>
-                            <li>1 hora libres para sus actividades</li>
-                        </ul> 
-                        </p>
-                    </td>
-                    <td>
-                        <img src="../images/ollantaytambo_tour_itinirario_refugio2.jpg" width="500" height="400">
-                    </td>
-                </tr>  
-            </table>
-            <table>
-                <tr>
-                    <td>
-                            <img src="../images/ollantaytambo_tour_itinirario_cena1.jpg" width="500" height="400">
-                    </td>
-                    
-                    <td>
-                        <p>
-                        <h3><center>4. Cena tradicional</center></h3><br>
-                        <strong>Duracion:</strong>4 horas<br>
-                        <strong>Duracion de viaje <i>Regreso</i>:</strong>15 min <u>(no se cuenta de las 2 horas de cena)</u><br>
-                        <strong>Horario:</strong>5:30 PM - 9:30 AM<br>
-                        <strong>Actividades:</strong><br>
-                        <ul type="circle">
-                            <li>Regreso en miniban al pueblito</li>
-                            <li>Nos dirijimos al restaurante <strong><i>Especialidades Andinas</i></strong></li>
-                            <li>Eleccion de potajes </li>
-                            <li>Degustacion de potajes</li>
-                            <li>vsisitaremos el centro del parque donde habra un espectaculo</li>
-                        </ul> 
-                        </p>
-                    </td>
-                </tr>  
-            </table>
-            <table>
-                <tr>
-                    <td>
-                        <img src="../images/ollantaytambo_tour_itinirario_cena2.jpg" width="500" height="400">
-                    </td>
-                    <td>
-                            <img src="../images/ollantaytambo_principal.jpg" width="500" height="400">
-                    </td>
-                    <td>
-                            <img src="../images/ollantaytambo_tour_itinirario_bajo.jpg" width="500" height="400">
-                    </td>
-                </tr>  
-            </table>
+          </nav>
         </div>
-    </section>
-</section>
-
-    <!-- Sección de Restaurantes -->
-    <section>
-        <h2><center>Restaurantes Recomendados</center></h2>
-        <section>
+    </header>
+    <div class="carousel">
+        <div class="slide" style="background-image: url('https://www.infobae.com/new-resizer/hdqxzhpLCqWGrRKgY8rjCvsk3BU=/arc-anglerfish-arc2-prod-infobae/public/KLER3AVAOBB6ZO5YHKZ2M5VATE.jpg');"></div>
+        <div class="slide" style="background-image: url('https://www.peru.travel/Contenido/Noticia/Imagen/es/1721/1.0/Principal/ollantaytambo-ds.jpg');"></div>
+        <div class="slide" style="background-image: url('https://portal.andina.pe/EDPfotografia3/Thumbnail/2022/01/12/000838883W.jpg');"></div>
+        <div class="carousel-caption"><span>Ollantaytambo</span></div>
+      </div>
+      <h4><center>Conociendo Ollantaytambo y su Gastronomía </center></h4><br>
+    <div class="grid-container">
+        <div class="grid_a">
+            <p>
+                <center><Strong>Duracion: </Strong> 2 dias <br></center>
+            </p>
             <table>
                 <tr>
                     <td>
-                        <h3>Restaurante: Ollantay</h3>
-                        <p>Te invitamos a descubrir los auténticos sabores de la cocina
-                             tradicional de nuestra tierra. Aquí, cada plato cuenta una historia, elaborada con 
-                             ingredientes frescos y locales que resaltan la riqueza cultural y gastronómica de Ollantay.<br>
-
-                            Disfruta de un ambiente acogedor donde la tradición se combina con la calidez de 
-                            nuestra atención. Desde clásicos como la <strong>pachamanca</strong> y el <strong>cuy al horno</strong>, hasta innovadoras 
-                            fusiones con recetas ancestrales, en Ollantay vivirás una experiencia culinaria inolvidable.<br>
-                            
-                            <i><center><strong>¡Ven y comparte con nosotros un recorrido por los sabores que hacen única a nuestra región!</strong></center></i></p>
-                        <p>Calificacion:<strong>4 estrellas</strong></p>
+                        <Strong>Incluye: </Strong>
+                      <ul type="circle">
+                        <li>Transporte ida y vuelta desde Hotel Luna creciente</li>
+                        <li>Guía turístico bilingüe (Español/Inglés)</li>
+                        <li> Entradas a parque arqueologico.</li>
+                        <li>Almuerzo en restaurante local Ollantay</li>
+                      <li>Degustación de chancho al palo, Guiso de alpaca, trucha frita, mate de coca</li>
+                      </ul>
                     </td>
                     <td>
-                        <h3>Platos famosos de carta</h3>
+                     <Strong>Que llevar: </Strong>
+                     <ul type="circle">
+                       <li>Ropa cómoda y zapatos adecuados para caminar.</li>
+                       <li>Protector solar, gorra o sombrero.</li>
+                       <li> Entradas a parque arqueologico.</li>
+                       <li>Botella de agua reutilizable.</li>
+                       <li>Cámara o teléfono para fotos.</li>
+                     </ul> 
+                    </td>
+                </tr>
+            </table>
+                
+                
+            <p>
+                <center><Strong>PRECIO: 500 USD</Strong> por persona</center>
+            </p>
+        </div>
+        <div class="grid_p"><h2><center>Itinerario</center></h2></div>
+        <div class="grid_b">
+            <h3><center>1. Explorar el Mercado Artesanal</center></h3><br>
+            <p>
+                <strong>Duracion:</strong>2 horas<br>
+                <strong>Horario:</strong>9:00 AM - 11:00 AM<br>
+                <strong>Actividades:</strong><br>
+            </p>
+                <ul type="circle">
+                    <li>Recorrido por el mercado de frutas con un guía experto</li>
+                    <li>Recorrido por el mercado de recuerdos con un guía experto</li>
+                    <li>Recorrido por el mercado de ropa tradicional con un guía experto</li>
+                    <li>Sesion de fotos con ropa tipica de la zona</li>
+                    <li>tiempo de descanso (15min)</li>
+                </ul> 
+
+        </div>
+        <div class="grid_c"><img src="../images/ollantaytambo_tour_itinirario_mercado2.jpg" width="300" height="175"></div>
+        <div class="grid_q"><img src="../images/ollantaytambo_tour_itinirario_mercado.jpg" width="300" height="175"></div>
+        <div class="grid_d"></div>
+        <div class="grid_e"><img src="../images/ollantaytambo_tour_itinirario_restaurante1.jpg" width="300" height="175"></div>
+        <div class="grid_r"><img src="../images/ollantaytambo_tour_itinirario_restaurante2.jpg" width="300" height="175"></div>
+        <div class="grid_f">
+            <h3><center>2. Almuerzo tipico</center></h3><br>
+            <p>
+                <strong>Duracion:</strong>1 horas<br>
+                <strong>Horario:</strong>11:30 AM - 1:00 PM<br>
+                <strong>Actividades:</strong><br>
+            </p>
+                <ul type="circle">
+                    <li>Nos dirijimos al restaurante <strong><i>Ollantay</i></strong></li>
+                    <li>Tomaremos una foto</li>
+                    <li>Degustaremos de los platos tipicos</li>
+                    <li>tiempo de descanso (15min)</li>
+                </ul> 
+
+        </div>
+        <div class="grid_g">
+            <h3>Restaurante: Ollantay</h3>
+            <p>
+            <i><center><strong>¡Ven y comparte con nosotros un recorrido por los sabores que hacen única a nuestra región!</strong></center></i></p>
+            <p>Calificacion:<strong>4 estrellas</strong></p>
+        </div>
+        <div class="grid_h">
+            <h3>Platos famosos de carta</h3>
                         <ul type="circle">
                           <li>Cuy al horno</li>
                           <li>Trucha frita</li>
                           <li>Caldo de llama</li>
                           <li>Chancho al palo</li>
                           <li>Guiso de alpaca</li>
-                          <li>Charqui</li>
-                          <li>Espesado de chuño</li>
-                          <li>Cordero al horno</li>
-                          <li>Especial de quinua</li>
-                          <li>Pachamanca</li>
                         </ul>
-                    </td>
-                    <td>
-                        <img src="../images/ollantaytambo_tour_itinirario_restaurante1.jpg" width="500" height="400">
-                    </td>
-                </tr>   
-            </table>
-            <center><button>Conocer el lugar</button></center>
-        </section>
-        <section>
-            <table>
-                <tr>
-                    <td>
-                        <h3>Especialidades andinas</h3>
-                        <p>
-                            Te ofrecemos un rincón dedicado a las tradiciones más reconfortantes de 
-                            la región andina. Aquí encontrarás una selección de potajes ligeros y 
-                            saludables, perfectos para disfrutar durante el desayuno o una cena 
-                            relajante.<br>
+          <br><center><button>Conocer el lugar</button></center>
+        </div>
+        <div class="grid_i"><img src="../images/ollantaytambo_tour_itinirario_refugio1.jpg"  width="300" height="175"></div>
+        <div class="grid_s"> <img src="../images/ollantaytambo_tour_itinirario_refugio2.jpg"  width="300" height="175"></div>
+        <div class="grid_j">
+            <h3><center>3. Entrada al parque arqueologico Ollantaytambo</center></h3><br>
+            <p>
+                <strong>Duracion:</strong>4 horas<br>
+                <strong>Duracion de viaje:</strong>15 min <u>(no se cuenta de las 4 horas en el parque)</u><br>
+                <strong>Horario:</strong>1:00 PM - 5:00 AM<br>
+                <strong>Actividades:</strong><br>
+            </p>
+                <ul type="circle">
+                    <li>Viaje en miniban al parque</li>
+                    <li>Foto en la entrada</li>
+                    <li>Recorrido por el parque arqueologico</li>
+                    <li>Sesion de fotos en el parque</li>
+                    <li>1 hora libres para sus actividades</li>
+                </ul> 
 
-                            Nuestra especialidad incluye infusiones como el emblemático <strong> de coca</strong>, 
-                            ideal para revitalizar el cuerpo y adaptarse a la altura, así como una 
-                            variedad de bebidas calientes y frías elaboradas con ingredientes locales. 
-                            También contamos con opciones nutritivas como panes artesanales, quesos 
-                            frescos, y <strong>tradicionales</strong> .<br>
-
-                            <i><center><strong>Ven a Especialidades Andinas y descubre sabores auténticos en un ambiente
+        </div>
+        <div class="grid_k">
+            <h3>Especialidades andinas</h3>
+            <p>
+                <i><center><strong>Ven a Especialidades Andinas y descubre sabores auténticos en un ambiente
                                  tranquilo y acogedor. Perfecto para comenzar el día o cerrar la jornada con un toque de 
                                  tradición.</strong></center></i></p>
-                        </p>
-                        <p>Calificacion: <strong>4 estrellas</strong></p>
-                    </td>
-                    <td>
-                        <h3>Un poco de lo que ofrecemos</h3>
-                        <ul type="circle">
-                          <li>Mate de coca</li>
-                          <li>Ponche de kiwuicha</li>
-                          <li>Quinua con Leche</li>
-                          <li>Infusión de Muña</li>
-                          <li>Ponche de kiwuicha</li>
-                          <li>Queso Fresco Andino</li>
-                          <li>Humitas con queso</li>
-                          <li>Galletas de kiwuicha</li>
-                          <li>Torrejitas de Maíz o Zapallo</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <img src="../images/ollantaytambo_tour_rest_humitas.jpg" width="500" height="400">
-                    </td>
-                </tr>   
-            </table>
-            <center><button>Conocer el lugar</button></center>
-        </section>
-    </section>
-
-    <!-- Sección de Hoteles -->
-    <section>
-        <h2><center>Hoteles recomendados Recomendados</center></h2>
-        <section>
-            <table>
-                <tr>
-                    <td>
-                        <h3>Hotel: Luna Creciente</h3>
-                        <p>Acompaña tu viaje de ensueño con el descanso que mereces. <strong> Luna Creciente</strong>,
-                             te aseguramos una experiencia inigualable, donde comodidad y tranquilidad 
-                             se combinan para ofrecerte el mejor hospedaje. <br>
-
-                            Disfruta de nuestras habitaciones acogedoras, servicios de primera clase y 
-                            una ubicación ideal para explorar los alrededores. <br>
-                             <i><center><strong>Porque en Luna Creciente, tu descanso es nuestra prioridad. ¡Te esperamos!</strong></center></i></p>
-                        </p>
-                        <p>Calificacion: <strong>4 estrellas</strong></p>
-                        <p><strong>Tipo de habitacion</strong>matrimonial, facimilar, simple, vip, doble</p>
-                        <p>Habitaciones desde <strong>S/50</strong></p>
-                        <p><strong>Desayuno buffet incluido</strong></p>
-                    </td>
-                    <td>
-                        <img src="../images/ollantaytambo_tour_hotel.jpg" width="500" height="400">
-                    </td>
-                </tr>   
-            </table>
-            <center><button>Conocer el lugar</button></center>
-        </section>
-
-    <!-- Pie de Página -->
-    <footer>
-        <h3>Cuéntanos tu experiencia</h3>
-        <form action="#" method="post">
-            <table>
-                <tr>
-                    <td>Nombre:</td>
-                    <td><input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre"></td>
-                </tr>
-                <tr>
-                    <td>Fecha de visita:</td>
-                    <td><input type="date" id="fecha" name="fecha" required></td>
-                </tr>
-                <tr>
-                    <td>Lugares visitados:</td>
-                    <td><textarea id="lugares" name="lugares" rows="3" required placeholder="Describa los lugares visitados"></textarea></td>
-                </tr>
-                <tr>
-                    <td>Recomendaciones:</td>
-                    <td><textarea id="recomendaciones" name="recomendaciones" rows="3" required placeholder="Ingrese sus recomendaciones"></textarea></td>
-                </tr>
-                <tr>
-                    <td>Puntuación (1-5):</td>
-                    <td><input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required></td>
-                </tr>
-                <tr>
-                    <td><button type="submit">Enviar</button></td>
-                    <td><button type="reset">Limpiar</button></td>
-                </tr>
-            </table>
-        </form>
-    </footer>
+            </p>
+            <p>Calificacion: <strong>4 estrellas</strong></p>
+        </div>
+        <div class="grid_l">
+            <h3>Un poco de lo que ofrecemos</h3>
+            <ul type="circle">
+              <li>Mate de coca</li>
+              <li>Ponche de kiwuicha</li>
+              <li>Quinua con Leche</li>
+              <li>Infusión de Muña</li>
+              <li>Ponche de kiwuicha</li>
+            </ul>
+            <br><center><button>Conocer el lugar</button></center>
+        </div>
+        <div class="grid_m">
+            <h3><center>4. Cena tradicional</center></h3><br>
+            <p>
+                <strong>Duracion:</strong>4 horas<br>
+                <strong>Duracion de viaje <i>Regreso</i>:</strong>15 min <u>(no se cuenta de las 2 horas de cena)</u><br>
+                <strong>Horario:</strong>5:30 PM - 9:30 AM<br>
+                <strong>Actividades:</strong><br>
+            </p>
+            </ul>
+            <ul type="circle"></ul>
+                <li>Regreso en miniban al pueblito</li>
+                <li>Nos dirijimos al restaurante <strong><i>Especialidades Andinas</i></strong></li>
+                <li>Eleccion de potajes </li>
+                <li>Degustacion de potajes</li>
+                <li>vsisitaremos el centro del parque donde habra un espectaculo</li>
+            </ul> 
+        </div>
+        <div class="grid_n"><img src="../images/ollantaytambo_tour_itinirario_cena1.jpg"  width="300" height="175"></div>
+        <div class="grid_o"><img src="../images/ollantaytambo_tour_itinirario_cena1.jpg"  width="300" height="175"></div>
+        <div class="grid_t"><br><h3>Hotel: Luna Creciente</h3><br></div>
+        <div class="grid_u"><br>
+            <p>Calificacion: <strong>4 estrellas</strong></p>
+            <p><strong>Tipo de habitacion</strong>matrimonial, facimilar, simple, vip, doble</p>
+            <p>Habitaciones desde <strong>S/50</strong></p>
+            <p><strong>Desayuno buffet incluido</strong></p>
+            <br><center><button>Conocer el lugar</button></center>
+        </div>
+        <div class="grid_y">
+            <h3><center>5. Noche de locura</center></h3><br>
+            <p>
+                <strong>Duracion:</strong>4 horas<br>
+                <strong>Duracion de viaje <i>Regreso</i>:</strong>15 min <u>(no se cuenta de las 2 horas de cena)</u><br>
+                <strong>Horario:</strong>10:30 PM - 2:30 AM<br>
+                <strong>Actividades:</strong><br>
+            </p>
+                <ul type="number">
+                    <li>Regresamos al hotel</li>
+                    <li>Nos dirigimos a la discoteca <strong><i>La llama loca</i></strong></li>
+                    <li>tendremos visponible una sala VIP </li>
+                    <li>Bailaremos hasta el amanecer</li>
+                    <li>Regresaremos al hotel a descansar.</li>
+                </ul> 
+        </div>
+        <div class="grid_z"><img src="../images/ollantaytambo_tour_itinirario_cena1.jpg"  width="300" height="175"></div>
+        <div class="grid_aa"><img src="../images/ollantaytambo_tour_itinirario_cena1.jpg"  width="300" height="175"></div>
+        <div class="grid_v"><img src="../images/ollantaytambo_tour_itinirario_cena2.jpg" width="500" height="400"></div>
+        <div class="grid_w"><img src="../images/ollantaytambo_principal.jpg" width="500" height="400"></div>
+        <div class="grid_x"><img src="../images/ollantaytambo_tour_itinirario_bajo.jpg" width="500" height="400"></div>
+    </div>
+    <section class="seccion-comentarios">
+        <h2>Comentarios</h2>
+        <!-- Grid de 4 comentarios -->
+        <div class="grid-comentarios">
+          <div class="comentario">Comentario 1</div>
+          <div class="comentario">Comentario 2</div>
+          <div class="comentario">Comentario 3</div>
+          <div class="comentario">Comentario 4</div>
+        </div>
+        <!-- Botón para mostrar el formulario de experiencia -->
+        <div class="boton-experiencia">
+          <button id="mostrar-formulario">Cuéntanos tu experiencia</button>
+        </div>
+        <!-- Formulario de experiencia (oculto por defecto) -->
+        <div class="formulario-experiencia" id="formulario-experiencia">
+          <form action="#" method="post">
+            <div class="campo-formulario">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+            </div>
+            <div class="campo-formulario">
+              <label for="fecha">Fecha de visita:</label>
+              <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div class="campo-formulario">
+              <label for="lugares">Lugares visitados:</label>
+              <textarea id="lugares" name="lugares" rows="3" placeholder="Describa los lugares visitados" required></textarea>
+            </div>
+            <div class="campo-formulario">
+              <label for="recomendaciones">Recomendaciones:</label>
+              <textarea id="recomendaciones" name="recomendaciones" rows="3" placeholder="Ingrese sus recomendaciones" required></textarea>
+            </div>
+            <div class="campo-formulario">
+              <label for="puntuacion">Puntuación (1-5):</label>
+              <input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required>
+            </div>
+            <div class="campo-formulario">
+              <button type="submit">Enviar</button>
+              <button type="reset">Limpiar</button>
+            </div>
+          </form>
+        </div>
+      </section>
 </body>
 </html>

@@ -3,176 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Viaje a Cusco</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #faf5ef;
-            color: #595552;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ffffff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 1rem 0;
-        }
-        header h1 {
-            color: #3ba1c8;
-            text-align: center;
-            padding: 15px;
-            margin: 0;
-        }
-        .banner {
-            width: 100%;
-            height: 50vh;
-            background-image: url('banner-image.jpg'); /* Reemplaza con la URL de tu imagen */
-            background-size: cover;
-            background-position: center;
-        }
-        section {
-            margin: 20px;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #0e2d3a;
-            border-bottom: 2px solid #ffc226;
-            padding-bottom: 7px;
-        }
-        h3 {
-            color: #0f2719;
-        }
-        .divider {
-            border-bottom: 2px solid #ffc226;
-            margin: 20px 0;
-        }
-        button {
-            background-color: #3ba1c8;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #2e8abf;
-        }
-        footer {
-            background-color: #223d4870;
-            color: #ffffff;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            background: #333;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        nav ul li a:hover {
-            background: #555;
-        }
-    </style>
+    <title>Montaña de Colores - Blog de Viaje a Cusco</title>
+    <link rel="stylesheet" href="../css/estilo12.css"> <!-- Enlace al archivo CSS -->
 </head>
 <body>
-    <header>
-        <h1>Blog de Viaje a Cusco</h1>
-        <nav>
-            <ul>
-                <li><a href="ollantaytambo.html">Ollantaytambo</a></li>
-                <li><a href="montana_colores.html">Montaña de Colores</a></li>
-                <li><a href="laguna_huamantay.html">Laguna Humantay</a></li>
-                <li><a href="pisaq.html">Pisaq</a></li>
-                <li><a href="machu_picchu.html">Machu Picchu</a></li>
+  <!-- Encabezado fijo con logo e ítems de menú -->
+   <header>
+    <div class="container header-container">
+      <div class="logo">
+        <!-- Reemplaza "logo.png" por la ruta de tu imagen -->
+        <a href="../index.html"><img src="../images/logo_sfondo.png" alt="Blog Viajero UTP"></a>
+      </div>
+      <nav>
+        <ul>
+          <li class="dropdown">
+            <a href="#">Lugares</a>
+            <ul class="dropdown-content">
+              <li><a href="../ollantaytambo/paginaprincipal.html">Ollantaytambo</a></li>
+              <li><a href="../montana_colores/menuprincipalmontaña.html">Montaña de Colores</a></li>
+              <li><a href="../lagunahuamantay/principallaguna.html">Laguna Humantay</a></li>
+              <li><a href="../pisac/pisac.html">Pisac</a></li>
+              <li><a href="../machupiichu/paginaprincipal.html">Machu Picchu</a></li>
             </ul>
-        </nav>
-    </header>
-    <div class="banner"> </div>
+          </li>
+          <li><a href="../tourgeneral.html">Tour y Actividades</a></li>
+          <li><a href="../consejospracti.html">Consejos prácticos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<section>
-    <h2><center>Montaña de Colores </center></h2>
-    <section>
-        <h3>Historia</h3>
-        <p>Dentro de esta seccion encontraras contenido acerca sobre la cultura de Montaña de colores, festividades y leyendas de la region.</p>
-        <a href="historiamontaña.html"><button>Ver más</button></a>
-        <div class="divider"></div>
-    </section>
-    <section>
-        <h3>Tour y Actividades</h3>
-        <p>Aquí se describirán los tours y actividades disponibles que puedes realizar</p>
-        <a href="touractvOllan.html"><button>Ver más</button></a>
-        <div class="divider"></div>
-    </section>
-    <section>
-        <h3>Consejos Prácticos</h3>
-        <p>Aquí se ofrecerán consejos prácticos para visitar Montaña de Colores></p>
-        <a href="consejosmontaña.html"><button>Ver más</button></a>
-        <div class="divider"></div>
-    </section>
-</section>
+    <!-- Banner tipo carrusel -->
+<div class="carousel">
+    <div class="slide" style="background-image: url('../images/montaña_tour.jpg');"></div>
+    <div class="slide" style="background-image: url('../images/montañafondo4.jpeg');"></div>
+    <div class="slide" style="background-image: url('../images/montañafondo5.jpeg');"></div>
+</div>
 
-    <!-- Formulario de comentarios -->
+    
+    <div class="carousel-caption"><span>MONTAÑA DE COLORES</span></div>
+</div>
+    <section class="content">
+        <!-- Contenido principal -->
+        <div class="container">
+            <h2>Conoce más</h2>
+            <div class="cards-container">
+   
+     
+    <!-- Sección Historia -->
+    <section class="card">
+        <div class="card-image" style="background-image: url('../images/tarjeta_montaña1.jpg');"></div>
+        <div class="card-overlay">
+            <h3>Historia</h3>
+            <div class="card-text">
+                <p>La Montaña de Colores, también conocida como Vinicunca o Rainbow Mountain, es un lugar mágico de la región andina de Perú. Aquí podrás conocer su rica historia, leyendas y tradiciones que hacen de este lugar único.</p>
+            </div>
+            <a href="historiamontaña.html"><button>Ver más</button></a>
+        </div>
+    </section>
+
+    <!-- Sección Tour y Actividades -->
+    <section class="card">
+        <div class="card-image" style="background-image: url('../images/tarjetamontaña4.jpg');"></div>
+        <div class="card-overlay">
+            <h3>Tour y Actividades</h3>
+            <div class="card-text">
+                <p>Vive una experiencia única realizando tours por la Montaña de Colores. Disfruta de actividades como caminatas guiadas y recorridos que te permitirán conocer más sobre este impresionante paisaje.</p>
+            </div>
+            <a href="zonaturis.html"><button>Ver más</button></a>
+        </div>
+    </section>
+
+    <!-- Sección Consejos Prácticos -->
+    <section class="card">
+        <div class="card-image" style="background-image: url('../images/tarjetamontaña3.jpg');"></div>
+        <div class="card-overlay">
+            <h3>Consejos Prácticos</h3>
+            <div class="card-text">
+                <p>¿Estás listo para visitar la Montaña de Colores? Aquí te damos algunos consejos prácticos para aprovechar al máximo tu visita a este maravilloso lugar.</p>
+            </div>
+            <a href="consejosmontaña.html"><button>Ver más</button></a>
+        </div>
+    </section>
+</div>
+        </section>
+    </section>
+
     <footer>
         <h2>Cuéntanos tu experiencia</h2>
-        <form>
+        <form action="#" method="post">
             <table>
-            <tr>
-                <td>Apellidos </td>
-                <td><input type="text" name="Apellidos" value="" placeholder="Ingrese Apellidos"></td>
-            </tr>
-            <tr>
-                <td>Nombres</td>
-                <td><input type="text" name="Nombres" value="" placeholder="Ingrese Nombres"></td>
-            </tr>
-            <tr>
-                <td>Lugar Visitado</td>
-                <td><select name="Donde estuve">
-                    <option>Ollantaytambo</option>
-                    <option>Machupichu</option>
-                    <option>Pisac</option>
-                    <option>Montaña 7 colores</option>
-                    <option>laguna-huamantay</option>
-                </td>
-            </tr>
-            <tr>
-                <td>Fecha de Visita</td>
-                <td><input type="date" name="fecnac"></td>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre"></td>
+                </tr>
+                <tr>
+                    <td>Fecha de visita:</td>
+                    <td><input type="date" id="fecha" name="fecha" required></td>
+                </tr>
+                <tr>
+                    <td>Lugar Visitado</td>
+                    <td><select name="Donde estuve">
+                        <option>Ollantaytambo</option>
+                        <option>Machupichu</option>
+                        <option>Pisac</option>
+                        <option>Montaña 7 colores</option>
+                        <option>Laguna Huamantay</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Recomendaciones:</td>
+                    <td><textarea id="recomendaciones" name="recomendaciones" rows="3" required placeholder="Ingrese sus recomendaciones"></textarea></td>
                 </tr>
                 <tr>
                     <td>Puntuación (1-5):</td>
                     <td><input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required></td>
                 </tr>
                 <tr>
-                    <td>Comentarios</td>
-                    <td>
-                        <textarea name="comentarios" value="" cols="50" rows="5">
-                        </textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="submit" value="Enviar"></td>
-                    <td><input type="reset" value="Limpiar"></td>
+                    <td><button type="submit">Enviar</button></td>
+                    <td><button type="reset">Limpiar</button></td>
                 </tr>
             </table>
         </form>
+        <p>&copy; 2025 Blog Viajero UTP. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
