@@ -1,0 +1,218 @@
+@layer reset, base, swiper;
+
+@import url('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css') layer(base);
+
+@layer swiper {
+  .swiper {
+    width  : 99vw;
+    height : 40vh;
+  }
+
+  .swiper-wrapper {
+    display     : flex;
+    align-items : center;
+    height      : 100%;
+  }
+
+  .swiper-slide {
+    scale      : 1.25;
+    transition : scale 250ms ease-in-out;
+
+    &.swiper-slide-active {
+      scale   : 2;
+      z-index : 10;
+    }
+
+    &.swiper-slide-prev,
+    &.swiper-slide-next {
+      scale               : 1.7;
+      z-index             : 5;
+      transition-duration : 50ms;
+    }
+    
+    &.swiper-slide-next + & {
+      z-index : 1;
+    }
+  }
+
+  .swiper-slide img {
+    display        : block;
+    border-radius  : 0.5rem;
+    width          : 80%;
+    height         : auto;
+    object-fit     : cover;
+    user-select    : none;
+    margin         : auto;
+  }
+
+  .swiper-button {
+    --position       : 17%;
+    background-color : #ffffff;
+    height           : 5rem;
+    width            : 5rem;
+    border-radius    : 0.5rem;
+    
+    &.swiper-button-prev {
+      left : var(--position);
+    }
+
+    &.swiper-button-next {
+      right : var(--position);
+    }
+
+    &:hover {
+      background-color : #4A261F;
+    }
+
+    &::after {
+      font-size : 1rem;
+      color     : rgb(154, 107, 107);
+    }
+  }
+}
+
+@layer reset {
+  * {
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+  }
+
+  body {
+    display     : grid;
+    place-items : center;
+    min-height  : 100svh;
+    background  : #eee;
+  }
+}
+
+  /* Estilos adicionales para los botones */
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    border-radius: 1em;
+    font-size: 3em;
+    padding: 1em;
+    margin: 2em;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+  
+  .btn-primary:active {
+    background-color: #004085;
+    border-color: #003366;
+  }
+  
+  /* Centrando los botones */
+  div[style="margin:3em; text-align: center;"] button {
+    margin: 4em;
+  }
+
+  .main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Styles for each section */
+.section {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #ddd;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* Styles for the close button */
+.close-section {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Styles for the box containing the title */
+.box {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+    /* Estilo del cuadro*/
+  .section {
+    position: relative;
+    width: 1000px;
+    height: 2000px;
+    border: 3px solid #000000;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer; 
+    transition: transform 0.3s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     }
+     /* agranda el cuadro */
+
+     .section:hover {
+        transform: scale(1.05);
+      }
+      /* estilo del box*/
+      .box {
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Sombra para crear borde negro */
+        text-align: center;
+      }
+
+    /* Fondo de cuadro */
+
+     .section:nth-child(1) {
+        background-image: url('https://media.gettyimages.com/id/890285328/es/foto/machu-picchu.jpg?s=612x612&w=0&k=20&c=I1ruWpMLeO8mKAyXGmbgjzwn3rY1Aq_rZwnUhbDe7ww=');
+      }
+      
+      .section:nth-child(2) {
+        background-image: url('https://media.gettyimages.com/id/540217011/es/foto/ruins-of-inca-p%C3%ADsac-on-hill-at-sacred-valley.jpg?s=612x612&w=0&k=20&c=VKgzKTkCwbwMso_nuqW7IsSG1U8_YFFPTuo5FpryB5w=');
+      }
+      
+      .section:nth-child(3) {
+        background-image: url('https://media.gettyimages.com/id/517695920/es/foto/moray-the-incan-agricultural-site-in-peru.jpg?s=612x612&w=0&k=20&c=jGHPosurLWU-0m17dpybocKmlVM_cGuru1Ux-cmeYfk=');
+      }
+      
+      .section:nth-child(4) {
+        background-image: url('https://media.gettyimages.com/id/1995784573/es/foto/humantay-lake-cusco-peru.jpg?s=612x612&w=0&k=20&c=AJo8VL8mCRdpppLx44c2PJA5lE5nR8Y0UCCWHxI4sTQ=');
+      }
+  
+     /* Titulo del cuadro*/
+  .box {
+    font-size: 80px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+  }
