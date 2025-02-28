@@ -1,4 +1,3 @@
-
 window.addEventListener('DOMContentLoaded', event => {
 
     // Función navbar Sjrink: Ajusta el navbar según el scroll
@@ -20,6 +19,8 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Ejecuta la función cuando se hace scroll
     document.addEventListener('scroll', navbarShrink);
+
+    //---------------------------------------------------//
 
     // Busca mainNav y activa Bootstrap scrollspy, que hace que se resalte automáticamente según la sección donde se navegue
     const mainNav = document.body.querySelector('#mainNav');
@@ -43,4 +44,27 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+});
+
+document.getElementById("submitButton").addEventListener("click", function () {
+    var entradaemail = document.getElementById("emailAddress").value.trim();
+    var errorEmail = document.getElementById("errorEmail");
+
+    // Validar que el campo no esté vacío y sea un correo válido
+    if (entradaemail === "" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(entradaemail)) {
+        errorEmail.style.display = "block";
+        return;
+    } else {
+        errorEmail.style.display = "none";
+    }
+
+    // Crear url con el mensaje personalizado
+    var receptor = "conocecusco@blog.utp.pe";
+    var asunto = encodeURIComponent("Solicitud de Asesoría");
+    var cuerpo = encodeURIComponent("Hola! Vengo desde el Blog Viajero UTP. Deseo asesoría, envíeme toda la información a mi correo: " + entradaemail);
+    
+    var linkgmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${receptor}&su=${asunto}&body=${cuerpo}`;
+    
+    // Abrir Gmail en una nueva ventana/pestaña
+    window.open(linkgmail, "_blank");
 });
