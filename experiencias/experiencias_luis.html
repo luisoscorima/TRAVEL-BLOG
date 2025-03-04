@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Viajero UTP :: Experiencias</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
+    <!-- fuente-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <!-- tema CSS bootstrap-->
+    <link href="../css/index_luis.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    .banner {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    background-image: url('https://traveler.marriott.com/es/wp-content/uploads/sites/2/2021/10/GI-542411244-Cusco-Night-1920x1080.jpg'); /* Reemplaza con la URL de tu imagen */
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 0px; /* Ajusta este valor según la altura de tu header */
+    z-index: -1; /* Envía la imagen detrás del header */
+    }
+    /* Tarjetas de experiencia y formulario */
+    .experience-card {
+      background-color: #dad5c7;
+      border: 2px solid #123339;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .experience-card h5 {
+      color: #0b1c26;
+      margin-bottom: 10px;
+    }
+    .experience-card p {
+      margin: 5px 0;
+    }
+    .experience-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .experience-form {
+      background-color: #ffffff;
+      border: 2px solid #b3d7ff;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    input, textarea, select {
+      background-color: #f8f9fa;
+      border: 1px solid #b3d7ff;
+      color: #333;
+    }
+    .btn-custom {
+      background-color: #174346;
+      color: #fff;
+      border: none;
+    }
+    .btn-custom:hover {
+      background-color: #1f5f59;
+    }
+    .container-experiences {
+      padding: 30px;
+    }
+    </style>
+</head>
+<body id="page-top">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="../index_luis.html"><img src="../images/logo_blog_banner_white.png" alt="logo"></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownLocations" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Lugares
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="dropdownLocations">
+                            <li><a class="dropdown-item" href="../ollantaytambo nuevo/principal_ollantaytambo_estefany.html">OLLANTAYTAMBO</a></li>
+                            <li><a class="dropdown-item" href="../pisac-nuevo/principal_pisac_estefany.html">PISAC</a></li>
+                            <li><a class="dropdown-item" href="../laguna/principal_laguna_estefany.html">LAGUNA</a></li>
+                            <li><a class="dropdown-item" href="../machu-picchu/principal_machu_luis.html">MACHU PICCHU</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../touryactividades/carrusel1_pris.html">Tours y Actividades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../consejos.html">Consejos Prácticos</a></li>
+                    <button class="btn rounded-pill px-2 py-1 fw-bold"><a class="nav-link" href="../login.html">Planea tu visita</a></button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <div class="banner">
+        <p>
+            <span>Experiencias</span>
+        </p>
+        <p class="lead">Conoce las experiencias de otros aventureros y escribe la tuya.</p>
+        <a class="btn btn-primary" href="#form">Cuéntanos tu historia!</a>
+    </div>
+      <!-- Contenido principal -->
+    <div class="container container-experiences">
+    <h2 class="my-4">Experiencias</h2>
+
+    <!-- Sección del formulario -->
+     <section id="form">
+        <div class="experience-form mb-5">
+            <h4>Agrega tu experiencia</h4>
+            <form id="experienceForm">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nombres:</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="age" class="form-label">Edad:</label>
+                <input type="number" class="form-control" id="age" required>
+              </div>
+              <div class="mb-3">
+                <label for="visitDate" class="form-label">Fecha de visita:</label>
+                <input type="date" class="form-control" id="visitDate" required>
+              </div>
+              <div class="mb-3">
+                <label for="place" class="form-label">Lugar visitado:</label>
+                <input type="text" class="form-control" id="place" required>
+              </div>
+              <div class="mb-3">
+                <label for="recommendation" class="form-label">¿Qué recomiendas?</label>
+                <textarea class="form-control" id="recommendation" rows="2" required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="notLiked" class="form-label">¿Qué no te gustó?</label>
+                <textarea class="form-control" id="notLiked" rows="2"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="rating" class="form-label">Calificación:</label>
+                <select class="form-select" id="rating" required>
+                  <option value="">Selecciona</option>
+                  <option value="1">1 - Muy malo</option>
+                  <option value="2">2 - Malo</option>
+                  <option value="3">3 - Regular</option>
+                  <option value="4">4 - Bueno</option>
+                  <option value="5">5 - Excelente</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="photo" class="form-label">Sube una foto:</label>
+                <input type="file" class="form-control" id="photo" accept="image/*">
+              </div>
+              <button type="submit" class="btn btn-custom">Agregar experiencia</button>
+            </form>
+          </div>
+     </section>
+    
+
+    <!-- Sección de experiencias en 2 columnas -->
+    <div id="experiencesList">
+      <!-- Se renderizarán en un grid -->
+    </div>
+  </div>
+
+    <!-- Contacto-->
+    <section class="contact-section bg-black">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Ubícanos</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50">Jr. Micalle 123, Cusco</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-envelope text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Suscríbete a nuestro Newsletter</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50"><a href="#!">conocecusco@blog.utp.pe</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Contáctanos</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50">+51 987654321  </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="social d-flex justify-content-center">
+                <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Derechos Reservados &copy; 2025 Conoce Cusco - Blog UTP</div></footer>
+
+    <!-- temas JS-->
+    <script src="../js/index_luis.js"></script>
+    <script>
+        // Experiencias predefinidas
+        let experiences = [
+            {
+                name: "Juan Pérez",
+                age: 28,
+                visitDate: "2023-01-15",
+                place: "Machu Picchu",
+                recommendation: "Inolvidable, lleno de historia.",
+                notLiked: "Demasiada multitud.",
+                rating: 5,
+                photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3TFd7M3MGKfA5wpcCaQwKiiB3UG07WlC3Rw&s"
+            },
+            {
+                name: "María Gómez",
+                age: 34,
+                visitDate: "2023-03-20",
+                place: "Ollantaytambo",
+                recommendation: "La arquitectura es impresionante.",
+                notLiked: "El camino es empinado.",
+                rating: 4,
+                photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK2c3NINhcJbPaEDEfjoGZugk8A_MgNVuBhw&s"
+            },
+            {
+                name: "Carlos Ruiz",
+                age: 42,
+                visitDate: "2022-11-05",
+                place: "Pisac",
+                recommendation: "Los mercados locales son un encanto.",
+                notLiked: "Poca señalización.",
+                rating: 4,
+                photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYU-p9aTnZEf0PiwnwC9NQ2cldeNn50_bbsg&s"
+            },
+            {
+                name: "Laura Mendoza",
+                age: 30,
+                visitDate: "2023-06-10",
+                place: "Laguna",
+                recommendation: "Paisajes de ensueño.",
+                notLiked: "Falta de servicios.",
+                rating: 5,
+                photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfz_-PBgRH1FdYYGCo6D5XsArGNPRlPk2SIA&s"
+            },
+            {
+                name: "Andrés López",
+                age: 37,
+                visitDate: "2023-02-28",
+                place: "Machu Picchu",
+                recommendation: "Experiencia mística y única.",
+                notLiked: "El costo es elevado.",
+                rating: 4,
+                photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREBmN1nPgp7pGqpHOPM3OKPFjca2nH1cyKKA&s"
+            }
+        ];
+    
+        // Renderizar experiencias en el grid
+        function renderExperiences() {
+            const experiencesList = document.getElementById('experiencesList');
+            experiencesList.innerHTML = "";
+            
+            const row = document.createElement("div");
+            row.className = "row";
+    
+            experiences.forEach(exp => {
+                const col = document.createElement("div");
+                col.className = "col-md-6";
+                const expCard = document.createElement('div');
+                expCard.className = 'experience-card';
+                expCard.innerHTML = `
+                    <h5>${exp.name} (${exp.age} años)</h5>
+                    <p><strong>Fecha de visita:</strong> ${exp.visitDate}</p>
+                    <p><strong>Lugar visitado:</strong> ${exp.place}</p>
+                    <p><strong>Recomendación:</strong> ${exp.recommendation}</p>
+                    <p><strong>Lo que no le gustó:</strong> ${exp.notLiked}</p>
+                    <p><strong>Calificación:</strong> ${exp.rating} / 5</p>
+                    <img src="${exp.photo}" alt="Foto de la experiencia" style="width:100px; height:100px; object-fit:cover;">
+                `;
+                col.appendChild(expCard);
+                row.appendChild(col);
+            });
+    
+            experiencesList.appendChild(row);
+        }
+    
+        // Manejo del envío del formulario
+        document.getElementById('experienceForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+    
+            const name = document.getElementById('name').value.trim();
+            const age = parseInt(document.getElementById('age').value, 10);
+            const visitDate = document.getElementById('visitDate').value;
+            const place = document.getElementById('place').value.trim();
+            const recommendation = document.getElementById('recommendation').value.trim();
+            const notLiked = document.getElementById('notLiked').value.trim();
+            const rating = parseInt(document.getElementById('rating').value, 10);
+            const photoInput = document.getElementById('photo');
+    
+            // Validación básica
+            if (!name || isNaN(age) || !visitDate || !place || !recommendation || !notLiked || isNaN(rating)) {
+                alert("Por favor, completa todos los campos correctamente.");
+                return;
+            }
+    
+            if (photoInput.files && photoInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const newExperience = {
+                        name,
+                        age,
+                        visitDate,
+                        place,
+                        recommendation,
+                        notLiked,
+                        rating,
+                        photo: event.target.result
+                    };
+                    experiences.push(newExperience);
+                    renderExperiences();
+                    document.getElementById('experienceForm').reset();
+                };
+                reader.readAsDataURL(photoInput.files[0]);
+            } else {
+                const newExperience = {
+                    name,
+                    age,
+                    visitDate,
+                    place,
+                    recommendation,
+                    notLiked,
+                    rating,
+                    photo: "https://via.placeholder.com/150"
+                };
+                experiences.push(newExperience);
+                renderExperiences();
+                document.getElementById('experienceForm').reset();
+            }
+        });
+    
+        // Renderizar experiencias predefinidas al cargar la página
+        document.addEventListener("DOMContentLoaded", renderExperiences);
+    </script>
+    
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

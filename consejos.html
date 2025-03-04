@@ -6,6 +6,7 @@
   <title>Blog Viajero UTP :: Consejos Prácticos</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
   <!-- CSS inline para fines de ejemplo -->
+  <link href="./css/index_luis.css" rel="stylesheet" />
   <style>
     /* Reset básico */
     * {
@@ -54,97 +55,7 @@
       font-weight: bold;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     }
-    /* Navbar */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background: rgba(0, 0, 0, 0.5);
-    }
-    .logo img {
-      max-width: 100px;
-      height: auto;
-    }
-    /* Menú de navegación */
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    .nav-links li a {
-      text-decoration: none;
-      color: rgb(255, 255, 255);
-      font-size: 12px;
-    }
-    .nav-links li a:hover {
-      background: #3a707a81;
-      color:#c7c7c7
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      align-items: center;
-    }
-    nav ul li {
-      position: relative;
-      margin-right: 18px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #fdfdfd;
-      padding: 8px 8px;
-      transition: background 0.3s ease;
-    }
-    nav ul li a:hover {
-      background: #264a50be;
-    }
-    .plan-trip {
-      background: white;
-      color: #224046;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 20px;
-    }
-    .plan-trip:hover {
-      background: lightgray;
-    }
-    .menu-icon {
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-      display: none;
-    }
-    #menu-toggle {
-      display: none;
-    }
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background: rgba(0, 0, 0, 0.8);
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        padding: 10px 0;
-      }
-      .nav-links li {
-        text-align: center;
-        padding: 10px 0;
-      }
-      .menu-icon {
-        display: block;
-      }
-      #menu-toggle:checked + .menu-icon + .nav-links {
-        display: flex;
-      }
-      .plan-trip {
-        display: none;
-      }
-    }
+
     /* Sección principal */
     section {
       margin: 20px;
@@ -509,31 +420,36 @@
   </style>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index_luis.html">
-          <img src="images/logo_blog_banner_white.png" alt="logo">
-        </a>
-      </div>
-      <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="menu-icon">&#9776;</label>
-      <ul class="nav-links">
-        <li class="dropdown">
-          <a href="#">Lugares</a>
-          <ul class="dropdown-content">
-            <li><a href="./ollantaytambo nuevo/principal_ollantaytambo_estefany.html">OLLANTAYTAMBO</a></li>
-            <li><a href="./pisac-nuevo/principal_pisac_estefany.html">PISAC</a></li>
-            <li><a href="./laguna/principal_laguna_estefany.html">LAGUNA</a></li>
-            <li><a href="./machu-picchu/principal_machu_luis.html">MACHU PICCHU</a></li>
-          </ul>
-        </li>
-        <li><a href="./touryactividades/carrusel1_pris.html">Tours y Actividades</a></li>
-        <li><a href="consejos.html">Consejos Prácticos</a></li>
-      </ul>
-      <button class="plan-trip"><a class="nav-link" href="login.html"></a> tu visita</button>
-    </nav>
-  </header>
+  <!-- Nave-->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container-sm px-4 px-lg-5">
+        <a class="navbar-brand" href="./index_luis.html"><img src="images/logo_blog_banner_white.png" alt="logo"></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownLocations" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Lugares
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow" aria-labelledby="dropdownLocations">
+                        <li><a class="dropdown-item" href="./ollantaytambo nuevo/principal_ollantaytambo_estefany.html">OLLANTAYTAMBO</a></li>
+                        <li><a class="dropdown-item" href="./pisac-nuevo/principal_pisac_estefany.html">PISAC</a></li>
+                        <li><a class="dropdown-item" href="./laguna/principal_laguna_estefany.html">LAGUNA</a></li>
+                        <li><a class="dropdown-item" href="./machu-picchu/principal_machu_luis.html">MACHU PICCHU</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="./touryactividades/carrusel1_pris.html">Tours y Actividades</a></li>
+                <li class="nav-item"><a class="nav-link" href="./consejos.html">Consejos Prácticos</a></li>
+                <button class="btn rounded-pill px-2 py-1 fw-bold"><a class="nav-link" href="login.html">Planea tu visita</a></button>
+            </ul>
+        </div>
+    </div>
+  </nav>
+  
+  
 
   <!-- Carrusel -->
   <div class="carousel">
@@ -1019,29 +935,46 @@
       </div>
     </section>
     
-    <!-- Pie de Página -->
-    <footer>
-      <div class="footer-container">
-        <div class="footer-section">
-          <h3>Ubícanos</h3>
-          <p>Jr. Micalle 123, Cusco</p>
-        </div>
-        <div class="footer-section">
-          <h3>Suscríbete a nuestro Newsletter</h3>
-          <p id="newsletter-email">
-            <a href="mailto:conocecusco@blog.utp.pe">conocecusco@blog.utp.pe</a>
-          </p>
-        </div>
-        <div class="footer-section">
-          <h3>Contáctanos</h3>
-          <p><a href="tel:+51987654321">+51 987654321</a></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>Derechos Reservados © 2025 Conoce Cusco - Blog UTP</p>
-      </div>
-    </footer>
-
+        <!-- Contacto-->
+        <section class="contact-section bg-black">
+          <div class="container px-4 px-lg-5">
+              <div class="row gx-4 gx-lg-5">
+                  <div class="col-md-4 mb-3 mb-md-0">
+                      <div class="card py-4 h-100">
+                          <div class="card-body text-center">
+                              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                              <h4 class="text-uppercase m-0">Ubícanos</h4>
+                              <hr class="my-4 mx-auto" />
+                              <div class="small text-black-50">Jr. Micalle 123, Cusco</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4 mb-3 mb-md-0">
+                      <div class="card py-4 h-100">
+                          <div class="card-body text-center">
+                              <i class="fas fa-envelope text-primary mb-2"></i>
+                              <h4 class="text-uppercase m-0">Suscríbete a nuestro Newsletter</h4>
+                              <hr class="my-4 mx-auto" />
+                              <div class="small text-black-50"><a href="#!">conocecusco@blog.utp.pe</a></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4 mb-3 mb-md-0">
+                      <div class="card py-4 h-100">
+                          <div class="card-body text-center">
+                              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                              <h4 class="text-uppercase m-0">Contáctanos</h4>
+                              <hr class="my-4 mx-auto" />
+                              <div class="small text-black-50">+51 987654321  </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- Footer-->
+      <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Derechos Reservados &copy; 2025 Conoce Cusco - Blog UTP</div></footer>
+  
     <!-- JavaScript -->
     <script>
     // Acordeón de Preguntas Frecuentes
@@ -1114,5 +1047,6 @@
        });
        });
     </script>
+    <script src="./js/index_luis.js"></script>
 </body>
 </html>
